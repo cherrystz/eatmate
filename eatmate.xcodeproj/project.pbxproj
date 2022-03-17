@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */; };
+		4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4774197627E3896700EF44C1 /* GoogleService-Info.plist */; };
+		4774197927E38A0100EF44C1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4774197827E38A0100EF44C1 /* Podfile */; };
 		47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE6B27D8A176004352EC /* eatmateApp.swift */; };
 		47E0DE6E27D8A176004352EC /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE6D27D8A176004352EC /* AppView.swift */; };
 		47E0DE7027D8A178004352EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E0DE6F27D8A178004352EC /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatmate.release.xcconfig"; path = "Target Support Files/Pods-eatmate/Pods-eatmate.release.xcconfig"; sourceTree = "<group>"; };
+		4774197627E3896700EF44C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4774197827E38A0100EF44C1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		47E0DE6827D8A176004352EC /* eatmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E0DE6B27D8A176004352EC /* eatmateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eatmateApp.swift; sourceTree = "<group>"; };
 		47E0DE6D27D8A176004352EC /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -23,6 +29,8 @@
 		47E0DE7227D8A178004352EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47E0DE7A27D8A6D2004352EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		47E0DE7D27D8A72A004352EC /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eatmate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A5247DC2F37DA84CCEEF83 /* Pods-eatmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatmate.debug.xcconfig"; path = "Target Support Files/Pods-eatmate/Pods-eatmate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +49,10 @@
 			isa = PBXGroup;
 			children = (
 				47E0DE6A27D8A176004352EC /* eatmate */,
+				4774197827E38A0100EF44C1 /* Podfile */,
 				47E0DE6927D8A176004352EC /* Products */,
+				AC57D528BC5F8998B6DD138B /* Pods */,
+				E803F5FE8779AEBE2C95A4A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +67,7 @@
 		47E0DE6A27D8A176004352EC /* eatmate */ = {
 			isa = PBXGroup;
 			children = (
+				4774197627E3896700EF44C1 /* GoogleService-Info.plist */,
 				47E0DE6B27D8A176004352EC /* eatmateApp.swift */,
 				47E0DE6D27D8A176004352EC /* AppView.swift */,
 				47E0DE7927D8A6B1004352EC /* MainView */,
@@ -89,6 +102,24 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		AC57D528BC5F8998B6DD138B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97A5247DC2F37DA84CCEEF83 /* Pods-eatmate.debug.xcconfig */,
+				2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E803F5FE8779AEBE2C95A4A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47E0DE7627D8A178004352EC /* Build configuration list for PBXNativeTarget "eatmate" */;
 			buildPhases = (
+				1DB185AFBBA22A461FCCB4F6 /* [CP] Check Pods Manifest.lock */,
 				47E0DE6427D8A176004352EC /* Sources */,
 				47E0DE6527D8A176004352EC /* Frameworks */,
 				47E0DE6627D8A176004352EC /* Resources */,
+				370CBC50B993EB5B88590C9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,11 +181,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				47E0DE7327D8A178004352EC /* Preview Assets.xcassets in Resources */,
+				4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */,
+				4774197927E38A0100EF44C1 /* Podfile in Resources */,
 				47E0DE7027D8A178004352EC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DB185AFBBA22A461FCCB4F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eatmate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		370CBC50B993EB5B88590C9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eatmate/Pods-eatmate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eatmate/Pods-eatmate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-eatmate/Pods-eatmate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47E0DE6427D8A176004352EC /* Sources */ = {
@@ -287,6 +364,7 @@
 		};
 		47E0DE7727D8A178004352EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97A5247DC2F37DA84CCEEF83 /* Pods-eatmate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +393,7 @@
 		};
 		47E0DE7827D8A178004352EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
