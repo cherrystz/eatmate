@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */; };
+		472920AD27E3B37900C62E86 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AC27E3B37900C62E86 /* CreateView.swift */; };
+		472920AF27E3B39D00C62E86 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AE27E3B39D00C62E86 /* ChatView.swift */; };
+		472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920B027E3B3AF00C62E86 /* NotificationView.swift */; };
 		4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4774197627E3896700EF44C1 /* GoogleService-Info.plist */; };
 		4774197927E38A0100EF44C1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4774197827E38A0100EF44C1 /* Podfile */; };
 		47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE6B27D8A176004352EC /* eatmateApp.swift */; };
-		47E0DE6E27D8A176004352EC /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE6D27D8A176004352EC /* AppView.swift */; };
+		47E0DE6E27D8A176004352EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE6D27D8A176004352EC /* ContentView.swift */; };
 		47E0DE7027D8A178004352EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E0DE6F27D8A178004352EC /* Assets.xcassets */; };
 		47E0DE7327D8A178004352EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E0DE7227D8A178004352EC /* Preview Assets.xcassets */; };
 		47E0DE7B27D8A6D2004352EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE7A27D8A6D2004352EC /* HomeView.swift */; };
@@ -20,11 +23,14 @@
 
 /* Begin PBXFileReference section */
 		2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatmate.release.xcconfig"; path = "Target Support Files/Pods-eatmate/Pods-eatmate.release.xcconfig"; sourceTree = "<group>"; };
+		472920AC27E3B37900C62E86 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		472920AE27E3B39D00C62E86 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		472920B027E3B3AF00C62E86 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		4774197627E3896700EF44C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4774197827E38A0100EF44C1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		47E0DE6827D8A176004352EC /* eatmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E0DE6B27D8A176004352EC /* eatmateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eatmateApp.swift; sourceTree = "<group>"; };
-		47E0DE6D27D8A176004352EC /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		47E0DE6D27D8A176004352EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		47E0DE6F27D8A178004352EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47E0DE7227D8A178004352EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47E0DE7A27D8A6D2004352EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -69,7 +75,7 @@
 			children = (
 				4774197627E3896700EF44C1 /* GoogleService-Info.plist */,
 				47E0DE6B27D8A176004352EC /* eatmateApp.swift */,
-				47E0DE6D27D8A176004352EC /* AppView.swift */,
+				47E0DE6D27D8A176004352EC /* ContentView.swift */,
 				47E0DE7927D8A6B1004352EC /* MainView */,
 				47E0DE7C27D8A6FE004352EC /* Components */,
 				47E0DE6F27D8A178004352EC /* Assets.xcassets */,
@@ -90,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				47E0DE7A27D8A6D2004352EC /* HomeView.swift */,
+				472920AC27E3B37900C62E86 /* CreateView.swift */,
+				472920AE27E3B39D00C62E86 /* ChatView.swift */,
+				472920B027E3B3AF00C62E86 /* NotificationView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -108,7 +117,6 @@
 				97A5247DC2F37DA84CCEEF83 /* Pods-eatmate.debug.xcconfig */,
 				2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -237,9 +245,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				47E0DE7B27D8A6D2004352EC /* HomeView.swift in Sources */,
-				47E0DE6E27D8A176004352EC /* AppView.swift in Sources */,
+				47E0DE6E27D8A176004352EC /* ContentView.swift in Sources */,
+				472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */,
 				47E0DE7E27D8A72A004352EC /* TabItem.swift in Sources */,
 				47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */,
+				472920AF27E3B39D00C62E86 /* ChatView.swift in Sources */,
+				472920AD27E3B37900C62E86 /* CreateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
