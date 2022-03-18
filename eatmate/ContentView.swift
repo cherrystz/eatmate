@@ -9,17 +9,54 @@ import SwiftUI
 
 struct ContentView: View {
     
-    init() {
-        UITabBar.appearance().backgroundColor = UIColor.white
-    }
+    @State var selectedIndex = 0
+    
+    let tabItemList: [TabItem] = [
+        TabItem(image: "HomeIcon", name: "Home"),
+        TabItem(image: "AddIcon", name: "Create"),
+        TabItem(image: "ChatIcon", name: "Chat"),
+        TabItem(image: "AlarmIcon", name: "Notification")
+    ]
     
     var body: some View {
-        TabView {
-            HomeView().tabItem { TabItem(imageName: "HomeIcon", text: "Home") }
-            CreateView().tabItem { TabItem(imageName: "AddIcon", text: "Create") }
-            ChatView().tabItem { TabItem(imageName: "ChatIcon", text: "Chat") }
-            NotificationView().tabItem { TabItem(imageName: "AlarmIcon", text: "Notification") }
+        VStack {
+            // Content
+            VStack {
+                
+                switch selectedIndex {
+                case 0: HomeView()
+                case 1: CreateView()
+                case 2: ChatView()
+                case 3: NotificationView()
+                default: EmptyView()
+                }
+                
+                HStack {
+                    ForEach(0..<tabItemList.count, id: \.self) { number in
+                        Spacer()
+                        Button(action: { selectedIndex = number }, label: {
+                            TabItemDisplay(imageName: tabItemList[number].image,
+                                           tagName: tabItemList[number].name,
+                                           foregroundColor: selectedIndex == number ? .black : .gray)
+                        })
+                        Spacer()
+                    }
+                }
+                .frame(height: 87)
+                .background(.white)
+            }
         }
-        
+    }
+}
+
+struct TabItem: Codable {
+    var id = UUID()
+    var image: String
+    var name: String
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }

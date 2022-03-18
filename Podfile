@@ -6,6 +6,7 @@ target 'eatmate' do
   use_frameworks!
 
   # Pods for eatmate
+  pod 'SwiftColor'
   
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
