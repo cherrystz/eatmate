@@ -16,3 +16,14 @@ struct OvalTextFieldStyle: TextFieldStyle {
             .shadow(color: .black.opacity(0.1), radius: 4, y: 4)
     }
 }
+
+struct BottomLineTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        VStack() {
+            configuration
+            Rectangle()
+                .frame(height: 0.5, alignment: .bottom)
+                .foregroundColor(Color.black.opacity(0.8))
+        }
+    }
+}

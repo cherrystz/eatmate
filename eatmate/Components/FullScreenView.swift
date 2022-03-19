@@ -19,10 +19,8 @@ struct FullScreenView<Content: View>: View {
     var body: some View {
         HStack {
             VStack {
-                
                 self.content
                 Spacer(minLength: 0)
-                
             }
             Spacer(minLength: 0)
         }

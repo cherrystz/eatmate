@@ -68,8 +68,9 @@ struct HomeView: View {
                                 Button(action: {}, label: {
                                     CategoriesModule(imageName: category, text: category)
                                 })
-                                
                             }
+                            
+                            Spacer()
                         }
                     }
                     
@@ -90,9 +91,10 @@ struct HomeView: View {
                             ForEach(0..<3, id: \.self) { number in
                                 GroupDisplayModule()
                             }
+                            Spacer()
                         }
                     }
-                    
+                    Spacer()
                 }.padding(.top, 15)
             }
         }

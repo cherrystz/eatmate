@@ -6,6 +6,9 @@
 	<array>
 		<string>Nunito-Bold.ttf</string>
 		<string>Nunito-Light.ttf</string>
+		<string>Nunito-ExtraBold.ttf</string>
+		<string>Nunito-SemiBold.ttf</string>
+		<string>Nunito-Regular.ttf</string>
 		<string>Kanit-Bold.ttf</string>
 		<string>Kanit-Regular.ttf</string>
 	</array>

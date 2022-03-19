@@ -10,20 +10,23 @@ import SwiftUI
 extension Font {
     
     static func nunito(size: CGFloat = 24, weight: NunitoStyle = .bold) -> Font {
-        return Font.custom(weight == .bold ? "Nunito-Bold" : "Nunito-Light", size: size)
+        return Font.custom(weight.rawValue, size: size)
     }
     
     static func kanit(size: CGFloat = 24, weight: KanitStyle = .bold) -> Font {
-        return Font.custom(weight == .bold ? "Kanit-Bold" : "Kanit-Regular", size: size)
+        return Font.custom(weight.rawValue, size: size)
     }
     
-    enum NunitoStyle {
-        case bold
-        case light
+    enum NunitoStyle: String {
+        case extraBold = "Nunito-ExtraBold"
+        case bold = "Nunito-Bold"
+        case semiBold = "Nunito-SemiBold"
+        case regular = "Nunito-Regular"
+        case light = "Nunito-Light"
     }
     
-    enum KanitStyle {
-        case bold
-        case regular
+    enum KanitStyle: String {
+        case bold = "Kanit-Bold"
+        case regular = "Kanit-Regular"
     }
 }

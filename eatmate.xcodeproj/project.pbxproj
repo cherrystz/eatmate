@@ -19,7 +19,6 @@
 		47E0DE7327D8A178004352EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E0DE7227D8A178004352EC /* Preview Assets.xcassets */; };
 		47E0DE7B27D8A6D2004352EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE7A27D8A6D2004352EC /* HomeView.swift */; };
 		47F3FD3D27E46FF3005DC7C2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD3C27E46FF3005DC7C2 /* LoginView.swift */; };
-		47F3FD3F27E4E2B7005DC7C2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD3E27E4E2B7005DC7C2 /* SignUpView.swift */; };
 		47F3FD4227E4F072005DC7C2 /* TabViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD4127E4F072005DC7C2 /* TabViewModule.swift */; };
 		47F3FD4427E4FA19005DC7C2 /* FullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD4327E4FA19005DC7C2 /* FullScreenView.swift */; };
 		47F3FD4B27E51829005DC7C2 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47F3FD4927E51829005DC7C2 /* Nunito-Light.ttf */; };
@@ -31,6 +30,13 @@
 		47F3FD5A27E529CE005DC7C2 /* CategoriesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD5927E529CE005DC7C2 /* CategoriesModule.swift */; };
 		47F3FD5C27E52EF0005DC7C2 /* GroupDisplayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD5B27E52EF0005DC7C2 /* GroupDisplayModule.swift */; };
 		47F3FD5E27E53296005DC7C2 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD5D27E53296005DC7C2 /* RoundedCorner.swift */; };
+		47F3FD6227E54C01005DC7C2 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47F3FD6127E54C01005DC7C2 /* Nunito-ExtraBold.ttf */; };
+		47F3FD6527E550EF005DC7C2 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47F3FD6427E550E8005DC7C2 /* Nunito-Regular.ttf */; };
+		47F3FD6627E550EF005DC7C2 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47F3FD6327E550E8005DC7C2 /* Nunito-SemiBold.ttf */; };
+		47F3FD6827E55613005DC7C2 /* LabelledDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD6727E55613005DC7C2 /* LabelledDivider.swift */; };
+		47F3FD6B27E55B25005DC7C2 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD6A27E55B25005DC7C2 /* RegisterView.swift */; };
+		47F3FD6D27E55B5C005DC7C2 /* RegisterConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD6C27E55B5C005DC7C2 /* RegisterConfirmView.swift */; };
+		47F3FD6F27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD6E27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +53,6 @@
 		47E0DE7227D8A178004352EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47E0DE7A27D8A6D2004352EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		47F3FD3C27E46FF3005DC7C2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		47F3FD3E27E4E2B7005DC7C2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		47F3FD4127E4F072005DC7C2 /* TabViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModule.swift; sourceTree = "<group>"; };
 		47F3FD4327E4FA19005DC7C2 /* FullScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenView.swift; sourceTree = "<group>"; };
 		47F3FD4927E51829005DC7C2 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
@@ -60,6 +65,13 @@
 		47F3FD5927E529CE005DC7C2 /* CategoriesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModule.swift; sourceTree = "<group>"; };
 		47F3FD5B27E52EF0005DC7C2 /* GroupDisplayModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDisplayModule.swift; sourceTree = "<group>"; };
 		47F3FD5D27E53296005DC7C2 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		47F3FD6127E54C01005DC7C2 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		47F3FD6327E550E8005DC7C2 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		47F3FD6427E550E8005DC7C2 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		47F3FD6727E55613005DC7C2 /* LabelledDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledDivider.swift; sourceTree = "<group>"; };
+		47F3FD6A27E55B25005DC7C2 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		47F3FD6C27E55B5C005DC7C2 /* RegisterConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterConfirmView.swift; sourceTree = "<group>"; };
+		47F3FD6E27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordSettingsView.swift; sourceTree = "<group>"; };
 		71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eatmate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A5247DC2F37DA84CCEEF83 /* Pods-eatmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatmate.debug.xcconfig"; path = "Target Support Files/Pods-eatmate/Pods-eatmate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				47F3FD3C27E46FF3005DC7C2 /* LoginView.swift */,
-				47F3FD3E27E4E2B7005DC7C2 /* SignUpView.swift */,
+				47F3FD6927E55B06005DC7C2 /* SignUp */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -144,6 +156,7 @@
 		47F3FD4027E4EFDC005DC7C2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				47F3FD6727E55613005DC7C2 /* LabelledDivider.swift */,
 				47F3FD4127E4F072005DC7C2 /* TabViewModule.swift */,
 				47F3FD4327E4FA19005DC7C2 /* FullScreenView.swift */,
 				47F3FD5927E529CE005DC7C2 /* CategoriesModule.swift */,
@@ -155,6 +168,9 @@
 		47F3FD4827E517CC005DC7C2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				47F3FD6427E550E8005DC7C2 /* Nunito-Regular.ttf */,
+				47F3FD6327E550E8005DC7C2 /* Nunito-SemiBold.ttf */,
+				47F3FD6127E54C01005DC7C2 /* Nunito-ExtraBold.ttf */,
 				47F3FD4A27E51829005DC7C2 /* Nunito-Bold.ttf */,
 				47F3FD4927E51829005DC7C2 /* Nunito-Light.ttf */,
 				47F3FD4D27E51876005DC7C2 /* Kanit-Bold.ttf */,
@@ -171,6 +187,16 @@
 				47F3FD5D27E53296005DC7C2 /* RoundedCorner.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		47F3FD6927E55B06005DC7C2 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				47F3FD6A27E55B25005DC7C2 /* RegisterView.swift */,
+				47F3FD6C27E55B5C005DC7C2 /* RegisterConfirmView.swift */,
+				47F3FD6E27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		AC57D528BC5F8998B6DD138B /* Pods */ = {
@@ -250,9 +276,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47F3FD6527E550EF005DC7C2 /* Nunito-Regular.ttf in Resources */,
 				47E0DE7327D8A178004352EC /* Preview Assets.xcassets in Resources */,
 				47F3FD4F27E51876005DC7C2 /* Kanit-Bold.ttf in Resources */,
 				47F3FD4B27E51829005DC7C2 /* Nunito-Light.ttf in Resources */,
+				47F3FD6227E54C01005DC7C2 /* Nunito-ExtraBold.ttf in Resources */,
+				47F3FD6627E550EF005DC7C2 /* Nunito-SemiBold.ttf in Resources */,
 				47F3FD5027E51876005DC7C2 /* Kanit-Regular.ttf in Resources */,
 				4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */,
 				4774197927E38A0100EF44C1 /* Podfile in Resources */,
@@ -316,13 +345,16 @@
 				472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */,
 				47F3FD4427E4FA19005DC7C2 /* FullScreenView.swift in Sources */,
 				47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */,
+				47F3FD6D27E55B5C005DC7C2 /* RegisterConfirmView.swift in Sources */,
 				47F3FD4227E4F072005DC7C2 /* TabViewModule.swift in Sources */,
 				472920AF27E3B39D00C62E86 /* ChatView.swift in Sources */,
 				47F3FD3D27E46FF3005DC7C2 /* LoginView.swift in Sources */,
 				47F3FD5827E52436005DC7C2 /* TextFieldStyle.swift in Sources */,
 				47F3FD5A27E529CE005DC7C2 /* CategoriesModule.swift in Sources */,
-				47F3FD3F27E4E2B7005DC7C2 /* SignUpView.swift in Sources */,
+				47F3FD6827E55613005DC7C2 /* LabelledDivider.swift in Sources */,
 				47F3FD5E27E53296005DC7C2 /* RoundedCorner.swift in Sources */,
+				47F3FD6B27E55B25005DC7C2 /* RegisterView.swift in Sources */,
+				47F3FD6F27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift in Sources */,
 				47F3FD5C27E52EF0005DC7C2 /* GroupDisplayModule.swift in Sources */,
 				472920AD27E3B37900C62E86 /* CreateView.swift in Sources */,
 			);
