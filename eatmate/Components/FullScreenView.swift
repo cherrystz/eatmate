@@ -24,6 +24,7 @@ struct FullScreenView<Content: View>: View {
             }
             Spacer(minLength: 0)
         }
+        .navigationBarHidden(true)
     }
 }
 

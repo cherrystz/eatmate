@@ -22,13 +22,14 @@ struct ContentView: View {
         VStack {
             // Content
             VStack {
-                
-                switch selectedIndex {
-                case 0: HomeView()
-                case 1: CreateView()
-                case 2: ChatView()
-                case 3: NotificationView()
-                default: EmptyView()
+                FullScreenView {
+                    switch selectedIndex {
+                    case 0: HomeView()
+                    case 1: CreateView()
+                    case 2: ChatView()
+                    case 3: NotificationView()
+                    default: EmptyView()
+                    }
                 }
                 
                 HStack {

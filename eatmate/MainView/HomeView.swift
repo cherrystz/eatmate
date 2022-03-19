@@ -99,7 +99,6 @@ struct HomeView: View {
             }
         }
         .background(Color(hexString: "#F3F3F3"))
-        .navigationBarHidden(true)
     }
 }
 
