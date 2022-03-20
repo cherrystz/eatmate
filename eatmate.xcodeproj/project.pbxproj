@@ -37,6 +37,12 @@
 		47F3FD6B27E55B25005DC7C2 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD6A27E55B25005DC7C2 /* RegisterView.swift */; };
 		47F3FD6D27E55B5C005DC7C2 /* RegisterConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD6C27E55B5C005DC7C2 /* RegisterConfirmView.swift */; };
 		47F3FD6F27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD6E27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift */; };
+		47F3FD7127E65F51005DC7C2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD7027E65F51005DC7C2 /* AuthManager.swift */; };
+		47F3FD7427E664AD005DC7C2 /* PasscodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD7327E664AD005DC7C2 /* PasscodeField.swift */; };
+		47F3FD7627E6679D005DC7C2 /* StringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD7527E6679D005DC7C2 /* StringProtocol.swift */; };
+		47F3FD7827E66D20005DC7C2 /* TextLimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD7727E66D20005DC7C2 /* TextLimiter.swift */; };
+		47F3FD7A27E674F9005DC7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F3FD7927E674F9005DC7C2 /* LaunchScreen.storyboard */; };
+		47F3FD7E27E68241005DC7C2 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD7D27E68241005DC7C2 /* AnyTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +78,13 @@
 		47F3FD6A27E55B25005DC7C2 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		47F3FD6C27E55B5C005DC7C2 /* RegisterConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterConfirmView.swift; sourceTree = "<group>"; };
 		47F3FD6E27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordSettingsView.swift; sourceTree = "<group>"; };
+		47F3FD7027E65F51005DC7C2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		47F3FD7327E664AD005DC7C2 /* PasscodeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeField.swift; sourceTree = "<group>"; };
+		47F3FD7527E6679D005DC7C2 /* StringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocol.swift; sourceTree = "<group>"; };
+		47F3FD7727E66D20005DC7C2 /* TextLimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLimiter.swift; sourceTree = "<group>"; };
+		47F3FD7927E674F9005DC7C2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47F3FD7D27E68241005DC7C2 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
+		47F3FD7F27E68A5D005DC7C2 /* eatmate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eatmate.entitlements; sourceTree = "<group>"; };
 		71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eatmate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A5247DC2F37DA84CCEEF83 /* Pods-eatmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatmate.debug.xcconfig"; path = "Target Support Files/Pods-eatmate/Pods-eatmate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,9 +123,11 @@
 		47E0DE6A27D8A176004352EC /* eatmate */ = {
 			isa = PBXGroup;
 			children = (
+				47F3FD7F27E68A5D005DC7C2 /* eatmate.entitlements */,
 				47F3FD5427E51E5E005DC7C2 /* Info.plist */,
 				4774197627E3896700EF44C1 /* GoogleService-Info.plist */,
 				47E0DE6B27D8A176004352EC /* eatmateApp.swift */,
+				47F3FD7927E674F9005DC7C2 /* LaunchScreen.storyboard */,
 				47E0DE6D27D8A176004352EC /* ContentView.swift */,
 				47F3FD3B27E46FD8005DC7C2 /* Authentication */,
 				47E0DE7927D8A6B1004352EC /* MainView */,
@@ -149,6 +164,7 @@
 			children = (
 				47F3FD3C27E46FF3005DC7C2 /* LoginView.swift */,
 				47F3FD6927E55B06005DC7C2 /* SignUp */,
+				47F3FD7227E65F58005DC7C2 /* AuthenticationManger */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -183,6 +199,9 @@
 			isa = PBXGroup;
 			children = (
 				47F3FD5227E518C0005DC7C2 /* Fonts.swift */,
+				47F3FD7D27E68241005DC7C2 /* AnyTransition.swift */,
+				47F3FD7527E6679D005DC7C2 /* StringProtocol.swift */,
+				47F3FD7727E66D20005DC7C2 /* TextLimiter.swift */,
 				47F3FD5727E52436005DC7C2 /* TextFieldStyle.swift */,
 				47F3FD5D27E53296005DC7C2 /* RoundedCorner.swift */,
 			);
@@ -195,8 +214,17 @@
 				47F3FD6A27E55B25005DC7C2 /* RegisterView.swift */,
 				47F3FD6C27E55B5C005DC7C2 /* RegisterConfirmView.swift */,
 				47F3FD6E27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift */,
+				47F3FD7327E664AD005DC7C2 /* PasscodeField.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		47F3FD7227E65F58005DC7C2 /* AuthenticationManger */ = {
+			isa = PBXGroup;
+			children = (
+				47F3FD7027E65F51005DC7C2 /* AuthManager.swift */,
+			);
+			path = AuthenticationManger;
 			sourceTree = "<group>";
 		};
 		AC57D528BC5F8998B6DD138B /* Pods */ = {
@@ -285,6 +313,7 @@
 				47F3FD5027E51876005DC7C2 /* Kanit-Regular.ttf in Resources */,
 				4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */,
 				4774197927E38A0100EF44C1 /* Podfile in Resources */,
+				47F3FD7A27E674F9005DC7C2 /* LaunchScreen.storyboard in Resources */,
 				47F3FD4C27E51829005DC7C2 /* Nunito-Bold.ttf in Resources */,
 				47E0DE7027D8A178004352EC /* Assets.xcassets in Resources */,
 			);
@@ -340,9 +369,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				47E0DE7B27D8A6D2004352EC /* HomeView.swift in Sources */,
+				47F3FD7E27E68241005DC7C2 /* AnyTransition.swift in Sources */,
 				47E0DE6E27D8A176004352EC /* ContentView.swift in Sources */,
 				47F3FD5327E518C0005DC7C2 /* Fonts.swift in Sources */,
 				472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */,
+				47F3FD7827E66D20005DC7C2 /* TextLimiter.swift in Sources */,
+				47F3FD7427E664AD005DC7C2 /* PasscodeField.swift in Sources */,
 				47F3FD4427E4FA19005DC7C2 /* FullScreenView.swift in Sources */,
 				47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */,
 				47F3FD6D27E55B5C005DC7C2 /* RegisterConfirmView.swift in Sources */,
@@ -352,7 +384,9 @@
 				47F3FD5827E52436005DC7C2 /* TextFieldStyle.swift in Sources */,
 				47F3FD5A27E529CE005DC7C2 /* CategoriesModule.swift in Sources */,
 				47F3FD6827E55613005DC7C2 /* LabelledDivider.swift in Sources */,
+				47F3FD7627E6679D005DC7C2 /* StringProtocol.swift in Sources */,
 				47F3FD5E27E53296005DC7C2 /* RoundedCorner.swift in Sources */,
+				47F3FD7127E65F51005DC7C2 /* AuthManager.swift in Sources */,
 				47F3FD6B27E55B25005DC7C2 /* RegisterView.swift in Sources */,
 				47F3FD6F27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift in Sources */,
 				47F3FD5C27E52EF0005DC7C2 /* GroupDisplayModule.swift in Sources */,
@@ -485,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eatmate/eatmate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eatmate/Preview Content\"";
@@ -494,6 +529,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -515,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eatmate/eatmate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eatmate/Preview Content\"";
@@ -524,6 +562,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -9,8 +9,10 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    @State var countryCode: String = "+ 66"
+    @State var countryCode: String = "66"
     @State var telephoneNumber: String = ""
+    @State private var isNextToRegisterConfirmed = false
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         VStack {
@@ -25,20 +27,44 @@ struct RegisterView: View {
                     Spacer()
                 }
                 
-                HStack(spacing: 14) {
-                    TextField("", text: $countryCode)
-                        .font(.nunito(size: 18, weight: .semiBold))
-                        .textFieldStyle(BottomLineTextFieldStyle())
-                        .frame(width: 113)
+                HStack(alignment: .bottom ,spacing: 14) {
+                    VStack(spacing: 0) {
+                        Button(action: {}, label: {
+                            Image("THIcon")
+                                .resizable()
+                                .frame(width: 30, height: 30, alignment: .center)
+                            Text("+ \(countryCode)")
+                                .font(.nunito(size: 18, weight: .semiBold))
+                            Image(systemName: "arrowtriangle.down.fill")
+                                .resizable()
+                                .frame(width: 14, height: 8, alignment: .center)
+                        })
+                        .padding(.bottom, 5)
+                    
+                        Rectangle()
+                            .frame(width: 113, height: 0.5)
+                            .background(.black.opacity(0.8))
+                        
+                    }
                     
                     TextField("", text: $telephoneNumber)
                         .font(.nunito(size: 18, weight: .semiBold))
                         .textFieldStyle(BottomLineTextFieldStyle())
                 }
             }.padding(.top, 28)
-            
             VStack(spacing: 39) {
-                Button(action: {}, label: {
+                NavigationLink(destination: RegisterConfirmView( phoneNumber: "+\(countryCode)\(telephoneNumber)"), isActive: $isNextToRegisterConfirmed) { EmptyView() }
+                Button(action: {
+//                    if !telephoneNumber.isEmpty {
+//                        let number = "+\(countryCode)\(telephoneNumber)"
+//                        AuthManager.shared.startAuth(phoneNumber: number) { success in
+//                            guard success else { return }
+//                            DispatchQueue.main.async {
+                                isNextToRegisterConfirmed = true
+//                            }
+//                        }
+//                    }
+                }) {
                     Text("Continue")
                         .font(.nunito(size: 20, weight: .bold))
                         .foregroundColor(.white)
@@ -46,9 +72,9 @@ struct RegisterView: View {
                         .padding(.vertical, 3)
                         .background(Color(hexString: "#5AB763"))
                         .cornerRadius(25)
-                })
+                }
                 
-                Button(action: {}, label: {
+                Button(action: { self.presentationMode.wrappedValue.dismiss() } , label: {
                     HStack {
                         Text("Already have an account?")
                             .font(.nunito(size: 14, weight: .regular))
@@ -61,7 +87,7 @@ struct RegisterView: View {
             
             Spacer()
         }.padding(.horizontal, 26)
-        
+            .navigationBarHidden(true)
     }
 }
 

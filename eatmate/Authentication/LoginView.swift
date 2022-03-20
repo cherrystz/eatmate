@@ -53,7 +53,7 @@ struct LoginView: View {
                         .font(.nunito(size: 14, weight: .regular))
                 })
                 
-                Button(action: {}, label: {
+                NavigationLink(destination: ContentView(), label: {
                     Text("Sign In")
                         .font(.nunito(size: 20, weight: .extraBold))
                         .foregroundColor(.white)
@@ -90,7 +90,7 @@ struct LoginView: View {
                     
                 }.padding(.horizontal, 53)
                 
-                Button(action: {}, label: {
+                NavigationLink(destination: RegisterView(), label: {
                     HStack {
                         Text("Don't have an account?")
                             .font(.nunito(size: 14, weight: .regular))
@@ -103,6 +103,7 @@ struct LoginView: View {
             }
         }
         .padding(.horizontal, 26)
+        .navigationBarHidden(true)
     }
 }
 
