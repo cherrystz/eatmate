@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2EBAC20927EBB20700076492 /* groupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20827EBB20700076492 /* groupView.swift */; };
+		2EBAC20927EBB20700076492 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20827EBB20700076492 /* GroupView.swift */; };
+		2EBAC20D27EBB59F00076492 /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20C27EBB59F00076492 /* NavbarView.swift */; };
 		3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */; };
 		472920AD27E3B37900C62E86 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AC27E3B37900C62E86 /* CreateView.swift */; };
 		472920AF27E3B39D00C62E86 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AE27E3B39D00C62E86 /* ChatView.swift */; };
@@ -47,7 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2EBAC20827EBB20700076492 /* groupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupView.swift; sourceTree = "<group>"; };
+		2EBAC20827EBB20700076492 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		2EBAC20C27EBB59F00076492 /* NavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarView.swift; sourceTree = "<group>"; };
 		2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatmate.release.xcconfig"; path = "Target Support Files/Pods-eatmate/Pods-eatmate.release.xcconfig"; sourceTree = "<group>"; };
 		472920AC27E3B37900C62E86 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		472920AE27E3B39D00C62E86 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 			children = (
 				47E0DE7A27D8A6D2004352EC /* HomeView.swift */,
 				472920AC27E3B37900C62E86 /* CreateView.swift */,
-				2EBAC20827EBB20700076492 /* groupView.swift */,
+				2EBAC20827EBB20700076492 /* GroupView.swift */,
 				472920AE27E3B39D00C62E86 /* ChatView.swift */,
 				472920B027E3B3AF00C62E86 /* NotificationView.swift */,
 			);
@@ -178,6 +180,7 @@
 				47F3FD6727E55613005DC7C2 /* LabelledDivider.swift */,
 				47F3FD4127E4F072005DC7C2 /* TabViewModule.swift */,
 				47F3FD4327E4FA19005DC7C2 /* FullScreenView.swift */,
+				2EBAC20C27EBB59F00076492 /* NavbarView.swift */,
 				47F3FD5927E529CE005DC7C2 /* CategoriesModule.swift */,
 				47F3FD5B27E52EF0005DC7C2 /* GroupDisplayModule.swift */,
 			);
@@ -373,8 +376,9 @@
 			files = (
 				47E0DE7B27D8A6D2004352EC /* HomeView.swift in Sources */,
 				47F3FD7E27E68241005DC7C2 /* AnyTransition.swift in Sources */,
-				2EBAC20927EBB20700076492 /* groupView.swift in Sources */,
+				2EBAC20927EBB20700076492 /* GroupView.swift in Sources */,
 				47E0DE6E27D8A176004352EC /* ContentView.swift in Sources */,
+				2EBAC20D27EBB59F00076492 /* NavbarView.swift in Sources */,
 				47F3FD5327E518C0005DC7C2 /* Fonts.swift in Sources */,
 				472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */,
 				47F3FD7827E66D20005DC7C2 /* TextLimiter.swift in Sources */,
