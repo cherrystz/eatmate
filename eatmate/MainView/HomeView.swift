@@ -95,6 +95,23 @@ struct HomeView: View {
                         }
                     }
                     Spacer()
+                    HStack(alignment: .bottom) {
+                        Button (action: {}, label: {
+                            HStack {
+                                Text("Near me").font(.nunito())
+                            }
+                        })
+                        Spacer()
+                    }.padding(.top, 20)
+                        .padding(.leading, 26)
+                        .padding(.trailing, 30)
+                    ScrollView (.vertical, showsIndicators: false) {
+                        HStack(spacing: 8) {
+                            Spacer(minLength: 21)
+                            //place group here
+                            Spacer()
+                        }
+                    }
                 }.padding(.top, 15)
             }
         }

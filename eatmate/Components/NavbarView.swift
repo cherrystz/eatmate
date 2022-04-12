@@ -11,8 +11,10 @@ struct NavbarView : View {
     
     var destination : AnyView
     var title : String = "Title"
-    @State var backActive = false
-    
+    @State private var backActive : Bool = false
+    @State var showBackButton : Bool = true
+    @State var showMoreButton : Bool = true
+    @State var shadow : CGFloat = 0
     
     var body: some View {
      
@@ -22,9 +24,11 @@ struct NavbarView : View {
                     self.backActive = true
                 },
                        label: {
+                    if self.showBackButton {
                         Image(systemName: "chevron.left")
                         .resizable()
                         .frame(width: 12, height: 24)
+                    }
                     
                 })
             }
@@ -41,20 +45,24 @@ struct NavbarView : View {
                 
             },
                    label: {
+                if showMoreButton{
                     Image(systemName: "ellipsis")
                     .resizable()
                     .frame(width: 16, height: 3.7)
+                }
+                    
             })
                 
         }
+      
         .padding(.leading, 26)
         .padding(.trailing,26)
         .padding(.bottom,20)
         .accentColor(.gray)
         .background(
             Color.white.ignoresSafeArea(edges:.top)
+                .shadow(radius: shadow)
         )
-
     }
 }
 
