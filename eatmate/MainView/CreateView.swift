@@ -9,6 +9,10 @@ import SwiftUI
 
 struct CreateView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        FullScreenView{
+            NavbarView(  destination: AnyView(HomeView()), title: "Create",showBackButton: false,showMoreButton: false,shadow: 2)
+            
+           
+        }
     }
 }

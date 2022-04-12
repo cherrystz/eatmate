@@ -9,6 +9,16 @@ import SwiftUI
 
 struct ChatView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        FullScreenView{
+            NavbarView(  destination: AnyView(HomeView()), title: "Messages",showBackButton: false,showMoreButton: false,shadow: 2)
+            
+           
+        }
+    }
+    }
+
+struct ChatView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChatView()
     }
 }
