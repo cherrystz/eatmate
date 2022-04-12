@@ -55,8 +55,7 @@ struct NavbarView : View {
                 
         }
       
-        .padding(.leading, 26)
-        .padding(.trailing,26)
+        .padding(.horizontal,26)
         .padding(.bottom,20)
         .accentColor(.gray)
         .background(

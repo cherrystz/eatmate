@@ -6,13 +6,25 @@
 //
 
 import SwiftUI
+import grpc
+struct NotificationItem: Identifiable,Hashable {
+    let id = UUID()
+    let header : String
+    let description : String
+    let time : String
+}
 
 struct NotificationView: View {
     
     var notiImage : String = "Image"
-    @State var notiHeader = ["Header1","Header2","Header3"]
-    var notiDescription = ["Description1","Description2","Description3"]
-    var notiTime = ["Time1","Time2","Time3"]
+ 
+    @State private var notificationList: [NotificationItem] = [
+        NotificationItem(header: "Header", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo sapien quis cursus. ", time: "7 March 10.02 PM"),
+        NotificationItem(header: "Header", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo sapien quis cursus. ", time: "7 March 10.02 PM"),
+        NotificationItem(header: "Header", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo sapien quis cursus. ", time: "7 March 10.02 PM"),
+        NotificationItem(header: "Header", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo sapien quis cursus. ", time: "7 March 10.02 PM")
+        
+    ]
     
     var body: some View {
         FullScreenView{
@@ -21,14 +33,16 @@ struct NotificationView: View {
             )
             
             List {
-                
-                ForEach (notiHeader, id: \.self) {
-                    header in CustomRowView(header: header)
-                }
+               ForEach (notificationList,id: \.self) { NotificationItem in
+                   CustomRowView(header: NotificationItem.header, description: NotificationItem.description, time:NotificationItem.time)
+                   
+                      
+               }
                 .onDelete(perform: { indexSet in
                     deleteAction(indexSet)
                 })
-            }.listStyle(PlainListStyle())
+            }.listStyle(.plain)
+                .padding(EdgeInsets(top: 0, leading: -20, bottom: 0, trailing: 0))
    
     
 
@@ -41,7 +55,7 @@ struct NotificationView: View {
         }
         }
     func deleteAction(_ index: IndexSet) {
-        notiHeader.remove(atOffsets: index)
+        notificationList.remove(atOffsets: index)
     }
    
 }
