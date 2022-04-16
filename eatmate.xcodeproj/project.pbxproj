@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2E68175D280B30AB00849174 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68175C280B30AA00849174 /* MessageRowView.swift */; };
+		2E68175F280B500F00849174 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68175E280B500F00849174 /* ChatView.swift */; };
+		2E681761280B524E00849174 /* MemberChatBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E681760280B524E00849174 /* MemberChatBarView.swift */; };
+		2E681765280B57C700849174 /* ChatInputTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E681764280B57C700849174 /* ChatInputTabView.swift */; };
 		2EBAC20927EBB20700076492 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20827EBB20700076492 /* GroupView.swift */; };
 		2EBAC20D27EBB59F00076492 /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20C27EBB59F00076492 /* NavbarView.swift */; };
 		2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */; };
@@ -53,6 +56,9 @@
 
 /* Begin PBXFileReference section */
 		2E68175C280B30AA00849174 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
+		2E68175E280B500F00849174 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		2E681760280B524E00849174 /* MemberChatBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberChatBarView.swift; sourceTree = "<group>"; };
+		2E681764280B57C700849174 /* ChatInputTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputTabView.swift; sourceTree = "<group>"; };
 		2EBAC20827EBB20700076492 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		2EBAC20C27EBB59F00076492 /* NavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarView.swift; sourceTree = "<group>"; };
 		2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderModule.swift; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 				2EBAC20827EBB20700076492 /* GroupView.swift */,
 				472920AE27E3B39D00C62E86 /* MessageView.swift */,
 				472920B027E3B3AF00C62E86 /* NotificationView.swift */,
+				2E68175E280B500F00849174 /* ChatView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -190,7 +197,9 @@
 				47F3FD4327E4FA19005DC7C2 /* FullScreenView.swift */,
 				2EBAC20C27EBB59F00076492 /* NavbarView.swift */,
 				2E68175C280B30AA00849174 /* MessageRowView.swift */,
+				2E681760280B524E00849174 /* MemberChatBarView.swift */,
 				2EE38D2C2805DFA6000668BD /* CustomRowView.swift */,
+				2E681764280B57C700849174 /* ChatInputTabView.swift */,
 				2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */,
 				2EBAC21027EE497A00076492 /* GroupContentModule.swift */,
 				47F3FD5927E529CE005DC7C2 /* CategoriesModule.swift */,
@@ -405,9 +414,12 @@
 				47F3FD4227E4F072005DC7C2 /* TabViewModule.swift in Sources */,
 				472920AF27E3B39D00C62E86 /* MessageView.swift in Sources */,
 				47F3FD3D27E46FF3005DC7C2 /* LoginView.swift in Sources */,
+				2E681765280B57C700849174 /* ChatInputTabView.swift in Sources */,
 				47F3FD5827E52436005DC7C2 /* TextFieldStyle.swift in Sources */,
 				47F3FD5A27E529CE005DC7C2 /* CategoriesModule.swift in Sources */,
 				47F3FD6827E55613005DC7C2 /* LabelledDivider.swift in Sources */,
+				2E68175F280B500F00849174 /* ChatView.swift in Sources */,
+				2E681761280B524E00849174 /* MemberChatBarView.swift in Sources */,
 				47F3FD7627E6679D005DC7C2 /* StringProtocol.swift in Sources */,
 				47F3FD5E27E53296005DC7C2 /* RoundedCorner.swift in Sources */,
 				47F3FD7127E65F51005DC7C2 /* AuthManager.swift in Sources */,

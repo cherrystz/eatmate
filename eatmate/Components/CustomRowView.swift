@@ -12,29 +12,33 @@ struct CustomRowView: View {
     var description: String
     var time: String
     var body: some View {
-        HStack {
-            Circle()
-                .frame(width: 40, height: 40)
-                .foregroundColor(.green)
-            VStack(alignment: .leading){
-                HStack{
-                    Text(header)
-                        .font(.kanit(size: 14, weight: .bold))
-                    Spacer()
-                    Text(time)
-                        .font(.kanit(size: 10, weight: .regular))
-                       
+        Button(action: {}, label: {
+            HStack {
+                Circle()
+                    .frame(width: 40, height: 40)
+                    .foregroundColor(.green)
+                VStack(alignment: .leading){
+                    HStack{
+                        Text(header)
+                            .font(.kanit(size: 14, weight: .bold))
+                        Spacer()
+                        Text(time)
+                            .font(.kanit(size: 10, weight: .regular))
+                           
+                    }
+                    
+                    Text(description)
+                        .font(.kanit(size: 12, weight: .regular))
+                        .foregroundColor(.gray)
                 }
-                
-                Text(description)
-                    .font(.kanit(size: 12, weight: .regular))
-                    .foregroundColor(.gray)
+              
             }
-          
-        }
-        .padding(.leading, 20)
-        .padding(.trailing,10)
-        .padding(.vertical,5)
+            .padding(.leading, 20)
+            .padding(.trailing,10)
+            .padding(.vertical,5)
+            
+        })
+       
        
     }
     

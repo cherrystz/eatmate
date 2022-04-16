@@ -38,6 +38,8 @@ struct NavbarView : View {
             VStack() {
                 Text(title)
                     .font(.nunito(size: 24, weight: .bold))
+                    .lineLimit(1)
+                    .padding(.horizontal, 50)
       
             }
             Spacer()
