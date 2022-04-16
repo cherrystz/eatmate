@@ -12,7 +12,8 @@ struct ChatView: View {
         FullScreenView{
             NavbarView(  destination: AnyView(HomeView()), title: "หิว อยากกินMomo paradise มากๆ เลยย",showBackButton: true,showMoreButton: false,shadow: 2)
             MemberChatBarView()
-          
+           
+          ChatInputTabView()
           
                 
         }
