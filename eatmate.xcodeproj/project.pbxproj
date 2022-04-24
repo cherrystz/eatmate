@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3A1222281587730094D1E4 /* InterestSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A1221281587730094D1E4 /* InterestSelectView.swift */; };
+		2E3A122528158AD70094D1E4 /* InterestButtonModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A122428158AD70094D1E4 /* InterestButtonModule.swift */; };
+		2E3A122828158FD70094D1E4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A122728158FD70094D1E4 /* Colors.swift */; };
+		2E3A122B281592720094D1E4 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 2E3A122A281592720094D1E4 /* WrappingHStack */; };
 		2E68175D280B30AB00849174 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68175C280B30AA00849174 /* MessageRowView.swift */; };
 		2E68175F280B500F00849174 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68175E280B500F00849174 /* ChatView.swift */; };
 		2E681761280B524E00849174 /* MemberChatBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E681760280B524E00849174 /* MemberChatBarView.swift */; };
@@ -55,6 +59,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E3A1221281587730094D1E4 /* InterestSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestSelectView.swift; sourceTree = "<group>"; };
+		2E3A122428158AD70094D1E4 /* InterestButtonModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestButtonModule.swift; sourceTree = "<group>"; };
+		2E3A122728158FD70094D1E4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2E68175C280B30AA00849174 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
 		2E68175E280B500F00849174 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		2E681760280B524E00849174 /* MemberChatBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberChatBarView.swift; sourceTree = "<group>"; };
@@ -112,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3A122B281592720094D1E4 /* WrappingHStack in Frameworks */,
 				3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +179,7 @@
 			children = (
 				47E0DE7A27D8A6D2004352EC /* HomeView.swift */,
 				472920AC27E3B37900C62E86 /* CreateView.swift */,
+				2E3A1221281587730094D1E4 /* InterestSelectView.swift */,
 				2EBAC20827EBB20700076492 /* GroupView.swift */,
 				472920AE27E3B39D00C62E86 /* MessageView.swift */,
 				472920B027E3B3AF00C62E86 /* NotificationView.swift */,
@@ -199,6 +208,7 @@
 				2E68175C280B30AA00849174 /* MessageRowView.swift */,
 				2E681760280B524E00849174 /* MemberChatBarView.swift */,
 				2EE38D2C2805DFA6000668BD /* CustomRowView.swift */,
+				2E3A122428158AD70094D1E4 /* InterestButtonModule.swift */,
 				2E681764280B57C700849174 /* ChatInputTabView.swift */,
 				2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */,
 				2EBAC21027EE497A00076492 /* GroupContentModule.swift */,
@@ -228,6 +238,7 @@
 				47F3FD5227E518C0005DC7C2 /* Fonts.swift */,
 				47F3FD7D27E68241005DC7C2 /* AnyTransition.swift */,
 				47F3FD7527E6679D005DC7C2 /* StringProtocol.swift */,
+				2E3A122728158FD70094D1E4 /* Colors.swift */,
 				47F3FD7727E66D20005DC7C2 /* TextLimiter.swift */,
 				47F3FD5727E52436005DC7C2 /* TextFieldStyle.swift */,
 				47F3FD5D27E53296005DC7C2 /* RoundedCorner.swift */,
@@ -289,6 +300,9 @@
 			dependencies = (
 			);
 			name = eatmate;
+			packageProductDependencies = (
+				2E3A122A281592720094D1E4 /* WrappingHStack */,
+			);
 			productName = eatmate;
 			productReference = 47E0DE6827D8A176004352EC /* eatmate.app */;
 			productType = "com.apple.product-type.application";
@@ -317,6 +331,9 @@
 				Base,
 			);
 			mainGroup = 47E0DE5F27D8A176004352EC;
+			packageReferences = (
+				2E3A1229281592720094D1E4 /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+			);
 			productRefGroup = 47E0DE6927D8A176004352EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,10 +429,12 @@
 				47F3FD6D27E55B5C005DC7C2 /* RegisterConfirmView.swift in Sources */,
 				2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */,
 				47F3FD4227E4F072005DC7C2 /* TabViewModule.swift in Sources */,
+				2E3A122528158AD70094D1E4 /* InterestButtonModule.swift in Sources */,
 				472920AF27E3B39D00C62E86 /* MessageView.swift in Sources */,
 				47F3FD3D27E46FF3005DC7C2 /* LoginView.swift in Sources */,
 				2E681765280B57C700849174 /* ChatInputTabView.swift in Sources */,
 				47F3FD5827E52436005DC7C2 /* TextFieldStyle.swift in Sources */,
+				2E3A1222281587730094D1E4 /* InterestSelectView.swift in Sources */,
 				47F3FD5A27E529CE005DC7C2 /* CategoriesModule.swift in Sources */,
 				47F3FD6827E55613005DC7C2 /* LabelledDivider.swift in Sources */,
 				2E68175F280B500F00849174 /* ChatView.swift in Sources */,
@@ -424,6 +443,7 @@
 				47F3FD5E27E53296005DC7C2 /* RoundedCorner.swift in Sources */,
 				47F3FD7127E65F51005DC7C2 /* AuthManager.swift in Sources */,
 				47F3FD6B27E55B25005DC7C2 /* RegisterView.swift in Sources */,
+				2E3A122828158FD70094D1E4 /* Colors.swift in Sources */,
 				47F3FD6F27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift in Sources */,
 				47F3FD5C27E52EF0005DC7C2 /* GroupDisplayModule.swift in Sources */,
 				472920AD27E3B37900C62E86 /* CreateView.swift in Sources */,
@@ -639,6 +659,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E3A1229281592720094D1E4 /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dkk/WrappingHStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E3A122A281592720094D1E4 /* WrappingHStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E3A1229281592720094D1E4 /* XCRemoteSwiftPackageReference "WrappingHStack" */;
+			productName = WrappingHStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 47E0DE6027D8A176004352EC /* Project object */;
 }
