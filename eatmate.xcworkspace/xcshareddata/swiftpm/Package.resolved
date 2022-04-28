@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "NavigationStack",
+        "repositoryURL": "https://github.com/indieSoftware/NavigationStack.git",
+        "state": {
+          "branch": null,
+          "revision": "900b75924f218a68c2487ab8a9c3fc7c42130705",
+          "version": "1.1.1"
+        }
+      },
+      {
         "package": "WrappingHStack",
         "repositoryURL": "https://github.com/dkk/WrappingHStack",
         "state": {

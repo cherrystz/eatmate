@@ -29,7 +29,7 @@ struct ChatInputTabView: View {
                         .padding(.horizontal,10)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     Button(action: {}, label: {
-                        Text("Send")
+                        Image(systemName: "paperplane")
                     })
                 }
                 

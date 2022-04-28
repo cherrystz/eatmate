@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct SettingView: View {
     
     var username : String = "Phumipat Apivansri"
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+        @State var isShowingMailView = false
     
     var body: some View {
         FullScreenView{
@@ -55,20 +58,25 @@ struct SettingView: View {
                         }
                         
                     })
-                    Button(action: {}, label: {
+                    NavigationLink(destination: AboutUsView(), label: {
                         HStack{
                             Image(systemName: "info.circle")
                             Text("About Eatmate")
                         }
-                    })
-                    Button(action: {}, label: {
+                    }) .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                   
+                    Button(action: {
+                        self.isShowingMailView.toggle()
+                    }, label: {
                         HStack{
                             Image(systemName: "message.circle")
                             Text("Contact us")
+                        }.sheet(isPresented: $isShowingMailView) {
+                            MailView(isShowing: self.$isShowingMailView, result: self.$result)
                         }
                         
                     })
-                   
+
                 }
                 Section(header: Text("")) {
                     Button(action: {}, label: {

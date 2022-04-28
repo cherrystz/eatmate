@@ -34,10 +34,13 @@ struct HomeView: View {
                                     .font(.nunito(size: 24))
                             }
                             Spacer()
-                            Image("ProfileImageDefault")
-                                .resizable()
-                                .frame(width: 48, height: 48)
-                                .cornerRadius(15)
+                            NavigationLink(destination: SettingView(), label: {
+                                Image("ProfileImageDefault")
+                                    .resizable()
+                                    .frame(width: 48, height: 48)
+                                    .cornerRadius(15)
+                            })
+                            
                         }
                         
                         TextField("What do you want to eat ?", text: $textFieldSearch)

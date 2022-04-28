@@ -14,6 +14,7 @@ struct InterestButtonModule: View {
     @State var interestSelected : Bool = false
     
     var body: some View {
+        
         Button(action: {
             if (interestSelected) {
                 interestSelected = false
@@ -31,7 +32,7 @@ struct InterestButtonModule: View {
                                .stroke(interestSelected ? Color(hex: 0xEFAE8A): .gray, lineWidth: 1)
                        )
                 
-        })
+        }).padding(.bottom,10)
     }
 }
 

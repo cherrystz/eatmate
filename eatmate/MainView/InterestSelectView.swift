@@ -10,7 +10,7 @@ import WrappingHStack
 
 struct InterestSelectView: View {
     
-    var interestNumber : Int = 0
+    @State var interestNumber : Int = 0
     var interest : [String] = ["Bakery","Breakfast","Seafood","Hamburger","BBQ"]
     
     
@@ -28,9 +28,11 @@ struct InterestSelectView: View {
                     .font(.kanit(size: 18, weight: .regular))
             }
             
-           WrappingHStack(interest, id: \.self) { interest in
+           WrappingHStack(interest, id: \.self) { (interest) in
+               
                InterestButtonModule(interest:interest)
-                   .padding(.bottom,10)
+                  
+               
             }
             }
                 .padding(.leading, 20)
