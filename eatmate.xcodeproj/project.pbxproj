@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1B1B0D281F401100F4E2AE /* OmiseSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */; };
+		2E1B1B0E281F401100F4E2AE /* OmiseSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2E1B1B11281F41E800F4E2AE /* 8812-eatsready-home-header.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */; };
+		2E1B1B13281F49A900F4E2AE /* PrivilegeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */; };
+		2E1B1B15281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2E1B1B14281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf */; };
+		2E1B1B18281F55AB00F4E2AE /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */; };
 		2E21D8E9281F116F000DFE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E21D8E8281F116F000DFE7B /* Assets.xcassets */; };
 		2E21D8EB281F1330000DFE7B /* 96916-searching.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E21D8EA281F1330000DFE7B /* 96916-searching.json */; };
 		2E3A1222281587730094D1E4 /* InterestSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A1221281587730094D1E4 /* InterestSelectView.swift */; };
@@ -70,7 +76,27 @@
 		47F3FD7E27E68241005DC7C2 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD7D27E68241005DC7C2 /* AnyTransition.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2E1B1B0F281F401100F4E2AE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2E1B1B0E281F401100F4E2AE /* OmiseSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OmiseSDK.xcframework; path = Carthage/Build/OmiseSDK.xcframework; sourceTree = "<group>"; };
+		2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "8812-eatsready-home-header.json"; path = "../../../../../Downloads/8812-eatsready-home-header.json"; sourceTree = "<group>"; };
+		2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegeView.swift; sourceTree = "<group>"; };
+		2E1B1B14281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "privacy_policy_20220502-1_th.pdf"; path = "../../../../Downloads/privacy_policy_20220502-1_th.pdf"; sourceTree = "<group>"; };
+		2E1B1B16281F4BAF00F4E2AE /* privacy_policy_20220502-1_th.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "privacy_policy_20220502-1_th.pdf"; sourceTree = "<group>"; };
+		2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		2E21D8E8281F116F000DFE7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E21D8EA281F1330000DFE7B /* 96916-searching.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "96916-searching.json"; sourceTree = "<group>"; };
 		2E3A1221281587730094D1E4 /* InterestSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestSelectView.swift; sourceTree = "<group>"; };
@@ -144,6 +170,7 @@
 			files = (
 				2E3A122B281592720094D1E4 /* WrappingHStack in Frameworks */,
 				2E86454C281A4740007634F4 /* NavigationStack in Frameworks */,
+				2E1B1B0D281F401100F4E2AE /* OmiseSDK.xcframework in Frameworks */,
 				3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +181,7 @@
 		2E3CEDC5281F0D8A006A3899 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */,
 				2E21D8EA281F1330000DFE7B /* 96916-searching.json */,
 			);
 			path = Lottie;
@@ -202,6 +230,7 @@
 		47E0DE7127D8A178004352EC /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				2E1B1B16281F4BAF00F4E2AE /* privacy_policy_20220502-1_th.pdf */,
 				47E0DE7227D8A178004352EC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -217,6 +246,8 @@
 				2E3CEDC3281F0807006A3899 /* SearchView.swift */,
 				2E86454D281A562D007634F4 /* ProfileView.swift */,
 				2EBAC20827EBB20700076492 /* GroupView.swift */,
+				2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */,
+				2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */,
 				2E3CEDC1281F0392006A3899 /* PolicyView.swift */,
 				2E864545281A3E6C007634F4 /* AboutUsView.swift */,
 				472920AE27E3B39D00C62E86 /* MessageView.swift */,
@@ -311,6 +342,7 @@
 		AC57D528BC5F8998B6DD138B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				2E1B1B14281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf */,
 				97A5247DC2F37DA84CCEEF83 /* Pods-eatmate.debug.xcconfig */,
 				2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */,
 			);
@@ -320,6 +352,7 @@
 		E803F5FE8779AEBE2C95A4A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */,
 				71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */,
 			);
 			name = Frameworks;
@@ -337,6 +370,7 @@
 				47E0DE6527D8A176004352EC /* Frameworks */,
 				47E0DE6627D8A176004352EC /* Resources */,
 				370CBC50B993EB5B88590C9D /* [CP] Embed Pods Frameworks */,
+				2E1B1B0F281F401100F4E2AE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -394,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47F3FD6527E550EF005DC7C2 /* Nunito-Regular.ttf in Resources */,
+				2E1B1B11281F41E800F4E2AE /* 8812-eatsready-home-header.json in Resources */,
 				47E0DE7327D8A178004352EC /* Preview Assets.xcassets in Resources */,
 				2E21D8EB281F1330000DFE7B /* 96916-searching.json in Resources */,
 				47F3FD4F27E51876005DC7C2 /* Kanit-Bold.ttf in Resources */,
@@ -406,6 +441,7 @@
 				4774197927E38A0100EF44C1 /* Podfile in Resources */,
 				47F3FD7A27E674F9005DC7C2 /* LaunchScreen.storyboard in Resources */,
 				47F3FD4C27E51829005DC7C2 /* Nunito-Bold.ttf in Resources */,
+				2E1B1B15281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,12 +530,14 @@
 				2E3CEDC4281F0807006A3899 /* SearchView.swift in Sources */,
 				47F3FD7627E6679D005DC7C2 /* StringProtocol.swift in Sources */,
 				47F3FD5E27E53296005DC7C2 /* RoundedCorner.swift in Sources */,
+				2E1B1B13281F49A900F4E2AE /* PrivilegeView.swift in Sources */,
 				2E86454E281A562E007634F4 /* ProfileView.swift in Sources */,
 				47F3FD7127E65F51005DC7C2 /* AuthManager.swift in Sources */,
 				47F3FD6B27E55B25005DC7C2 /* RegisterView.swift in Sources */,
 				2E3A122828158FD70094D1E4 /* Colors.swift in Sources */,
 				47F3FD6F27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift in Sources */,
 				2E3CEDC2281F0392006A3899 /* PolicyView.swift in Sources */,
+				2E1B1B18281F55AB00F4E2AE /* PaymentView.swift in Sources */,
 				47F3FD5C27E52EF0005DC7C2 /* GroupDisplayModule.swift in Sources */,
 				2E864546281A3E6D007634F4 /* AboutUsView.swift in Sources */,
 				472920AD27E3B37900C62E86 /* CreateView.swift in Sources */,

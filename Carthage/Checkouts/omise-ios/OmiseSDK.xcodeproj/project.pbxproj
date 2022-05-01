@@ -1,0 +1,1479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14ACEF831D02D641001C5319 /* CardExpiryDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ACEF821D02D641001C5319 /* CardExpiryDatePicker.swift */; };
+		2220F1A91D0FEE85008CD89F /* OmiseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220F1A31D0FEE85008CD89F /* OmiseCard.swift */; };
+		2220F1AA1D0FEE85008CD89F /* OmiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220F1A41D0FEE85008CD89F /* OmiseError.swift */; };
+		2220F1AC1D0FEE85008CD89F /* OmiseSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220F1A61D0FEE85008CD89F /* OmiseSDKClient.swift */; };
+		2220F1AD1D0FEE85008CD89F /* OmiseToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220F1A71D0FEE85008CD89F /* OmiseToken.swift */; };
+		2225B3541D0FDD63003EB396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2225B3531D0FDD63003EB396 /* Assets.xcassets */; };
+		22445FFC1CF41DD300801D0F /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22445FFB1CF41DD300801D0F /* Globals.swift */; };
+		224460041CF43A1200801D0F /* SDKTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225931561CE4745200841B86 /* SDKTestCase.swift */; settings = {COMPILER_FLAGS = "-Wnodeprecated-declarations"; }; };
+		224460051CF43A1500801D0F /* CardNumberTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225931541CE4743A00841B86 /* CardNumberTest.swift */; settings = {COMPILER_FLAGS = "-Wnodeprecated-declarations"; }; };
+		2244600A1CF441DC00801D0F /* TokenRequestDelegateDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224460091CF441DC00801D0F /* TokenRequestDelegateDummy.swift */; settings = {COMPILER_FLAGS = "-Wnodeprecated-declarations"; }; };
+		2259311C1CE3210700841B86 /* OmiseSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 2259311B1CE3210700841B86 /* OmiseSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2259314E1CE46E5700841B86 /* CardBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259314D1CE46E5700841B86 /* CardBrand.swift */; };
+		225931501CE46F7F00841B86 /* CardNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259314F1CE46F7F00841B86 /* CardNumber.swift */; };
+		229E14581D0EBAB5000511DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E14541D0EBAB5000511DE /* AppDelegate.swift */; };
+		229E145A1D0EBAB5000511DE /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E14561D0EBAB5000511DE /* ProductDetailViewController.swift */; };
+		22E0DBD71D0EBE2E00472C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E0DBD61D0EBE2E00472C74 /* Assets.xcassets */; };
+		731A75D325E3604A002353C0 /* FPXBankChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731A75D225E3604A002353C0 /* FPXBankChooserViewController.swift */; };
+		73F9BA4725E50F4700F55CA8 /* AdaptableDynamicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F9BA4625E50F4700F55CA8 /* AdaptableDynamicTableViewController.swift */; };
+		73F9BA4B25E6053700F55CA8 /* FPXFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F9BA4A25E6053700F55CA8 /* FPXFormViewController.swift */; };
+		8A01E48D21059EFF00D73FE6 /* SourcePaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A01E48C21059EFF00D73FE6 /* SourcePaymentMethod.swift */; };
+		8A01F78120D8DB7C003FC11E /* OMSOmiseClientTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A01F78020D8DB7C003FC11E /* OMSOmiseClientTestCase.m */; };
+		8A01F78920D8E101003FC11E /* OMSRequestDelegateDummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A01F78820D8E101003FC11E /* OMSRequestDelegateDummy.m */; };
+		8A01F78B20D90EC5003FC11E /* Client+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A01F78A20D90EC5003FC11E /* Client+ObjC.swift */; };
+		8A01F78E20D91091003FC11E /* OMSTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A01F78D20D91091003FC11E /* OMSTokenRequest.swift */; };
+		8A01F79120D91356003FC11E /* OMSSourceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A01F79020D91356003FC11E /* OMSSourceRequest.swift */; };
+		8A01F79420D914A4003FC11E /* OmiseSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A01F79320D914A4003FC11E /* OmiseSource.swift */; };
+		8A0A67E72137EE49006356B7 /* AdaptableStaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A67E62137EE49006356B7 /* AdaptableStaticTableViewController.swift */; };
+		8A0A67E821383614006356B7 /* PaymentChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23AAD20F8CA8800BC9D8F /* PaymentChooserViewController.swift */; };
+		8A14C209220ACB2B003F5B20 /* Capability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14C208220ACB2B003F5B20 /* Capability.swift */; };
+		8A14C20B220AE241003F5B20 /* CapabilityOperationFixtureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14C20A220AE241003F5B20 /* CapabilityOperationFixtureTests.swift */; };
+		8A188BB01D951E3C00FFF467 /* AuthorizingPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A188BAF1D951E3C00FFF467 /* AuthorizingPaymentViewController.swift */; };
+		8A275CBC21241E4500C5716F /* MainActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A275CBB21241E4500C5716F /* MainActionButton.swift */; };
+		8A2BE95520A9A39E000CEB60 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2BE95420A9A39E000CEB60 /* Request.swift */; };
+		8A2C451920ECC7A60033E2EB /* OmiseSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 225931181CE3210700841B86 /* OmiseSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A30FB7D214929C900DC09DC /* PaymentCreatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A30FB7C214929C900DC09DC /* PaymentCreatorController.swift */; };
+		8A37E43620B584D300E2DA18 /* ModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A37E43520B584D300E2DA18 /* ModelTestCase.swift */; };
+		8A3C10562159F7FC00BEFD8A /* InvalidCardAPIErrorParsingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C10552159F7FC00BEFD8A /* InvalidCardAPIErrorParsingTestCase.swift */; };
+		8A3C10582159FCE900BEFD8A /* BadRequestAPIErrorParsingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C10572159FCE900BEFD8A /* BadRequestAPIErrorParsingTestCase.swift */; };
+		8A40DA29216B441E00749F45 /* PaymentSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A9EBC2166160300F12D86 /* PaymentSettingTableViewController.swift */; };
+		8A40DA2B216B53E900749F45 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40DA2A216B53E900749F45 /* Tools.swift */; };
+		8A40DA2C216B53E900749F45 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40DA2A216B53E900749F45 /* Tools.swift */; };
+		8A429E7B2109A3AE007C230F /* PaymentInformationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A429E7A2109A3AE007C230F /* PaymentInformationTestCase.swift */; };
+		8A43454720DBAE76005C5C94 /* PANModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A43454620DBAE76005C5C94 /* PANModelTestCase.swift */; };
+		8A43FEAA2269BD8A002E89EC /* CustomCreditCardFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A43FEA92269BD8A002E89EC /* CustomCreditCardFormViewController.m */; };
+		8A47173A20AAB0F40022733A /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47173920AAB0F40022733A /* Token.swift */; };
+		8A47173D20AAB11B0022733A /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47173C20AAB11B0022733A /* Source.swift */; };
+		8A4F7CB920A9C0FD001C441A /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4F7CB820A9C0FD001C441A /* Object.swift */; };
+		8A5D59811D5317DD005D3346 /* OmiseSDK.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D59831D5317DD005D3346 /* OmiseSDK.storyboard */; };
+		8A60619A20B2A8D400CF90D5 /* PAN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60619920B2A8D400CF90D5 /* PAN.swift */; };
+		8A6AA06D216B958100E49E5E /* OMSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA06B216B957D00E49E5E /* OMSBaseViewController.m */; };
+		8A6AA06E216B9DAE00E49E5E /* OMSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA06B216B957D00E49E5E /* OMSBaseViewController.m */; };
+		8A723A562164D7B100D902F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E14541D0EBAB5000511DE /* AppDelegate.swift */; };
+		8A723A5C2164D7B100D902F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E0DBD61D0EBE2E00472C74 /* Assets.xcassets */; };
+		8A723A5F2164D7B100D902F5 /* OmiseSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 225931181CE3210700841B86 /* OmiseSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A723A692164D87B00D902F5 /* OMSExampleProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF6A1D920E4FEBE00AC5625 /* OMSExampleProductDetailViewController.m */; };
+		8A72CD5E2162358400F14F76 /* PaymentOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A72CD5D2162358400F14F76 /* PaymentOptionTableViewCell.swift */; };
+		8A7567652178956800C684C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7567642178956800C684C9 /* Main.storyboard */; };
+		8A7567662178956800C684C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7567642178956800C684C9 /* Main.storyboard */; };
+		8A7567682178959400C684C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7567672178959400C684C9 /* LaunchScreen.storyboard */; };
+		8A7567692178959400C684C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7567672178959400C684C9 /* LaunchScreen.storyboard */; };
+		8A75676D2178963B00C684C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A75676B2178963B00C684C9 /* Localizable.strings */; };
+		8A76791F214663560085DE3C /* PaymentUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76791E214663560085DE3C /* PaymentUI.swift */; };
+		8A776647214A5FC60029D166 /* NoticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A776646214A5FC60029D166 /* NoticeView.xib */; };
+		8A7A9EBE2166160300F12D86 /* PaymentSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A9EBC2166160300F12D86 /* PaymentSettingTableViewController.swift */; };
+		8A7A9EC0216642D100F12D86 /* Swift Version Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A9EBF216642D100F12D86 /* Swift Version Compatibility.swift */; };
+		8A7A9EC12166578700F12D86 /* Swift Version Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A9EBF216642D100F12D86 /* Swift Version Compatibility.swift */; };
+		8A7A9EC22166578800F12D86 /* Swift Version Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A9EBF216642D100F12D86 /* Swift Version Compatibility.swift */; };
+		8A87DBCB226DA404001596F1 /* OmiseCapability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A87DBCA226DA404001596F1 /* OmiseCapability.swift */; };
+		8AC1D3A32139224D0051F966 /* InternetBankingSourceChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1D3A22139224D0051F966 /* InternetBankingSourceChooserViewController.swift */; };
+		8AC1D3A5213922570051F966 /* InstallmentBankingSourceChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1D3A4213922570051F966 /* InstallmentBankingSourceChooserViewController.swift */; };
+		8AC1D3A7213941C80051F966 /* InstallmentsNumberOfTermsChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1D3A6213941C80051F966 /* InstallmentsNumberOfTermsChooserViewController.swift */; };
+		8AD0609320B55B3A0074894E /* RequestTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD0609220B55B3A0074894E /* RequestTask.swift */; };
+		8AD0609620B55E610074894E /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD0609520B55E610074894E /* Client.swift */; };
+		8AD391B1230C05BC00383286 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD391B0230C05BC00383286 /* Colors.swift */; };
+		8ADAA9A520B6C0AF00DD7CCF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADAA9A420B6C0AF00DD7CCF /* Currency.swift */; };
+		8AEF7804224CABF800787470 /* EContextInformationInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25E929213CF6F300D48252 /* EContextInformationInputViewController.swift */; };
+		8AF5517A213D4C0100D61C98 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5517C213D4C0100D61C98 /* Localizable.stringsdict */; };
+		8AF56E602268650D0097CFEE /* OmiseTextFieldCompatability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF56E5F2268650D0097CFEE /* OmiseTextFieldCompatability.swift */; };
+		8AF56E62226878070097CFEE /* CustomCreditCardFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF56E61226878070097CFEE /* CustomCreditCardFormViewController.swift */; };
+		8AF9857121479F38007E18ED /* MoreInformationOnCVVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3150AD2146B6C300A4F429 /* MoreInformationOnCVVViewController.swift */; };
+		8AF9857221479F72007E18ED /* CreditCardFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1D4C651D51B72200C7837C /* CreditCardFormViewController.swift */; };
+		8AF985732147CC3D007E18ED /* Error.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AF985752147CC3D007E18ED /* Error.strings */; };
+		8AFB920F20D39BE50072B185 /* OmiseTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220F1A81D0FEE85008CD89F /* OmiseTokenRequest.swift */; };
+		8AFE10BB20B69B39008E741D /* ClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFE10BA20B69B39008E741D /* ClientTestCase.swift */; };
+		986406301CFEA7E4004BCF51 /* CardCVVTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864062A1CFEA7E4004BCF51 /* CardCVVTextField.swift */; };
+		986406311CFEA7E4004BCF51 /* CardExpiryDateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864062B1CFEA7E4004BCF51 /* CardExpiryDateTextField.swift */; };
+		986406321CFEA7E4004BCF51 /* CardNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864062C1CFEA7E4004BCF51 /* CardNumberTextField.swift */; };
+		986406341CFEA7E4004BCF51 /* CardNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864062E1CFEA7E4004BCF51 /* CardNameTextField.swift */; };
+		986406351CFEA7E4004BCF51 /* OmiseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864062F1CFEA7E4004BCF51 /* OmiseTextField.swift */; };
+		987A02CE1CE35D5E0035417A /* OmiseSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225931181CE3210700841B86 /* OmiseSDK.framework */; };
+		987A03211CE5B7D70035417A /* OmiseTokenRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987A03201CE5B7D70035417A /* OmiseTokenRequestTest.swift */; };
+		987A03AD1CE5CD450035417A /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = 987A03AC1CE5CD450035417A /* Fixtures */; };
+		98FF99BB2577789800476487 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FF99BA2577789800476487 /* Configuration.swift */; };
+		98FF99BE25777E1B00476487 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FF99BA2577789800476487 /* Configuration.swift */; };
+		F3497368254C067000D05C7B /* MobileBankingSourceChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3497367254C066F00D05C7B /* MobileBankingSourceChooserViewController.swift */; };
+		F615CBF8261565D600E1A2D9 /* CardExpiryDatePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615CBF7261565D600E1A2D9 /* CardExpiryDatePickerTests.swift */; };
+		F6614CD6243DB8E7005B656E /* TrueMoneyFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6614CD5243DB8E7005B656E /* TrueMoneyFormViewController.swift */; };
+		F6FE862C25E3B02300C7A4DE /* OMSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FE862A25E3B02300C7A4DE /* OMSConstants.m */; };
+		F6FE862D25E3B02300C7A4DE /* OMSConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F6FE862B25E3B02300C7A4DE /* OMSConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A723A522164D7B100D902F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2259310F1CE3210700841B86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 225931171CE3210700841B86;
+			remoteInfo = OmiseSDK;
+		};
+		8A7F8B0A20C55312008F4D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2259310F1CE3210700841B86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 225931171CE3210700841B86;
+			remoteInfo = OmiseSDK;
+		};
+		987A02CF1CE35D5E0035417A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2259310F1CE3210700841B86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 225931171CE3210700841B86;
+			remoteInfo = OmiseSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A0928211D545455008D393F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8A2C451920ECC7A60033E2EB /* OmiseSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A723A5E2164D7B100D902F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8A723A5F2164D7B100D902F5 /* OmiseSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14ACEF821D02D641001C5319 /* CardExpiryDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardExpiryDatePicker.swift; sourceTree = "<group>"; };
+		2220F1A31D0FEE85008CD89F /* OmiseCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseCard.swift; sourceTree = "<group>"; };
+		2220F1A41D0FEE85008CD89F /* OmiseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseError.swift; sourceTree = "<group>"; };
+		2220F1A61D0FEE85008CD89F /* OmiseSDKClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseSDKClient.swift; sourceTree = "<group>"; };
+		2220F1A71D0FEE85008CD89F /* OmiseToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseToken.swift; sourceTree = "<group>"; };
+		2220F1A81D0FEE85008CD89F /* OmiseTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseTokenRequest.swift; sourceTree = "<group>"; };
+		2225B3531D0FDD63003EB396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22445FFB1CF41DD300801D0F /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		224460091CF441DC00801D0F /* TokenRequestDelegateDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenRequestDelegateDummy.swift; sourceTree = "<group>"; };
+		225931181CE3210700841B86 /* OmiseSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OmiseSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2259311B1CE3210700841B86 /* OmiseSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OmiseSDK.h; sourceTree = "<group>"; };
+		2259311D1CE3210700841B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2259314D1CE46E5700841B86 /* CardBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBrand.swift; sourceTree = "<group>"; };
+		2259314F1CE46F7F00841B86 /* CardNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardNumber.swift; sourceTree = "<group>"; };
+		225931541CE4743A00841B86 /* CardNumberTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardNumberTest.swift; sourceTree = "<group>"; };
+		225931561CE4745200841B86 /* SDKTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKTestCase.swift; sourceTree = "<group>"; };
+		226E16101D2268B400219652 /* QuickStart.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = QuickStart.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		229E14541D0EBAB5000511DE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		229E14561D0EBAB5000511DE /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		22D4809D1D0EB29C00544CE1 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D480AB1D0EB29C00544CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22E0DBD61D0EBE2E00472C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		731A75D225E3604A002353C0 /* FPXBankChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPXBankChooserViewController.swift; sourceTree = "<group>"; };
+		73F9BA4625E50F4700F55CA8 /* AdaptableDynamicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptableDynamicTableViewController.swift; sourceTree = "<group>"; };
+		73F9BA4A25E6053700F55CA8 /* FPXFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPXFormViewController.swift; sourceTree = "<group>"; };
+		8A00FEC21F1DE88600246078 /* README.md */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; tabWidth = 2; };
+		8A01E48C21059EFF00D73FE6 /* SourcePaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcePaymentMethod.swift; sourceTree = "<group>"; };
+		8A01F78020D8DB7C003FC11E /* OMSOmiseClientTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMSOmiseClientTestCase.m; sourceTree = "<group>"; };
+		8A01F78720D8E101003FC11E /* OMSRequestDelegateDummy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMSRequestDelegateDummy.h; sourceTree = "<group>"; };
+		8A01F78820D8E101003FC11E /* OMSRequestDelegateDummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMSRequestDelegateDummy.m; sourceTree = "<group>"; };
+		8A01F78A20D90EC5003FC11E /* Client+ObjC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client+ObjC.swift"; sourceTree = "<group>"; };
+		8A01F78D20D91091003FC11E /* OMSTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMSTokenRequest.swift; sourceTree = "<group>"; };
+		8A01F79020D91356003FC11E /* OMSSourceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMSSourceRequest.swift; sourceTree = "<group>"; };
+		8A01F79320D914A4003FC11E /* OmiseSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmiseSource.swift; sourceTree = "<group>"; };
+		8A0A67E62137EE49006356B7 /* AdaptableStaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableStaticTableViewController.swift; sourceTree = "<group>"; };
+		8A14C208220ACB2B003F5B20 /* Capability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capability.swift; sourceTree = "<group>"; };
+		8A14C20A220AE241003F5B20 /* CapabilityOperationFixtureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapabilityOperationFixtureTests.swift; sourceTree = "<group>"; };
+		8A188BAF1D951E3C00FFF467 /* AuthorizingPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizingPaymentViewController.swift; sourceTree = "<group>"; };
+		8A1D4C651D51B72200C7837C /* CreditCardFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CreditCardFormViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
+		8A25E929213CF6F300D48252 /* EContextInformationInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EContextInformationInputViewController.swift; sourceTree = "<group>"; };
+		8A275CBB21241E4500C5716F /* MainActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActionButton.swift; sourceTree = "<group>"; };
+		8A2BE95420A9A39E000CEB60 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		8A30FB7C214929C900DC09DC /* PaymentCreatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCreatorController.swift; sourceTree = "<group>"; };
+		8A3150AD2146B6C300A4F429 /* MoreInformationOnCVVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInformationOnCVVViewController.swift; sourceTree = "<group>"; };
+		8A37E43520B584D300E2DA18 /* ModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTestCase.swift; sourceTree = "<group>"; };
+		8A3C10552159F7FC00BEFD8A /* InvalidCardAPIErrorParsingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidCardAPIErrorParsingTestCase.swift; sourceTree = "<group>"; };
+		8A3C10572159FCE900BEFD8A /* BadRequestAPIErrorParsingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadRequestAPIErrorParsingTestCase.swift; sourceTree = "<group>"; };
+		8A40DA2A216B53E900749F45 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		8A429E7A2109A3AE007C230F /* PaymentInformationTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInformationTestCase.swift; sourceTree = "<group>"; };
+		8A43454620DBAE76005C5C94 /* PANModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PANModelTestCase.swift; sourceTree = "<group>"; };
+		8A43FEA82269BD8A002E89EC /* CustomCreditCardFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCreditCardFormViewController.h; sourceTree = "<group>"; };
+		8A43FEA92269BD8A002E89EC /* CustomCreditCardFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCreditCardFormViewController.m; sourceTree = "<group>"; };
+		8A47173920AAB0F40022733A /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		8A47173C20AAB11B0022733A /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		8A4F7CB820A9C0FD001C441A /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		8A5D59821D5317DD005D3346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OmiseSDK.storyboard; sourceTree = "<group>"; };
+		8A5D59851D5317E0005D3346 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/OmiseSDK.strings; sourceTree = "<group>"; };
+		8A5D59871D5317E1005D3346 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/OmiseSDK.strings; sourceTree = "<group>"; };
+		8A60619920B2A8D400CF90D5 /* PAN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAN.swift; sourceTree = "<group>"; };
+		8A6AA06A216B957D00E49E5E /* OMSBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMSBaseViewController.h; sourceTree = "<group>"; };
+		8A6AA06B216B957D00E49E5E /* OMSBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMSBaseViewController.m; sourceTree = "<group>"; };
+		8A723A632164D7B100D902F5 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A72CD5D2162358400F14F76 /* PaymentOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionTableViewCell.swift; sourceTree = "<group>"; };
+		8A7567642178956800C684C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8A7567672178959400C684C9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A75676C2178963B00C684C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8A75676E2178964000C684C9 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8A75676F2178964700C684C9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8A76791E214663560085DE3C /* PaymentUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentUI.swift; sourceTree = "<group>"; };
+		8A776646214A5FC60029D166 /* NoticeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeView.xib; sourceTree = "<group>"; };
+		8A776657214AA4E70029D166 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ja; path = ja.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		8A776658214AA4F10029D166 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Error.strings; sourceTree = "<group>"; };
+		8A7A9EBC2166160300F12D86 /* PaymentSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSettingTableViewController.swift; sourceTree = "<group>"; };
+		8A7A9EBF216642D100F12D86 /* Swift Version Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift Version Compatibility.swift"; sourceTree = "<group>"; };
+		8A87DBCA226DA404001596F1 /* OmiseCapability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmiseCapability.swift; sourceTree = "<group>"; };
+		8AC1D3A22139224D0051F966 /* InternetBankingSourceChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetBankingSourceChooserViewController.swift; sourceTree = "<group>"; };
+		8AC1D3A4213922570051F966 /* InstallmentBankingSourceChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentBankingSourceChooserViewController.swift; sourceTree = "<group>"; };
+		8AC1D3A6213941C80051F966 /* InstallmentsNumberOfTermsChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsNumberOfTermsChooserViewController.swift; sourceTree = "<group>"; };
+		8AD0609220B55B3A0074894E /* RequestTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTask.swift; sourceTree = "<group>"; };
+		8AD0609520B55E610074894E /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		8AD391B0230C05BC00383286 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8ADAA9A420B6C0AF00DD7CCF /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		8ADAA9AC20B71EDA00DD7CCF /* module.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
+		8AE23AAD20F8CA8800BC9D8F /* PaymentChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentChooserViewController.swift; sourceTree = "<group>"; };
+		8AF5517B213D4C0100D61C98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		8AF56E5F2268650D0097CFEE /* OmiseTextFieldCompatability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmiseTextFieldCompatability.swift; sourceTree = "<group>"; };
+		8AF56E61226878070097CFEE /* CustomCreditCardFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCreditCardFormViewController.swift; sourceTree = "<group>"; };
+		8AF6A1D720E4FEBE00AC5625 /* ExampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		8AF6A1D820E4FEBE00AC5625 /* OMSExampleProductDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMSExampleProductDetailViewController.h; sourceTree = "<group>"; };
+		8AF6A1D920E4FEBE00AC5625 /* OMSExampleProductDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMSExampleProductDetailViewController.m; sourceTree = "<group>"; };
+		8AF985742147CC3D007E18ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Error.strings; sourceTree = "<group>"; };
+		8AF985762147CF3B007E18ED /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Error.strings; sourceTree = "<group>"; };
+		8AF985772147CF3B007E18ED /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = th; path = th.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		8AFE10BA20B69B39008E741D /* ClientTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTestCase.swift; sourceTree = "<group>"; };
+		9864062A1CFEA7E4004BCF51 /* CardCVVTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCVVTextField.swift; sourceTree = "<group>"; };
+		9864062B1CFEA7E4004BCF51 /* CardExpiryDateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardExpiryDateTextField.swift; sourceTree = "<group>"; };
+		9864062C1CFEA7E4004BCF51 /* CardNumberTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardNumberTextField.swift; sourceTree = "<group>"; };
+		9864062E1CFEA7E4004BCF51 /* CardNameTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardNameTextField.swift; sourceTree = "<group>"; };
+		9864062F1CFEA7E4004BCF51 /* OmiseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseTextField.swift; sourceTree = "<group>"; };
+		987A02C91CE35D5E0035417A /* OmiseSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmiseSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		987A02CD1CE35D5E0035417A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		987A03201CE5B7D70035417A /* OmiseTokenRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseTokenRequestTest.swift; sourceTree = "<group>"; };
+		987A03AC1CE5CD450035417A /* Fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fixtures; sourceTree = "<group>"; };
+		98FF99BA2577789800476487 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		F3497367254C066F00D05C7B /* MobileBankingSourceChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileBankingSourceChooserViewController.swift; sourceTree = "<group>"; };
+		F615CBF7261565D600E1A2D9 /* CardExpiryDatePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpiryDatePickerTests.swift; sourceTree = "<group>"; };
+		F6614CD5243DB8E7005B656E /* TrueMoneyFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueMoneyFormViewController.swift; sourceTree = "<group>"; };
+		F6FE862A25E3B02300C7A4DE /* OMSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMSConstants.m; path = OmiseSDKObjc/OMSConstants.m; sourceTree = SOURCE_ROOT; };
+		F6FE862B25E3B02300C7A4DE /* OMSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMSConstants.h; path = OmiseSDKObjc/OMSConstants.h; sourceTree = SOURCE_ROOT; };
+		F6FE863925E3B19A00C7A4DE /* OMSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSConstants.swift; sourceTree = "<group>"; };
+		F6FE867625E4A34600C7A4DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OmiseSDK.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		225931141CE3210700841B86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D4809A1D0EB29C00544CE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A723A592164D7B100D902F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		987A02C61CE35D5E0035417A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				987A02CE1CE35D5E0035417A /* OmiseSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2259310E1CE3210700841B86 = {
+			isa = PBXGroup;
+			children = (
+				226E16101D2268B400219652 /* QuickStart.playground */,
+				2259311A1CE3210700841B86 /* OmiseSDK */,
+				F6FE863425E3B0AE00C7A4DE /* OmiseSDKObjc */,
+				987A02CA1CE35D5E0035417A /* OmiseSDKTests */,
+				22D4809E1D0EB29C00544CE1 /* ExampleApp */,
+				225931191CE3210700841B86 /* Products */,
+			);
+			indentWidth = 4;
+			sourceTree = "<group>";
+			tabWidth = 4;
+		};
+		225931191CE3210700841B86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				225931181CE3210700841B86 /* OmiseSDK.framework */,
+				987A02C91CE35D5E0035417A /* OmiseSDKTests.xctest */,
+				22D4809D1D0EB29C00544CE1 /* ExampleApp.app */,
+				8A723A632164D7B100D902F5 /* ExampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2259311A1CE3210700841B86 /* OmiseSDK */ = {
+			isa = PBXGroup;
+			children = (
+				2259311B1CE3210700841B86 /* OmiseSDK.h */,
+				8A00FEC21F1DE88600246078 /* README.md */,
+				2259311D1CE3210700841B86 /* Info.plist */,
+				8AD0609520B55E610074894E /* Client.swift */,
+				22445FFB1CF41DD300801D0F /* Globals.swift */,
+				8A2BE95420A9A39E000CEB60 /* Request.swift */,
+				8AD0609220B55B3A0074894E /* RequestTask.swift */,
+				8A0927841D535548008D393F /* Library */,
+				8A2BE95720A9A8F1000CEB60 /* Models */,
+				8A2BE95820A9A8FE000CEB60 /* Views */,
+				8AD0609120B550B90074894E /* Compatibility */,
+				F6FE863F25E49BC900C7A4DE /* Resources */,
+				98FF99BA2577789800476487 /* Configuration.swift */,
+			);
+			path = OmiseSDK;
+			sourceTree = "<group>";
+		};
+		22D4809E1D0EB29C00544CE1 /* ExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				8AF6A1D720E4FEBE00AC5625 /* ExampleApp-Bridging-Header.h */,
+				22D480AB1D0EB29C00544CE1 /* Info.plist */,
+				229E14541D0EBAB5000511DE /* AppDelegate.swift */,
+				22E0DBD61D0EBE2E00472C74 /* Assets.xcassets */,
+				8A7567642178956800C684C9 /* Main.storyboard */,
+				8A7567672178959400C684C9 /* LaunchScreen.storyboard */,
+				8A723A682164D80C00D902F5 /* Objective-C */,
+				8AB3B85F216DCF5C006497B5 /* Shared */,
+				8A723A672164D80200D902F5 /* Swift */,
+			);
+			path = ExampleApp;
+			sourceTree = "<group>";
+		};
+		8A01F77E20D7D327003FC11E /* Old version */ = {
+			isa = PBXGroup;
+			children = (
+				2259314F1CE46F7F00841B86 /* CardNumber.swift */,
+				2220F1A61D0FEE85008CD89F /* OmiseSDKClient.swift */,
+				8AF56E5F2268650D0097CFEE /* OmiseTextFieldCompatability.swift */,
+				2220F1A81D0FEE85008CD89F /* OmiseTokenRequest.swift */,
+			);
+			path = "Old version";
+			sourceTree = "<group>";
+		};
+		8A01F78620D8E0EB003FC11E /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				8A01F78720D8E101003FC11E /* OMSRequestDelegateDummy.h */,
+				8A01F78020D8DB7C003FC11E /* OMSOmiseClientTestCase.m */,
+				8A01F78820D8E101003FC11E /* OMSRequestDelegateDummy.m */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
+		8A0927841D535548008D393F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				8ADAA9AB20B71EC400DD7CCF /* CommonCrypto */,
+			);
+			path = Library;
+			sourceTree = SOURCE_ROOT;
+		};
+		8A2BE95720A9A8F1000CEB60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A14C208220ACB2B003F5B20 /* Capability.swift */,
+				2259314D1CE46E5700841B86 /* CardBrand.swift */,
+				8ADAA9A420B6C0AF00DD7CCF /* Currency.swift */,
+				8A4F7CB820A9C0FD001C441A /* Object.swift */,
+				2220F1A41D0FEE85008CD89F /* OmiseError.swift */,
+				8A60619920B2A8D400CF90D5 /* PAN.swift */,
+				8A47173C20AAB11B0022733A /* Source.swift */,
+				8A01E48C21059EFF00D73FE6 /* SourcePaymentMethod.swift */,
+				8A47173920AAB0F40022733A /* Token.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8A2BE95820A9A8FE000CEB60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73F9BA4A25E6053700F55CA8 /* FPXFormViewController.swift */,
+				731A75D225E3604A002353C0 /* FPXBankChooserViewController.swift */,
+				73F9BA4625E50F4700F55CA8 /* AdaptableDynamicTableViewController.swift */,
+				8A0A67E62137EE49006356B7 /* AdaptableStaticTableViewController.swift */,
+				8A188BAF1D951E3C00FFF467 /* AuthorizingPaymentViewController.swift */,
+				8AD391B0230C05BC00383286 /* Colors.swift */,
+				8A1D4C651D51B72200C7837C /* CreditCardFormViewController.swift */,
+				8A25E929213CF6F300D48252 /* EContextInformationInputViewController.swift */,
+				F6614CD5243DB8E7005B656E /* TrueMoneyFormViewController.swift */,
+				8AC1D3A4213922570051F966 /* InstallmentBankingSourceChooserViewController.swift */,
+				8AC1D3A6213941C80051F966 /* InstallmentsNumberOfTermsChooserViewController.swift */,
+				8AC1D3A22139224D0051F966 /* InternetBankingSourceChooserViewController.swift */,
+				F3497367254C066F00D05C7B /* MobileBankingSourceChooserViewController.swift */,
+				8A275CBB21241E4500C5716F /* MainActionButton.swift */,
+				8A3150AD2146B6C300A4F429 /* MoreInformationOnCVVViewController.swift */,
+				8AE23AAD20F8CA8800BC9D8F /* PaymentChooserViewController.swift */,
+				8A30FB7C214929C900DC09DC /* PaymentCreatorController.swift */,
+				8A72CD5D2162358400F14F76 /* PaymentOptionTableViewCell.swift */,
+				8A76791E214663560085DE3C /* PaymentUI.swift */,
+				986406361CFEA7EA004BCF51 /* Fields */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8A47173F20AAD6BA0022733A /* Compatability Suite */ = {
+			isa = PBXGroup;
+			children = (
+				225931541CE4743A00841B86 /* CardNumberTest.swift */,
+				987A03201CE5B7D70035417A /* OmiseTokenRequestTest.swift */,
+				224460091CF441DC00801D0F /* TokenRequestDelegateDummy.swift */,
+			);
+			path = "Compatability Suite";
+			sourceTree = "<group>";
+		};
+		8A723A672164D80200D902F5 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				229E14561D0EBAB5000511DE /* ProductDetailViewController.swift */,
+				8AF56E61226878070097CFEE /* CustomCreditCardFormViewController.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		8A723A682164D80C00D902F5 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				8AF6A1D820E4FEBE00AC5625 /* OMSExampleProductDetailViewController.h */,
+				8AF6A1D920E4FEBE00AC5625 /* OMSExampleProductDetailViewController.m */,
+				8A43FEA82269BD8A002E89EC /* CustomCreditCardFormViewController.h */,
+				8A43FEA92269BD8A002E89EC /* CustomCreditCardFormViewController.m */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
+		8AB3B85F216DCF5C006497B5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8A6AA06A216B957D00E49E5E /* OMSBaseViewController.h */,
+				8A6AA06B216B957D00E49E5E /* OMSBaseViewController.m */,
+				8A7A9EBC2166160300F12D86 /* PaymentSettingTableViewController.swift */,
+				8A40DA2A216B53E900749F45 /* Tools.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8AD0609120B550B90074894E /* Compatibility */ = {
+			isa = PBXGroup;
+			children = (
+				8AF10BAE20DA6D8B00443A9C /* Objective-C */,
+				8A01F77E20D7D327003FC11E /* Old version */,
+				8A7A9EBF216642D100F12D86 /* Swift Version Compatibility.swift */,
+			);
+			path = Compatibility;
+			sourceTree = "<group>";
+		};
+		8ADAA9AB20B71EC400DD7CCF /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				8ADAA9AC20B71EDA00DD7CCF /* module.map */,
+			);
+			path = CommonCrypto;
+			sourceTree = "<group>";
+		};
+		8AF10BAE20DA6D8B00443A9C /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F6FE863925E3B19A00C7A4DE /* OMSConstants.swift */,
+				8A01F78A20D90EC5003FC11E /* Client+ObjC.swift */,
+				2220F1A31D0FEE85008CD89F /* OmiseCard.swift */,
+				8A01F79320D914A4003FC11E /* OmiseSource.swift */,
+				8A87DBCA226DA404001596F1 /* OmiseCapability.swift */,
+				2220F1A71D0FEE85008CD89F /* OmiseToken.swift */,
+				8A01F79020D91356003FC11E /* OMSSourceRequest.swift */,
+				8A01F78D20D91091003FC11E /* OMSTokenRequest.swift */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		986406361CFEA7EA004BCF51 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				9864062A1CFEA7E4004BCF51 /* CardCVVTextField.swift */,
+				14ACEF821D02D641001C5319 /* CardExpiryDatePicker.swift */,
+				9864062B1CFEA7E4004BCF51 /* CardExpiryDateTextField.swift */,
+				9864062E1CFEA7E4004BCF51 /* CardNameTextField.swift */,
+				9864062C1CFEA7E4004BCF51 /* CardNumberTextField.swift */,
+				9864062F1CFEA7E4004BCF51 /* OmiseTextField.swift */,
+			);
+			name = Fields;
+			sourceTree = "<group>";
+		};
+		987A02CA1CE35D5E0035417A /* OmiseSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				987A03AC1CE5CD450035417A /* Fixtures */,
+				987A02CD1CE35D5E0035417A /* Info.plist */,
+				8A3C10572159FCE900BEFD8A /* BadRequestAPIErrorParsingTestCase.swift */,
+				8A14C20A220AE241003F5B20 /* CapabilityOperationFixtureTests.swift */,
+				8AFE10BA20B69B39008E741D /* ClientTestCase.swift */,
+				8A3C10552159F7FC00BEFD8A /* InvalidCardAPIErrorParsingTestCase.swift */,
+				8A37E43520B584D300E2DA18 /* ModelTestCase.swift */,
+				8A43454620DBAE76005C5C94 /* PANModelTestCase.swift */,
+				8A429E7A2109A3AE007C230F /* PaymentInformationTestCase.swift */,
+				225931561CE4745200841B86 /* SDKTestCase.swift */,
+				F615CBFB2615696100E1A2D9 /* Views */,
+				8A47173F20AAD6BA0022733A /* Compatability Suite */,
+				8A01F78620D8E0EB003FC11E /* Objective-C */,
+			);
+			path = OmiseSDKTests;
+			sourceTree = "<group>";
+		};
+		F615CBFB2615696100E1A2D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F615CBF7261565D600E1A2D9 /* CardExpiryDatePickerTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6FE863425E3B0AE00C7A4DE /* OmiseSDKObjc */ = {
+			isa = PBXGroup;
+			children = (
+				F6FE862B25E3B02300C7A4DE /* OMSConstants.h */,
+				F6FE862A25E3B02300C7A4DE /* OMSConstants.m */,
+			);
+			path = OmiseSDKObjc;
+			sourceTree = "<group>";
+		};
+		F6FE863F25E49BC900C7A4DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2225B3531D0FDD63003EB396 /* Assets.xcassets */,
+				8A5D59831D5317DD005D3346 /* OmiseSDK.storyboard */,
+				8A776646214A5FC60029D166 /* NoticeView.xib */,
+				8AF5517C213D4C0100D61C98 /* Localizable.stringsdict */,
+				8A75676B2178963B00C684C9 /* Localizable.strings */,
+				8AF985752147CC3D007E18ED /* Error.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		225931151CE3210700841B86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2259311C1CE3210700841B86 /* OmiseSDK.h in Headers */,
+				F6FE862D25E3B02300C7A4DE /* OMSConstants.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		225931171CE3210700841B86 /* OmiseSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225931201CE3210700841B86 /* Build configuration list for PBXNativeTarget "OmiseSDK" */;
+			buildPhases = (
+				225931151CE3210700841B86 /* Headers */,
+				225931161CE3210700841B86 /* Resources */,
+				225931131CE3210700841B86 /* Sources */,
+				225931141CE3210700841B86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OmiseSDK;
+			productName = OmiseSDK;
+			productReference = 225931181CE3210700841B86 /* OmiseSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		22D4809C1D0EB29C00544CE1 /* ExampleApp (Swift) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D480AE1D0EB29C00544CE1 /* Build configuration list for PBXNativeTarget "ExampleApp (Swift)" */;
+			buildPhases = (
+				22D4809B1D0EB29C00544CE1 /* Resources */,
+				22D480991D0EB29C00544CE1 /* Sources */,
+				22D4809A1D0EB29C00544CE1 /* Frameworks */,
+				8A0928211D545455008D393F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A7F8B0B20C55312008F4D08 /* PBXTargetDependency */,
+			);
+			name = "ExampleApp (Swift)";
+			productName = ExampleApp;
+			productReference = 22D4809D1D0EB29C00544CE1 /* ExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A723A502164D7B100D902F5 /* ExampleApp (Objective-C) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A723A602164D7B100D902F5 /* Build configuration list for PBXNativeTarget "ExampleApp (Objective-C)" */;
+			buildPhases = (
+				8A723A532164D7B100D902F5 /* Sources */,
+				8A723A592164D7B100D902F5 /* Frameworks */,
+				8A723A5A2164D7B100D902F5 /* Resources */,
+				8A723A5E2164D7B100D902F5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A723A512164D7B100D902F5 /* PBXTargetDependency */,
+			);
+			name = "ExampleApp (Objective-C)";
+			productName = ExampleApp;
+			productReference = 8A723A632164D7B100D902F5 /* ExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		987A02C81CE35D5E0035417A /* OmiseSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 987A02D31CE35D5E0035417A /* Build configuration list for PBXNativeTarget "OmiseSDKTests" */;
+			buildPhases = (
+				987A02C71CE35D5E0035417A /* Resources */,
+				987A02C51CE35D5E0035417A /* Sources */,
+				987A02C61CE35D5E0035417A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				987A02D01CE35D5E0035417A /* PBXTargetDependency */,
+			);
+			name = OmiseSDKTests;
+			productName = OmiseSDKTests;
+			productReference = 987A02C91CE35D5E0035417A /* OmiseSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2259310F1CE3210700841B86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OMS;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = Omise;
+				TargetAttributes = {
+					225931171CE3210700841B86 = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 1240;
+						ProvisioningStyle = Automatic;
+					};
+					22D4809C1D0EB29C00544CE1 = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+					};
+					8A723A502164D7B100D902F5 = {
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+					};
+					987A02C81CE35D5E0035417A = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 225931121CE3210700841B86 /* Build configuration list for PBXProject "OmiseSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				th,
+				ja,
+				Base,
+			);
+			mainGroup = 2259310E1CE3210700841B86;
+			productRefGroup = 225931191CE3210700841B86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				225931171CE3210700841B86 /* OmiseSDK */,
+				987A02C81CE35D5E0035417A /* OmiseSDKTests */,
+				22D4809C1D0EB29C00544CE1 /* ExampleApp (Swift) */,
+				8A723A502164D7B100D902F5 /* ExampleApp (Objective-C) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		225931161CE3210700841B86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5D59811D5317DD005D3346 /* OmiseSDK.storyboard in Resources */,
+				8A75676D2178963B00C684C9 /* Localizable.strings in Resources */,
+				8A776647214A5FC60029D166 /* NoticeView.xib in Resources */,
+				2225B3541D0FDD63003EB396 /* Assets.xcassets in Resources */,
+				8AF5517A213D4C0100D61C98 /* Localizable.stringsdict in Resources */,
+				8AF985732147CC3D007E18ED /* Error.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D4809B1D0EB29C00544CE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A7567682178959400C684C9 /* LaunchScreen.storyboard in Resources */,
+				8A7567652178956800C684C9 /* Main.storyboard in Resources */,
+				22E0DBD71D0EBE2E00472C74 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A723A5A2164D7B100D902F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A7567692178959400C684C9 /* LaunchScreen.storyboard in Resources */,
+				8A7567662178956800C684C9 /* Main.storyboard in Resources */,
+				8A723A5C2164D7B100D902F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		987A02C71CE35D5E0035417A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				987A03AD1CE5CD450035417A /* Fixtures in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		225931131CE3210700841B86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A76791F214663560085DE3C /* PaymentUI.swift in Sources */,
+				8AFB920F20D39BE50072B185 /* OmiseTokenRequest.swift in Sources */,
+				8A01F79120D91356003FC11E /* OMSSourceRequest.swift in Sources */,
+				2220F1AC1D0FEE85008CD89F /* OmiseSDKClient.swift in Sources */,
+				8AF56E602268650D0097CFEE /* OmiseTextFieldCompatability.swift in Sources */,
+				8A60619A20B2A8D400CF90D5 /* PAN.swift in Sources */,
+				2220F1AA1D0FEE85008CD89F /* OmiseError.swift in Sources */,
+				73F9BA4B25E6053700F55CA8 /* FPXFormViewController.swift in Sources */,
+				8A7A9EC0216642D100F12D86 /* Swift Version Compatibility.swift in Sources */,
+				8A0A67E821383614006356B7 /* PaymentChooserViewController.swift in Sources */,
+				98FF99BB2577789800476487 /* Configuration.swift in Sources */,
+				8A72CD5E2162358400F14F76 /* PaymentOptionTableViewCell.swift in Sources */,
+				8AD391B1230C05BC00383286 /* Colors.swift in Sources */,
+				8A47173D20AAB11B0022733A /* Source.swift in Sources */,
+				986406351CFEA7E4004BCF51 /* OmiseTextField.swift in Sources */,
+				73F9BA4725E50F4700F55CA8 /* AdaptableDynamicTableViewController.swift in Sources */,
+				2220F1AD1D0FEE85008CD89F /* OmiseToken.swift in Sources */,
+				F3497368254C067000D05C7B /* MobileBankingSourceChooserViewController.swift in Sources */,
+				8AF9857221479F72007E18ED /* CreditCardFormViewController.swift in Sources */,
+				8AC1D3A32139224D0051F966 /* InternetBankingSourceChooserViewController.swift in Sources */,
+				2220F1A91D0FEE85008CD89F /* OmiseCard.swift in Sources */,
+				8A14C209220ACB2B003F5B20 /* Capability.swift in Sources */,
+				8AD0609320B55B3A0074894E /* RequestTask.swift in Sources */,
+				8A275CBC21241E4500C5716F /* MainActionButton.swift in Sources */,
+				8A0A67E72137EE49006356B7 /* AdaptableStaticTableViewController.swift in Sources */,
+				8A01F78E20D91091003FC11E /* OMSTokenRequest.swift in Sources */,
+				986406311CFEA7E4004BCF51 /* CardExpiryDateTextField.swift in Sources */,
+				986406341CFEA7E4004BCF51 /* CardNameTextField.swift in Sources */,
+				8AF9857121479F38007E18ED /* MoreInformationOnCVVViewController.swift in Sources */,
+				F6FE862C25E3B02300C7A4DE /* OMSConstants.m in Sources */,
+				8A188BB01D951E3C00FFF467 /* AuthorizingPaymentViewController.swift in Sources */,
+				8A01F78B20D90EC5003FC11E /* Client+ObjC.swift in Sources */,
+				731A75D325E3604A002353C0 /* FPXBankChooserViewController.swift in Sources */,
+				8A2BE95520A9A39E000CEB60 /* Request.swift in Sources */,
+				14ACEF831D02D641001C5319 /* CardExpiryDatePicker.swift in Sources */,
+				8A01F79420D914A4003FC11E /* OmiseSource.swift in Sources */,
+				986406301CFEA7E4004BCF51 /* CardCVVTextField.swift in Sources */,
+				8A47173A20AAB0F40022733A /* Token.swift in Sources */,
+				22445FFC1CF41DD300801D0F /* Globals.swift in Sources */,
+				8A87DBCB226DA404001596F1 /* OmiseCapability.swift in Sources */,
+				8ADAA9A520B6C0AF00DD7CCF /* Currency.swift in Sources */,
+				8A30FB7D214929C900DC09DC /* PaymentCreatorController.swift in Sources */,
+				8A4F7CB920A9C0FD001C441A /* Object.swift in Sources */,
+				8AD0609620B55E610074894E /* Client.swift in Sources */,
+				8AC1D3A7213941C80051F966 /* InstallmentsNumberOfTermsChooserViewController.swift in Sources */,
+				986406321CFEA7E4004BCF51 /* CardNumberTextField.swift in Sources */,
+				F6614CD6243DB8E7005B656E /* TrueMoneyFormViewController.swift in Sources */,
+				8A01E48D21059EFF00D73FE6 /* SourcePaymentMethod.swift in Sources */,
+				225931501CE46F7F00841B86 /* CardNumber.swift in Sources */,
+				8AC1D3A5213922570051F966 /* InstallmentBankingSourceChooserViewController.swift in Sources */,
+				2259314E1CE46E5700841B86 /* CardBrand.swift in Sources */,
+				8AEF7804224CABF800787470 /* EContextInformationInputViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D480991D0EB29C00544CE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A40DA29216B441E00749F45 /* PaymentSettingTableViewController.swift in Sources */,
+				229E14581D0EBAB5000511DE /* AppDelegate.swift in Sources */,
+				8A6AA06E216B9DAE00E49E5E /* OMSBaseViewController.m in Sources */,
+				8A40DA2B216B53E900749F45 /* Tools.swift in Sources */,
+				229E145A1D0EBAB5000511DE /* ProductDetailViewController.swift in Sources */,
+				8AF56E62226878070097CFEE /* CustomCreditCardFormViewController.swift in Sources */,
+				98FF99BE25777E1B00476487 /* Configuration.swift in Sources */,
+				8A7A9EC12166578700F12D86 /* Swift Version Compatibility.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A723A532164D7B100D902F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A723A692164D87B00D902F5 /* OMSExampleProductDetailViewController.m in Sources */,
+				8A7A9EBE2166160300F12D86 /* PaymentSettingTableViewController.swift in Sources */,
+				8A6AA06D216B958100E49E5E /* OMSBaseViewController.m in Sources */,
+				8A40DA2C216B53E900749F45 /* Tools.swift in Sources */,
+				8A43FEAA2269BD8A002E89EC /* CustomCreditCardFormViewController.m in Sources */,
+				8A7A9EC22166578800F12D86 /* Swift Version Compatibility.swift in Sources */,
+				8A723A562164D7B100D902F5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		987A02C51CE35D5E0035417A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A01F78120D8DB7C003FC11E /* OMSOmiseClientTestCase.m in Sources */,
+				8A14C20B220AE241003F5B20 /* CapabilityOperationFixtureTests.swift in Sources */,
+				8A01F78920D8E101003FC11E /* OMSRequestDelegateDummy.m in Sources */,
+				8AFE10BB20B69B39008E741D /* ClientTestCase.swift in Sources */,
+				8A43454720DBAE76005C5C94 /* PANModelTestCase.swift in Sources */,
+				8A429E7B2109A3AE007C230F /* PaymentInformationTestCase.swift in Sources */,
+				224460041CF43A1200801D0F /* SDKTestCase.swift in Sources */,
+				8A3C10582159FCE900BEFD8A /* BadRequestAPIErrorParsingTestCase.swift in Sources */,
+				F615CBF8261565D600E1A2D9 /* CardExpiryDatePickerTests.swift in Sources */,
+				2244600A1CF441DC00801D0F /* TokenRequestDelegateDummy.swift in Sources */,
+				224460051CF43A1500801D0F /* CardNumberTest.swift in Sources */,
+				987A03211CE5B7D70035417A /* OmiseTokenRequestTest.swift in Sources */,
+				8A3C10562159F7FC00BEFD8A /* InvalidCardAPIErrorParsingTestCase.swift in Sources */,
+				8A37E43620B584D300E2DA18 /* ModelTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A723A512164D7B100D902F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 225931171CE3210700841B86 /* OmiseSDK */;
+			targetProxy = 8A723A522164D7B100D902F5 /* PBXContainerItemProxy */;
+		};
+		8A7F8B0B20C55312008F4D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 225931171CE3210700841B86 /* OmiseSDK */;
+			targetProxy = 8A7F8B0A20C55312008F4D08 /* PBXContainerItemProxy */;
+		};
+		987A02D01CE35D5E0035417A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 225931171CE3210700841B86 /* OmiseSDK */;
+			targetProxy = 987A02CF1CE35D5E0035417A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A5D59831D5317DD005D3346 /* OmiseSDK.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A5D59821D5317DD005D3346 /* Base */,
+				8A5D59851D5317E0005D3346 /* th */,
+				8A5D59871D5317E1005D3346 /* ja */,
+				F6FE867625E4A34600C7A4DE /* en */,
+			);
+			name = OmiseSDK.storyboard;
+			sourceTree = "<group>";
+		};
+		8A75676B2178963B00C684C9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A75676C2178963B00C684C9 /* en */,
+				8A75676E2178964000C684C9 /* th */,
+				8A75676F2178964700C684C9 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8AF5517C213D4C0100D61C98 /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AF5517B213D4C0100D61C98 /* en */,
+				8AF985772147CF3B007E18ED /* th */,
+				8A776657214AA4E70029D166 /* ja */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+		8AF985752147CC3D007E18ED /* Error.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AF985742147CC3D007E18ED /* en */,
+				8AF985762147CF3B007E18ED /* th */,
+				8A776658214AA4F10029D166 /* ja */,
+			);
+			name = Error.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2259311E1CE3210700841B86 /* Debug (Staging) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Debug (Staging)";
+		};
+		2259311F1CE3210700841B86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		225931211CE3210700841B86 /* Debug (Staging) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 5;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = OmiseSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 4.0.1;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos10*]" = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos11*]" = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator10*]" = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator11*]" = "$(SRCROOT)/Library";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Debug (Staging)";
+		};
+		225931221CE3210700841B86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 5;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = OmiseSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 4.0.1;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos10*]" = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos11*]" = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator10*]" = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator11*]" = "$(SRCROOT)/Library";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		22D480AC1D0EB29C00544CE1 /* Debug (Staging) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_WARNINGS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.ExampleApp;
+				PRODUCT_NAME = ExampleApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleApp/ExampleApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug (Staging)";
+		};
+		22D480AD1D0EB29C00544CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_WARNINGS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.ExampleApp;
+				PRODUCT_NAME = ExampleApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleApp/ExampleApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8A723A612164D7B100D902F5 /* Debug (Staging) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_WARNINGS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.ExampleApp;
+				PRODUCT_NAME = ExampleApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleApp/ExampleApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug (Staging)";
+		};
+		8A723A622164D7B100D902F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_WARNINGS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.ExampleApp;
+				PRODUCT_NAME = ExampleApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleApp/ExampleApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		987A02D11CE35D5E0035417A /* Debug (Staging) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = OmiseSDKTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Staging)";
+		};
+		987A02D21CE35D5E0035417A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				INFOPLIST_FILE = OmiseSDKTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		98FF99B3257773EB00476487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98FF99B4257773EB00476487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 5;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = OmiseSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 4.0.1;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos10*]" = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos11*]" = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator10*]" = "$(SRCROOT)/Library";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator11*]" = "$(SRCROOT)/Library";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		98FF99B5257773EB00476487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = OmiseSDKTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.OmiseSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		98FF99B6257773EB00476487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_WARNINGS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.ExampleApp;
+				PRODUCT_NAME = ExampleApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleApp/ExampleApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		98FF99B7257773EB00476487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_WARNINGS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.omise.ExampleApp;
+				PRODUCT_NAME = ExampleApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleApp/ExampleApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		225931121CE3210700841B86 /* Build configuration list for PBXProject "OmiseSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2259311E1CE3210700841B86 /* Debug (Staging) */,
+				98FF99B3257773EB00476487 /* Debug */,
+				2259311F1CE3210700841B86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		225931201CE3210700841B86 /* Build configuration list for PBXNativeTarget "OmiseSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225931211CE3210700841B86 /* Debug (Staging) */,
+				98FF99B4257773EB00476487 /* Debug */,
+				225931221CE3210700841B86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D480AE1D0EB29C00544CE1 /* Build configuration list for PBXNativeTarget "ExampleApp (Swift)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D480AC1D0EB29C00544CE1 /* Debug (Staging) */,
+				98FF99B6257773EB00476487 /* Debug */,
+				22D480AD1D0EB29C00544CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A723A602164D7B100D902F5 /* Build configuration list for PBXNativeTarget "ExampleApp (Objective-C)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A723A612164D7B100D902F5 /* Debug (Staging) */,
+				98FF99B7257773EB00476487 /* Debug */,
+				8A723A622164D7B100D902F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		987A02D31CE35D5E0035417A /* Build configuration list for PBXNativeTarget "OmiseSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				987A02D11CE35D5E0035417A /* Debug (Staging) */,
+				98FF99B5257773EB00476487 /* Debug */,
+				987A02D21CE35D5E0035417A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2259310F1CE3210700841B86 /* Project object */;
+}
