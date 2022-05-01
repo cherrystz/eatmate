@@ -16,7 +16,7 @@ struct InterestSelectView: View {
     
     var body: some View {
         FullScreenView{
-            NavbarView(  destination: AnyView(HomeView()), title: "Interest",showBackButton: false,showMoreButton: false,shadow: 2)
+            NavbarView(title: "Interest",showBackButton: false,showMoreButton: false,shadow: 2)
             ZStack{
             VStack{
             HStack{

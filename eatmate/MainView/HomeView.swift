@@ -11,7 +11,7 @@ import SwiftColor
 struct HomeView: View {
     
     @State var textFieldSearch: String = ""
-    
+   
     let categoriesList = [
         "Esan",
         "Grill",
@@ -42,11 +42,14 @@ struct HomeView: View {
                             })
                             
                         }
-                        
-                        TextField("What do you want to eat ?", text: $textFieldSearch)
-                            .font(.kanit(size: 18))
-                            .textFieldStyle(OvalTextFieldStyle())
-                            .padding(.top)
+                        NavigationLink(destination: SearchView(), label: {
+                            TextField("What do you want to eat ?", text: $textFieldSearch)
+                                .font(.kanit(size: 18))
+                                .textFieldStyle(OvalTextFieldStyle())
+                                .multilineTextAlignment(.leading)
+                        }).padding(.top)
+                       
+                            
                         
                         HStack(alignment: .bottom) {
                             Button (action: {}, label: {

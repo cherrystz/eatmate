@@ -28,8 +28,7 @@ struct NotificationView: View {
     
     var body: some View {
         FullScreenView{
-            NavbarView(
-                destination: AnyView(HomeView()), title: "Notification",showBackButton: false,showMoreButton: false,shadow: 2
+            NavbarView(title: "Notification",showBackButton: false,showMoreButton: false,shadow: 2
             )
             
             List {

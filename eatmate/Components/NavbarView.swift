@@ -8,20 +8,17 @@
 import SwiftUI
 
 struct NavbarView : View {
-    
-    var destination : AnyView
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var title : String = "Title"
-    @State private var backActive : Bool = false
     @State var showBackButton : Bool = true
     @State var showMoreButton : Bool = true
     @State var shadow : CGFloat = 0
-    
     var body: some View {
      
         HStack{
-            NavigationLink(destination: destination, isActive: $backActive){
+
                 Button(action: {
-                    self.backActive = true
+                    presentationMode.wrappedValue.dismiss()
                 },
                        label: {
                     if self.showBackButton {
@@ -31,7 +28,7 @@ struct NavbarView : View {
                     }
                     
                 })
-            }
+
             
                 
             Spacer()
@@ -70,7 +67,7 @@ struct NavbarView : View {
 struct NavbarViewPreviews: PreviewProvider {
     static var previews: some View {
         VStack{
-            NavbarView(destination: AnyView(HomeView()))
+            NavbarView()
             Spacer()
         }
     }

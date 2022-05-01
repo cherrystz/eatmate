@@ -34,7 +34,7 @@ struct MessageView: View {
     
     var body: some View {
         FullScreenView{
-            NavbarView(  destination: AnyView(HomeView()), title: "Messages",showBackButton: false,showMoreButton: false,shadow: 2)
+            NavbarView(title: "Messages",showBackButton: false,showMoreButton: false,shadow: 2)
             
           
             List {

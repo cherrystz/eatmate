@@ -18,7 +18,7 @@ struct ProfileView: View {
     
     var body: some View {
         FullScreenView{
-            NavbarView(  destination: AnyView(SettingView()), title: "Profile",showBackButton: true,showMoreButton: true,shadow: 2)
+            NavbarView(title: "Profile",showBackButton: true,showMoreButton: true,shadow: 2)
             // edit profile on show morebutton
             ScrollView{
             HStack{

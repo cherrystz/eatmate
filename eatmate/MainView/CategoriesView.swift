@@ -13,7 +13,7 @@ struct CategoriesView: View {
     
     var body: some View {
         FullScreenView{
-            NavbarView(  destination: AnyView(HomeView()), title: "Catagories",showBackButton: true,showMoreButton: false,shadow: 2)
+            NavbarView(title: "Catagories",showBackButton: true,showMoreButton: false,shadow: 2)
             
             List{
                 ForEach(catagory, id: \.self) { catagory in

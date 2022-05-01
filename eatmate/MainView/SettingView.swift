@@ -9,14 +9,14 @@ import SwiftUI
 import MessageUI
 
 struct SettingView: View {
-    
+   
     var username : String = "Phumipat Apivansri"
     @State var result: Result<MFMailComposeResult, Error>? = nil
         @State var isShowingMailView = false
     
     var body: some View {
         FullScreenView{
-            NavbarView(  destination: AnyView(HomeView()), title: "Profile",showBackButton: true,showMoreButton: false,shadow: 2)
+            NavbarView(title: "Profile",showBackButton: true,showMoreButton: false,shadow: 2)
             HStack{
                 Image("ProfileImageDefault")
                     .resizable()

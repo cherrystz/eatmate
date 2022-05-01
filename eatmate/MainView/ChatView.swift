@@ -10,7 +10,7 @@ import SwiftUI
 struct ChatView: View {
     var body: some View {
         FullScreenView{
-            NavbarView(  destination: AnyView(HomeView()), title: "หิว อยากกินMomo paradise มากๆ เลยย",showBackButton: true,showMoreButton: false,shadow: 2)
+            NavbarView(title: "หิว อยากกินMomo paradise มากๆ เลยย",showBackButton: true,showMoreButton: false,shadow: 2)
             MemberChatBarView()
            
           ChatInputTabView()

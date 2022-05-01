@@ -10,7 +10,7 @@ import SwiftUI
 struct AboutUsView: View {
     var body: some View {
         FullScreenView{
-            NavbarView(  destination: AnyView(SettingView()), title: "Eatmate",showBackButton: true,showMoreButton: false,shadow: 2)
+            NavbarView(title: "Eatmate",showBackButton: true,showMoreButton: false,shadow: 2)
 
             GeometryReader { gp in
                        ZStack {

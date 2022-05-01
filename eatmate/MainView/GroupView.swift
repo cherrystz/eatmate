@@ -40,7 +40,7 @@ struct GroupView: View {
     
     var body: some View {
         FullScreenView{
-            NavbarView(destination: AnyView(HomeView()), title: "")
+            NavbarView(title: "")
             ZStack{
             ScrollView{
             ImageSliderModule()
