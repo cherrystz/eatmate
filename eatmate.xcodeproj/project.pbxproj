@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E21D8E9281F116F000DFE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E21D8E8281F116F000DFE7B /* Assets.xcassets */; };
 		2E3A1222281587730094D1E4 /* InterestSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A1221281587730094D1E4 /* InterestSelectView.swift */; };
 		2E3A122528158AD70094D1E4 /* InterestButtonModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A122428158AD70094D1E4 /* InterestButtonModule.swift */; };
 		2E3A122828158FD70094D1E4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A122728158FD70094D1E4 /* Colors.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E21D8E8281F116F000DFE7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E3A1221281587730094D1E4 /* InterestSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestSelectView.swift; sourceTree = "<group>"; };
 		2E3A122428158AD70094D1E4 /* InterestButtonModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestButtonModule.swift; sourceTree = "<group>"; };
 		2E3A122728158FD70094D1E4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				47F3FD5127E518B2005DC7C2 /* Extensions */,
 				47F3FD4827E517CC005DC7C2 /* Fonts */,
 				47F3FD4027E4EFDC005DC7C2 /* Components */,
+				2E21D8E8281F116F000DFE7B /* Assets.xcassets */,
 				47E0DE7127D8A178004352EC /* Preview Content */,
 			);
 			path = eatmate;
@@ -396,6 +399,7 @@
 				47F3FD4B27E51829005DC7C2 /* Nunito-Light.ttf in Resources */,
 				47F3FD6227E54C01005DC7C2 /* Nunito-ExtraBold.ttf in Resources */,
 				47F3FD6627E550EF005DC7C2 /* Nunito-SemiBold.ttf in Resources */,
+				2E21D8E9281F116F000DFE7B /* Assets.xcassets in Resources */,
 				47F3FD5027E51876005DC7C2 /* Kanit-Regular.ttf in Resources */,
 				4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */,
 				2E3CEDC7281F0D96006A3899 /* 96916-searching.gif in Resources */,
