@@ -90,7 +90,7 @@ struct RegisterConfirmView: View {
             }.padding(.top, 26)
             
             Spacer()
-        }.padding(.horizontal, 26)
+        }.padding(.horizontal, 20)
             .navigationBarHidden(true)
         
     }

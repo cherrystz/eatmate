@@ -43,7 +43,7 @@ struct AboutUsView: View {
                                               .foregroundColor(.gray)
                                           Text("Feel bored when eating alone?")
                                               .font(.nunito(size: 18, weight: .regular))
-                                          Text("Let us help you find your soulmate!")
+                                          Text("Let us help you find your Eatmate!")
                                .font(.nunito(size: 18, weight: .regular))}
                                .alignmentGuide(VerticalAlignment.center, computeValue: { $0[.bottom] })
                                .position(x: gp.size.width / 2, y: gp.size.height / 2)

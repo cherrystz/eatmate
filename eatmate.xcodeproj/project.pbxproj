@@ -21,6 +21,7 @@
 		2E864546281A3E6D007634F4 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E864545281A3E6C007634F4 /* AboutUsView.swift */; };
 		2E86454C281A4740007634F4 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 2E86454B281A4740007634F4 /* NavigationStack */; };
 		2E86454E281A562E007634F4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86454D281A562D007634F4 /* ProfileView.swift */; };
+		2E864550281A6A66007634F4 /* RegisterPersonalInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86454F281A6A66007634F4 /* RegisterPersonalInformationView.swift */; };
 		2EBAC20927EBB20700076492 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20827EBB20700076492 /* GroupView.swift */; };
 		2EBAC20D27EBB59F00076492 /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20C27EBB59F00076492 /* NavbarView.swift */; };
 		2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */; };
@@ -77,6 +78,7 @@
 		2E864543281A37C0007634F4 /* MFMailComposeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFMailComposeModule.swift; sourceTree = "<group>"; };
 		2E864545281A3E6C007634F4 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		2E86454D281A562D007634F4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2E86454F281A6A66007634F4 /* RegisterPersonalInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonalInformationView.swift; sourceTree = "<group>"; };
 		2EBAC20827EBB20700076492 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		2EBAC20C27EBB59F00076492 /* NavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarView.swift; sourceTree = "<group>"; };
 		2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderModule.swift; sourceTree = "<group>"; };
@@ -191,7 +193,6 @@
 			children = (
 				47E0DE7A27D8A6D2004352EC /* HomeView.swift */,
 				472920AC27E3B37900C62E86 /* CreateView.swift */,
-				2E3A1221281587730094D1E4 /* InterestSelectView.swift */,
 				2E3A122C2815CD3E0094D1E4 /* SettingView.swift */,
 				2E4273C92815F5B4003C68B8 /* CategoriesView.swift */,
 				2E86454D281A562D007634F4 /* ProfileView.swift */,
@@ -269,6 +270,8 @@
 				47F3FD6A27E55B25005DC7C2 /* RegisterView.swift */,
 				47F3FD6C27E55B5C005DC7C2 /* RegisterConfirmView.swift */,
 				47F3FD6E27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift */,
+				2E3A1221281587730094D1E4 /* InterestSelectView.swift */,
+				2E86454F281A6A66007634F4 /* RegisterPersonalInformationView.swift */,
 				47F3FD7327E664AD005DC7C2 /* PasscodeField.swift */,
 			);
 			path = SignUp;
@@ -450,6 +453,7 @@
 				2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */,
 				47F3FD4227E4F072005DC7C2 /* TabViewModule.swift in Sources */,
 				2E864544281A37C0007634F4 /* MFMailComposeModule.swift in Sources */,
+				2E864550281A6A66007634F4 /* RegisterPersonalInformationView.swift in Sources */,
 				2E3A122528158AD70094D1E4 /* InterestButtonModule.swift in Sources */,
 				472920AF27E3B39D00C62E86 /* MessageView.swift in Sources */,
 				47F3FD3D27E46FF3005DC7C2 /* LoginView.swift in Sources */,
