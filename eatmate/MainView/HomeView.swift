@@ -44,7 +44,7 @@ struct HomeView: View {
                         }
                         
                         TextField("What do you want to eat ?", text: $textFieldSearch)
-                            .font(.nunito(size: 18))
+                            .font(.kanit(size: 18))
                             .textFieldStyle(OvalTextFieldStyle())
                             .padding(.top)
                         

@@ -25,7 +25,7 @@ struct SettingView: View {
                 VStack(alignment:.leading){
                     Text(username)
                         .font(.nunito(size: 24, weight: .bold))
-                    Button(action: {}, label: {
+                    NavigationLink(destination: ProfileView(), label: {
                         Text("View my profile")
                             .font(.nunito(size: 18, weight: .bold))
                             .foregroundColor(.gray)
