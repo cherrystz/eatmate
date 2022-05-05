@@ -27,5 +27,7 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

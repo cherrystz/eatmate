@@ -10,7 +10,7 @@ import SwiftUI
 struct MyGroupView: View {
     var body: some View {
         FullScreenView{
-            NavbarView(title: "My Group",showBackButton: true,showMoreButton: false,shadow: 2)
+            NavbarView(title: "History",showBackButton: true,showMoreButton: false,shadow: 2)
             ScrollView(showsIndicators: false) {
            
                 GroupDisplayModule()

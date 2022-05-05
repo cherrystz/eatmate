@@ -60,21 +60,22 @@ struct GroupDisplayModule: View {
 //                            .background(Color(hexString: "#57D96C"))
 //                            .cornerRadius(10)
 //                    })
-                }
+                }.padding(.bottom,25)
 //                Spacer()
             }
             .padding(.horizontal)
         }
-        .frame(width: 335, height: 275)
+        .frame(width: 335, height: 245)
         .background(.white)
         .cornerRadius(15)
         .shadow(color: .black.opacity(0.1), radius: 4, y: 4)
+        .padding(.bottom, 20)
     }
 }
 
 struct GroupDisplayModule_Previews: PreviewProvider {
     static var previews: some View {
         GroupDisplayModule()
-//            .previewLayout(.fixed(width: 335, height: 249))
+//            .previewLayout(.fixed(width: 335, height: 156))
     }
 }

@@ -62,7 +62,7 @@ struct SettingView: View {
                 NavigationLink(destination:MyGroupView(), label: {
                     HStack{
                         Image(systemName: "fork.knife.circle")
-                        Text("My group")
+                        Text("History")
                     }
 
                 })
