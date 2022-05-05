@@ -63,7 +63,8 @@ struct GroupContentModule: View {
                     .padding(.bottom, 1)
                 Text("สถานที่")
                     .font(.kanit(size: 24, weight: .bold))
-                Text(groupLocation)
+                Link("ดูสถานที่",
+                      destination: URL(string: "https://www.google.com/maps/place/Shuba+Shabu+(Ratchathewi)+%E0%B8%8A%E0%B8%B9%E0%B8%9A%E0%B8%B2+%E0%B8%8A%E0%B8%B2%E0%B8%9A%E0%B8%B9+(%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B5)/@13.7517685,100.5297017,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29ecb7db75303:0xbeb219bab8d260bf!8m2!3d13.7517633!4d100.5318904")!)
                     .font(.kanit(size: 14, weight: .regular))
                 
                 
@@ -77,40 +78,4 @@ struct GroupContentModule: View {
        
 }
 
-//struct GroupContentModule_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GroupContentModule()
-//    }
-//}
-
-
-//ทำให้ปุ่มมันอยู่เหนือTabbar 10 px แล้ว fix position
-//            HStack{
-//            Spacer()
-//            Button(action: {
-//                if groupApprove==0 {
-//                    self.groupApprove=2
-//                } else if groupApprove==2 {
-//                    self.groupApprove = 0
-//                }
-//                }, label: {
-//                    if groupApprove==2 {
-//                        Text("เข้าร่วม")
-//                            .font(.kanit(size: 20, weight: .bold))
-//                            .foregroundColor(.white)
-//                            .frame(width: 272, height: 33,alignment: .center)
-//                            .background(Color.green)
-//                    } else if groupApprove==0 {
-//                        Text("ยกเลิก")
-//                            .font(.kanit(size: 20, weight: .bold))
-//                            .foregroundColor(.white)
-//                            .frame(width: 272, height: 33,alignment: .center)
-//                            .background(Color.red)
-//                    }
-//
-//                            })
-//
-//                .cornerRadius(25)
-//            Spacer()
-//            }
-//End of button component
+ 

@@ -37,6 +37,8 @@
 		2EBAC20D27EBB59F00076492 /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20C27EBB59F00076492 /* NavbarView.swift */; };
 		2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */; };
 		2EBAC21127EE497A00076492 /* GroupContentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC21027EE497A00076492 /* GroupContentModule.swift */; };
+		2ED75BCC282466CD001C953D /* MyGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED75BCB282466CD001C953D /* MyGroupView.swift */; };
+		2EDC6F47281FF04100B172FC /* NotificationSettingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC6F46281FF04000B172FC /* NotificationSettingVIew.swift */; };
 		2EE38D2D2805DFA7000668BD /* CustomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE38D2C2805DFA6000668BD /* CustomRowView.swift */; };
 		3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */; };
 		472920AD27E3B37900C62E86 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AC27E3B37900C62E86 /* CreateView.swift */; };
@@ -119,6 +121,8 @@
 		2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderModule.swift; sourceTree = "<group>"; };
 		2EBAC21027EE497A00076492 /* GroupContentModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupContentModule.swift; sourceTree = "<group>"; };
 		2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatmate.release.xcconfig"; path = "Target Support Files/Pods-eatmate/Pods-eatmate.release.xcconfig"; sourceTree = "<group>"; };
+		2ED75BCB282466CD001C953D /* MyGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupView.swift; sourceTree = "<group>"; };
+		2EDC6F46281FF04000B172FC /* NotificationSettingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingVIew.swift; sourceTree = "<group>"; };
 		2EE38D2C2805DFA6000668BD /* CustomRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowView.swift; sourceTree = "<group>"; };
 		472920AC27E3B37900C62E86 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		472920AE27E3B39D00C62E86 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -241,9 +245,11 @@
 				472920AC27E3B37900C62E86 /* CreateView.swift */,
 				2E3A122C2815CD3E0094D1E4 /* SettingView.swift */,
 				2E4273C92815F5B4003C68B8 /* CategoriesView.swift */,
+				2EDC6F46281FF04000B172FC /* NotificationSettingVIew.swift */,
 				2E3CEDC3281F0807006A3899 /* SearchView.swift */,
 				2E86454D281A562D007634F4 /* ProfileView.swift */,
 				2EBAC20827EBB20700076492 /* GroupView.swift */,
+				2ED75BCB282466CD001C953D /* MyGroupView.swift */,
 				2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */,
 				2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */,
 				2E3CEDC1281F0392006A3899 /* PolicyView.swift */,
@@ -498,6 +504,7 @@
 				2E4273CA2815F5B4003C68B8 /* CategoriesView.swift in Sources */,
 				2EBAC20927EBB20700076492 /* GroupView.swift in Sources */,
 				2E68175D280B30AB00849174 /* MessageRowView.swift in Sources */,
+				2EDC6F47281FF04100B172FC /* NotificationSettingVIew.swift in Sources */,
 				47E0DE6E27D8A176004352EC /* ContentView.swift in Sources */,
 				2EBAC20D27EBB59F00076492 /* NavbarView.swift in Sources */,
 				47F3FD5327E518C0005DC7C2 /* Fonts.swift in Sources */,
@@ -523,6 +530,7 @@
 				47F3FD6827E55613005DC7C2 /* LabelledDivider.swift in Sources */,
 				2E68175F280B500F00849174 /* ChatView.swift in Sources */,
 				2E681761280B524E00849174 /* MemberChatBarView.swift in Sources */,
+				2ED75BCC282466CD001C953D /* MyGroupView.swift in Sources */,
 				2E3CEDC4281F0807006A3899 /* SearchView.swift in Sources */,
 				47F3FD7627E6679D005DC7C2 /* StringProtocol.swift in Sources */,
 				47F3FD5E27E53296005DC7C2 /* RoundedCorner.swift in Sources */,

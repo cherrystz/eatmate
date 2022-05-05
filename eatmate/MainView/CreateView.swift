@@ -67,9 +67,7 @@ struct CreateView: View {
                     VStack(alignment: .leading, spacing: 0) {
                         Text("Date")
                             .font(.nunito(size: 18, weight: .semiBold))
-//                        TextField("", text: $dateField)
-//                            .font(.nunito(size: 18, weight: .regular))
-//                            .textFieldStyle(BottomLineTextFieldStyle())
+
                         DatePicker("Date", selection: $dateField, displayedComponents: [.date])
                                         .datePickerStyle(GraphicalDatePickerStyle())
                                         .frame(maxHeight: 400)
@@ -78,7 +76,7 @@ struct CreateView: View {
                     VStack(alignment: .leading, spacing: 0) {
                         Text("Location")
                             .font(.nunito(size: 18, weight: .semiBold))
-                        TextField("", text: $locationField)
+                        TextField("Fill in Google Map Link", text: $locationField)
                             .font(.nunito(size: 18, weight: .regular))
                             .textFieldStyle(BottomLineTextFieldStyle())
                     }

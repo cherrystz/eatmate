@@ -28,7 +28,15 @@ struct AboutUsView: View {
                                           Text("Feel bored when eating alone?")
                                               .font(.nunito(size: 18, weight: .regular))
                                           Text("Let us help you find your Eatmate!")
-                               .font(.nunito(size: 18, weight: .regular))}
+                               .font(.nunito(size: 18, weight: .regular))
+                               Text("Thank you for awesome illustrators.")
+                                   .font(.nunito(size: 20, weight: .regular))
+                                   .padding(.top, 20)
+                               Link("Icons8.com",
+                                     destination: URL(string: "https://icons8.com")!)
+                           }
+                         
+
                                .alignmentGuide(VerticalAlignment.center, computeValue: { $0[.bottom] })
                                .position(x: gp.size.width / 2, y: gp.size.height / 2)
                        
