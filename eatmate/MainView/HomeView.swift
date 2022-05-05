@@ -52,7 +52,7 @@ struct HomeView: View {
                             
                         
                         HStack(alignment: .bottom) {
-                            Button (action: {}, label: {
+                            NavigationLink (destination:CategoriesView(), label: {
                                 HStack {
                                     Text("Categories").font(.nunito())
                                     Image(systemName: "arrow.forward.circle.fill")

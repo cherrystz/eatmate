@@ -59,14 +59,14 @@ struct SettingView: View {
                     
             Form {
             Section(header: Text("Setting")) {
-                Button(action: {}, label: {
+                NavigationLink(destination:PaymentView(), label: {
                     HStack{
                         Image(systemName: "creditcard")
                         Text("Payment")
                     }
                     
                 })
-                Button(action: {}, label: {
+                NavigationLink(destination: NotificationSettingVIew(), label: {
                     HStack{
                         Image(systemName: "bell")
                         Text("Notification")
