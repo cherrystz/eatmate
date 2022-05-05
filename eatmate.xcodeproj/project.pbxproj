@@ -11,7 +11,6 @@
 		2E1B1B0E281F401100F4E2AE /* OmiseSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E1B1B11281F41E800F4E2AE /* 8812-eatsready-home-header.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */; };
 		2E1B1B13281F49A900F4E2AE /* PrivilegeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */; };
-		2E1B1B15281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2E1B1B14281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf */; };
 		2E1B1B18281F55AB00F4E2AE /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */; };
 		2E21D8E9281F116F000DFE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E21D8E8281F116F000DFE7B /* Assets.xcassets */; };
 		2E21D8EB281F1330000DFE7B /* 96916-searching.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E21D8EA281F1330000DFE7B /* 96916-searching.json */; };
@@ -92,9 +91,8 @@
 
 /* Begin PBXFileReference section */
 		2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OmiseSDK.xcframework; path = Carthage/Build/OmiseSDK.xcframework; sourceTree = "<group>"; };
-		2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "8812-eatsready-home-header.json"; path = "../../../../../Downloads/8812-eatsready-home-header.json"; sourceTree = "<group>"; };
+		2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "8812-eatsready-home-header.json"; sourceTree = "<group>"; };
 		2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegeView.swift; sourceTree = "<group>"; };
-		2E1B1B14281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "privacy_policy_20220502-1_th.pdf"; path = "../../../../Downloads/privacy_policy_20220502-1_th.pdf"; sourceTree = "<group>"; };
 		2E1B1B16281F4BAF00F4E2AE /* privacy_policy_20220502-1_th.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "privacy_policy_20220502-1_th.pdf"; sourceTree = "<group>"; };
 		2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		2E21D8E8281F116F000DFE7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -342,7 +340,6 @@
 		AC57D528BC5F8998B6DD138B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2E1B1B14281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf */,
 				97A5247DC2F37DA84CCEEF83 /* Pods-eatmate.debug.xcconfig */,
 				2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */,
 			);
@@ -441,7 +438,6 @@
 				4774197927E38A0100EF44C1 /* Podfile in Resources */,
 				47F3FD7A27E674F9005DC7C2 /* LaunchScreen.storyboard in Resources */,
 				47F3FD4C27E51829005DC7C2 /* Nunito-Bold.ttf in Resources */,
-				2E1B1B15281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
