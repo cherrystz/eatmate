@@ -35,36 +35,36 @@ struct SettingView: View {
             }
             .padding(.top, 20)
           
-                NavigationLink(destination: PrivilegeView(), label: {
-                    VStack(spacing: 0){
-                    HStack{
-                        LottieView(name: "8812-eatsready-home-header", loopMode: .loop)
-                            .frame(height: 150)
-                        Text("Try Premium!")
-                            .font(.nunito(size: 20, weight: .bold))
-                            .foregroundColor(.white)
-                        
-                    }.padding(.horizontal,20)
-                        
-                    }.frame(height:100)
-                            .background(.gray)
-                            .cornerRadius(20)
-                            .shadow(color: Color.black.opacity(0.3),
-                                    radius: 3,
-                                    x: 3,
-                                    y: 3)
-                }
-                ) .padding(.horizontal,26)
+//                NavigationLink(destination: PrivilegeView(), label: {
+//                    VStack(spacing: 0){
+//                    HStack{
+//                        LottieView(name: "8812-eatsready-home-header", loopMode: .loop)
+//                            .frame(height: 150)
+//                        Text("Try Premium!")
+//                            .font(.nunito(size: 20, weight: .bold))
+//                            .foregroundColor(.white)
+//
+//                    }.padding(.horizontal,20)
+//
+//                    }.frame(height:100)
+//                            .background(.gray)
+//                            .cornerRadius(20)
+//                            .shadow(color: Color.black.opacity(0.3),
+//                                    radius: 3,
+//                                    x: 3,
+//                                    y: 3)
+//                }
+//                ) .padding(.horizontal,26)
                
                     
             Form {
             Section(header: Text("Setting")) {
-                NavigationLink(destination:PaymentView(), label: {
+                NavigationLink(destination:MyGroupView(), label: {
                     HStack{
-                        Image(systemName: "creditcard")
-                        Text("Payment")
+                        Image(systemName: "fork.knife.circle")
+                        Text("My group")
                     }
-                    
+
                 })
                 NavigationLink(destination: NotificationSettingVIew(), label: {
                     HStack{
