@@ -11,7 +11,7 @@ import SwiftColor
 struct HomeView: View {
     
     @State var textFieldSearch: String = ""
-    
+   
     let categoriesList = [
         "Esan",
         "Grill",
@@ -34,16 +34,22 @@ struct HomeView: View {
                                     .font(.nunito(size: 24))
                             }
                             Spacer()
-                            Image("ProfileImageDefault")
-                                .resizable()
-                                .frame(width: 48, height: 48)
-                                .cornerRadius(15)
+                            NavigationLink(destination: SettingView(), label: {
+                                Image("ProfileImageDefault")
+                                    .resizable()
+                                    .frame(width: 48, height: 48)
+                                    .cornerRadius(15)
+                            })
+                            
                         }
-                        
-                        TextField("What do you want to eat ?", text: $textFieldSearch)
-                            .font(.nunito(size: 18))
-                            .textFieldStyle(OvalTextFieldStyle())
-                            .padding(.top)
+                        NavigationLink(destination: SearchView(), label: {
+                            TextField("What do you want to eat ?", text: $textFieldSearch)
+                                .font(.kanit(size: 18))
+                                .textFieldStyle(OvalTextFieldStyle())
+                                .multilineTextAlignment(.leading)
+                        }).padding(.top)
+                       
+                            
                         
                         HStack(alignment: .bottom) {
                             Button (action: {}, label: {
@@ -95,6 +101,23 @@ struct HomeView: View {
                         }
                     }
                     Spacer()
+                    HStack(alignment: .bottom) {
+                        Button (action: {}, label: {
+                            HStack {
+                                Text("Near me").font(.nunito())
+                            }
+                        })
+                        Spacer()
+                    }.padding(.top, 20)
+                        .padding(.leading, 26)
+                        .padding(.trailing, 30)
+                    ScrollView (.vertical, showsIndicators: false) {
+                        HStack(spacing: 8) {
+                            Spacer(minLength: 21)
+                            //place group here
+                            Spacer()
+                        }
+                    }
                 }.padding(.top, 15)
             }
         }

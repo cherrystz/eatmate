@@ -7,15 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1B1B0D281F401100F4E2AE /* OmiseSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */; };
+		2E1B1B0E281F401100F4E2AE /* OmiseSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2E1B1B11281F41E800F4E2AE /* 8812-eatsready-home-header.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */; };
+		2E1B1B13281F49A900F4E2AE /* PrivilegeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */; };
+		2E1B1B15281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2E1B1B14281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf */; };
+		2E1B1B18281F55AB00F4E2AE /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */; };
+		2E21D8E9281F116F000DFE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E21D8E8281F116F000DFE7B /* Assets.xcassets */; };
+		2E21D8EB281F1330000DFE7B /* 96916-searching.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E21D8EA281F1330000DFE7B /* 96916-searching.json */; };
+		2E3A1222281587730094D1E4 /* InterestSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A1221281587730094D1E4 /* InterestSelectView.swift */; };
+		2E3A122528158AD70094D1E4 /* InterestButtonModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A122428158AD70094D1E4 /* InterestButtonModule.swift */; };
+		2E3A122828158FD70094D1E4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A122728158FD70094D1E4 /* Colors.swift */; };
+		2E3A122B281592720094D1E4 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 2E3A122A281592720094D1E4 /* WrappingHStack */; };
+		2E3A122D2815CD3F0094D1E4 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A122C2815CD3E0094D1E4 /* SettingView.swift */; };
+		2E3CEDC2281F0392006A3899 /* PolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CEDC1281F0392006A3899 /* PolicyView.swift */; };
+		2E3CEDC4281F0807006A3899 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CEDC3281F0807006A3899 /* SearchView.swift */; };
+		2E3CEDC9281F0DB6006A3899 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CEDC8281F0DB6006A3899 /* LottieView.swift */; };
+		2E4273CA2815F5B4003C68B8 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4273C92815F5B4003C68B8 /* CategoriesView.swift */; };
+		2E68175D280B30AB00849174 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68175C280B30AA00849174 /* MessageRowView.swift */; };
+		2E68175F280B500F00849174 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68175E280B500F00849174 /* ChatView.swift */; };
+		2E681761280B524E00849174 /* MemberChatBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E681760280B524E00849174 /* MemberChatBarView.swift */; };
+		2E681765280B57C700849174 /* ChatInputTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E681764280B57C700849174 /* ChatInputTabView.swift */; };
+		2E864544281A37C0007634F4 /* MFMailComposeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E864543281A37C0007634F4 /* MFMailComposeModule.swift */; };
+		2E864546281A3E6D007634F4 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E864545281A3E6C007634F4 /* AboutUsView.swift */; };
+		2E86454C281A4740007634F4 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 2E86454B281A4740007634F4 /* NavigationStack */; };
+		2E86454E281A562E007634F4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86454D281A562D007634F4 /* ProfileView.swift */; };
+		2E864550281A6A66007634F4 /* RegisterPersonalInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86454F281A6A66007634F4 /* RegisterPersonalInformationView.swift */; };
+		2E864554281F0132007634F4 /* PDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E864553281F0132007634F4 /* PDFView.swift */; };
+		2EBAC20927EBB20700076492 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20827EBB20700076492 /* GroupView.swift */; };
+		2EBAC20D27EBB59F00076492 /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20C27EBB59F00076492 /* NavbarView.swift */; };
+		2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */; };
+		2EBAC21127EE497A00076492 /* GroupContentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC21027EE497A00076492 /* GroupContentModule.swift */; };
+		2EE38D2D2805DFA7000668BD /* CustomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE38D2C2805DFA6000668BD /* CustomRowView.swift */; };
 		3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */; };
 		472920AD27E3B37900C62E86 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AC27E3B37900C62E86 /* CreateView.swift */; };
-		472920AF27E3B39D00C62E86 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AE27E3B39D00C62E86 /* ChatView.swift */; };
+		472920AF27E3B39D00C62E86 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AE27E3B39D00C62E86 /* MessageView.swift */; };
 		472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920B027E3B3AF00C62E86 /* NotificationView.swift */; };
 		4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4774197627E3896700EF44C1 /* GoogleService-Info.plist */; };
 		4774197927E38A0100EF44C1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4774197827E38A0100EF44C1 /* Podfile */; };
 		47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE6B27D8A176004352EC /* eatmateApp.swift */; };
 		47E0DE6E27D8A176004352EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE6D27D8A176004352EC /* ContentView.swift */; };
-		47E0DE7027D8A178004352EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E0DE6F27D8A178004352EC /* Assets.xcassets */; };
 		47E0DE7327D8A178004352EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E0DE7227D8A178004352EC /* Preview Assets.xcassets */; };
 		47E0DE7B27D8A6D2004352EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE7A27D8A6D2004352EC /* HomeView.swift */; };
 		47F3FD3D27E46FF3005DC7C2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD3C27E46FF3005DC7C2 /* LoginView.swift */; };
@@ -45,17 +76,60 @@
 		47F3FD7E27E68241005DC7C2 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3FD7D27E68241005DC7C2 /* AnyTransition.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2E1B1B0F281F401100F4E2AE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2E1B1B0E281F401100F4E2AE /* OmiseSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OmiseSDK.xcframework; path = Carthage/Build/OmiseSDK.xcframework; sourceTree = "<group>"; };
+		2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "8812-eatsready-home-header.json"; path = "../../../../../Downloads/8812-eatsready-home-header.json"; sourceTree = "<group>"; };
+		2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegeView.swift; sourceTree = "<group>"; };
+		2E1B1B14281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "privacy_policy_20220502-1_th.pdf"; path = "../../../../Downloads/privacy_policy_20220502-1_th.pdf"; sourceTree = "<group>"; };
+		2E1B1B16281F4BAF00F4E2AE /* privacy_policy_20220502-1_th.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "privacy_policy_20220502-1_th.pdf"; sourceTree = "<group>"; };
+		2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		2E21D8E8281F116F000DFE7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E21D8EA281F1330000DFE7B /* 96916-searching.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "96916-searching.json"; sourceTree = "<group>"; };
+		2E3A1221281587730094D1E4 /* InterestSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestSelectView.swift; sourceTree = "<group>"; };
+		2E3A122428158AD70094D1E4 /* InterestButtonModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestButtonModule.swift; sourceTree = "<group>"; };
+		2E3A122728158FD70094D1E4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2E3A122C2815CD3E0094D1E4 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		2E3CEDC1281F0392006A3899 /* PolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyView.swift; sourceTree = "<group>"; };
+		2E3CEDC3281F0807006A3899 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		2E3CEDC8281F0DB6006A3899 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		2E4273C92815F5B4003C68B8 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		2E68175C280B30AA00849174 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
+		2E68175E280B500F00849174 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		2E681760280B524E00849174 /* MemberChatBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberChatBarView.swift; sourceTree = "<group>"; };
+		2E681764280B57C700849174 /* ChatInputTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputTabView.swift; sourceTree = "<group>"; };
+		2E864543281A37C0007634F4 /* MFMailComposeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFMailComposeModule.swift; sourceTree = "<group>"; };
+		2E864545281A3E6C007634F4 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
+		2E86454D281A562D007634F4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2E86454F281A6A66007634F4 /* RegisterPersonalInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonalInformationView.swift; sourceTree = "<group>"; };
+		2E864553281F0132007634F4 /* PDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFView.swift; sourceTree = "<group>"; };
+		2EBAC20827EBB20700076492 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		2EBAC20C27EBB59F00076492 /* NavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarView.swift; sourceTree = "<group>"; };
+		2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderModule.swift; sourceTree = "<group>"; };
+		2EBAC21027EE497A00076492 /* GroupContentModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupContentModule.swift; sourceTree = "<group>"; };
 		2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatmate.release.xcconfig"; path = "Target Support Files/Pods-eatmate/Pods-eatmate.release.xcconfig"; sourceTree = "<group>"; };
+		2EE38D2C2805DFA6000668BD /* CustomRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowView.swift; sourceTree = "<group>"; };
 		472920AC27E3B37900C62E86 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
-		472920AE27E3B39D00C62E86 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		472920AE27E3B39D00C62E86 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		472920B027E3B3AF00C62E86 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		4774197627E3896700EF44C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4774197827E38A0100EF44C1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		47E0DE6827D8A176004352EC /* eatmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E0DE6B27D8A176004352EC /* eatmateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eatmateApp.swift; sourceTree = "<group>"; };
 		47E0DE6D27D8A176004352EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		47E0DE6F27D8A178004352EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47E0DE7227D8A178004352EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47E0DE7A27D8A6D2004352EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		47F3FD3C27E46FF3005DC7C2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -94,6 +168,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3A122B281592720094D1E4 /* WrappingHStack in Frameworks */,
+				2E86454C281A4740007634F4 /* NavigationStack in Frameworks */,
+				2E1B1B0D281F401100F4E2AE /* OmiseSDK.xcframework in Frameworks */,
 				3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +178,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E3CEDC5281F0D8A006A3899 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */,
+				2E21D8EA281F1330000DFE7B /* 96916-searching.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		47E0DE5F27D8A176004352EC = {
 			isa = PBXGroup;
 			children = (
@@ -125,16 +211,17 @@
 			children = (
 				47F3FD7F27E68A5D005DC7C2 /* eatmate.entitlements */,
 				47F3FD5427E51E5E005DC7C2 /* Info.plist */,
+				2E3CEDC5281F0D8A006A3899 /* Lottie */,
 				4774197627E3896700EF44C1 /* GoogleService-Info.plist */,
 				47E0DE6B27D8A176004352EC /* eatmateApp.swift */,
 				47F3FD7927E674F9005DC7C2 /* LaunchScreen.storyboard */,
 				47E0DE6D27D8A176004352EC /* ContentView.swift */,
 				47F3FD3B27E46FD8005DC7C2 /* Authentication */,
 				47E0DE7927D8A6B1004352EC /* MainView */,
-				47E0DE6F27D8A178004352EC /* Assets.xcassets */,
 				47F3FD5127E518B2005DC7C2 /* Extensions */,
 				47F3FD4827E517CC005DC7C2 /* Fonts */,
 				47F3FD4027E4EFDC005DC7C2 /* Components */,
+				2E21D8E8281F116F000DFE7B /* Assets.xcassets */,
 				47E0DE7127D8A178004352EC /* Preview Content */,
 			);
 			path = eatmate;
@@ -143,6 +230,7 @@
 		47E0DE7127D8A178004352EC /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				2E1B1B16281F4BAF00F4E2AE /* privacy_policy_20220502-1_th.pdf */,
 				47E0DE7227D8A178004352EC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -153,8 +241,18 @@
 			children = (
 				47E0DE7A27D8A6D2004352EC /* HomeView.swift */,
 				472920AC27E3B37900C62E86 /* CreateView.swift */,
-				472920AE27E3B39D00C62E86 /* ChatView.swift */,
+				2E3A122C2815CD3E0094D1E4 /* SettingView.swift */,
+				2E4273C92815F5B4003C68B8 /* CategoriesView.swift */,
+				2E3CEDC3281F0807006A3899 /* SearchView.swift */,
+				2E86454D281A562D007634F4 /* ProfileView.swift */,
+				2EBAC20827EBB20700076492 /* GroupView.swift */,
+				2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */,
+				2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */,
+				2E3CEDC1281F0392006A3899 /* PolicyView.swift */,
+				2E864545281A3E6C007634F4 /* AboutUsView.swift */,
+				472920AE27E3B39D00C62E86 /* MessageView.swift */,
 				472920B027E3B3AF00C62E86 /* NotificationView.swift */,
+				2E68175E280B500F00849174 /* ChatView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -175,6 +273,16 @@
 				47F3FD6727E55613005DC7C2 /* LabelledDivider.swift */,
 				47F3FD4127E4F072005DC7C2 /* TabViewModule.swift */,
 				47F3FD4327E4FA19005DC7C2 /* FullScreenView.swift */,
+				2EBAC20C27EBB59F00076492 /* NavbarView.swift */,
+				2E864543281A37C0007634F4 /* MFMailComposeModule.swift */,
+				2E68175C280B30AA00849174 /* MessageRowView.swift */,
+				2E681760280B524E00849174 /* MemberChatBarView.swift */,
+				2EE38D2C2805DFA6000668BD /* CustomRowView.swift */,
+				2E3CEDC8281F0DB6006A3899 /* LottieView.swift */,
+				2E3A122428158AD70094D1E4 /* InterestButtonModule.swift */,
+				2E681764280B57C700849174 /* ChatInputTabView.swift */,
+				2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */,
+				2EBAC21027EE497A00076492 /* GroupContentModule.swift */,
 				47F3FD5927E529CE005DC7C2 /* CategoriesModule.swift */,
 				47F3FD5B27E52EF0005DC7C2 /* GroupDisplayModule.swift */,
 			);
@@ -201,7 +309,9 @@
 				47F3FD5227E518C0005DC7C2 /* Fonts.swift */,
 				47F3FD7D27E68241005DC7C2 /* AnyTransition.swift */,
 				47F3FD7527E6679D005DC7C2 /* StringProtocol.swift */,
+				2E3A122728158FD70094D1E4 /* Colors.swift */,
 				47F3FD7727E66D20005DC7C2 /* TextLimiter.swift */,
+				2E864553281F0132007634F4 /* PDFView.swift */,
 				47F3FD5727E52436005DC7C2 /* TextFieldStyle.swift */,
 				47F3FD5D27E53296005DC7C2 /* RoundedCorner.swift */,
 			);
@@ -214,6 +324,8 @@
 				47F3FD6A27E55B25005DC7C2 /* RegisterView.swift */,
 				47F3FD6C27E55B5C005DC7C2 /* RegisterConfirmView.swift */,
 				47F3FD6E27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift */,
+				2E3A1221281587730094D1E4 /* InterestSelectView.swift */,
+				2E86454F281A6A66007634F4 /* RegisterPersonalInformationView.swift */,
 				47F3FD7327E664AD005DC7C2 /* PasscodeField.swift */,
 			);
 			path = SignUp;
@@ -230,6 +342,7 @@
 		AC57D528BC5F8998B6DD138B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				2E1B1B14281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf */,
 				97A5247DC2F37DA84CCEEF83 /* Pods-eatmate.debug.xcconfig */,
 				2ED10E80AADFB3C84FA1DD66 /* Pods-eatmate.release.xcconfig */,
 			);
@@ -239,6 +352,7 @@
 		E803F5FE8779AEBE2C95A4A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */,
 				71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */,
 			);
 			name = Frameworks;
@@ -256,12 +370,17 @@
 				47E0DE6527D8A176004352EC /* Frameworks */,
 				47E0DE6627D8A176004352EC /* Resources */,
 				370CBC50B993EB5B88590C9D /* [CP] Embed Pods Frameworks */,
+				2E1B1B0F281F401100F4E2AE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = eatmate;
+			packageProductDependencies = (
+				2E3A122A281592720094D1E4 /* WrappingHStack */,
+				2E86454B281A4740007634F4 /* NavigationStack */,
+			);
 			productName = eatmate;
 			productReference = 47E0DE6827D8A176004352EC /* eatmate.app */;
 			productType = "com.apple.product-type.application";
@@ -290,6 +409,10 @@
 				Base,
 			);
 			mainGroup = 47E0DE5F27D8A176004352EC;
+			packageReferences = (
+				2E3A1229281592720094D1E4 /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+				2E86454A281A4740007634F4 /* XCRemoteSwiftPackageReference "NavigationStack" */,
+			);
 			productRefGroup = 47E0DE6927D8A176004352EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -305,17 +428,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				47F3FD6527E550EF005DC7C2 /* Nunito-Regular.ttf in Resources */,
+				2E1B1B11281F41E800F4E2AE /* 8812-eatsready-home-header.json in Resources */,
 				47E0DE7327D8A178004352EC /* Preview Assets.xcassets in Resources */,
+				2E21D8EB281F1330000DFE7B /* 96916-searching.json in Resources */,
 				47F3FD4F27E51876005DC7C2 /* Kanit-Bold.ttf in Resources */,
 				47F3FD4B27E51829005DC7C2 /* Nunito-Light.ttf in Resources */,
 				47F3FD6227E54C01005DC7C2 /* Nunito-ExtraBold.ttf in Resources */,
 				47F3FD6627E550EF005DC7C2 /* Nunito-SemiBold.ttf in Resources */,
+				2E21D8E9281F116F000DFE7B /* Assets.xcassets in Resources */,
 				47F3FD5027E51876005DC7C2 /* Kanit-Regular.ttf in Resources */,
 				4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */,
 				4774197927E38A0100EF44C1 /* Podfile in Resources */,
 				47F3FD7A27E674F9005DC7C2 /* LaunchScreen.storyboard in Resources */,
 				47F3FD4C27E51829005DC7C2 /* Nunito-Bold.ttf in Resources */,
-				47E0DE7027D8A178004352EC /* Assets.xcassets in Resources */,
+				2E1B1B15281F4BAC00F4E2AE /* privacy_policy_20220502-1_th.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,28 +494,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE38D2D2805DFA7000668BD /* CustomRowView.swift in Sources */,
 				47E0DE7B27D8A6D2004352EC /* HomeView.swift in Sources */,
+				2E3CEDC9281F0DB6006A3899 /* LottieView.swift in Sources */,
+				2E864554281F0132007634F4 /* PDFView.swift in Sources */,
 				47F3FD7E27E68241005DC7C2 /* AnyTransition.swift in Sources */,
+				2E4273CA2815F5B4003C68B8 /* CategoriesView.swift in Sources */,
+				2EBAC20927EBB20700076492 /* GroupView.swift in Sources */,
+				2E68175D280B30AB00849174 /* MessageRowView.swift in Sources */,
 				47E0DE6E27D8A176004352EC /* ContentView.swift in Sources */,
+				2EBAC20D27EBB59F00076492 /* NavbarView.swift in Sources */,
 				47F3FD5327E518C0005DC7C2 /* Fonts.swift in Sources */,
+				2EBAC21127EE497A00076492 /* GroupContentModule.swift in Sources */,
 				472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */,
 				47F3FD7827E66D20005DC7C2 /* TextLimiter.swift in Sources */,
 				47F3FD7427E664AD005DC7C2 /* PasscodeField.swift in Sources */,
 				47F3FD4427E4FA19005DC7C2 /* FullScreenView.swift in Sources */,
 				47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */,
 				47F3FD6D27E55B5C005DC7C2 /* RegisterConfirmView.swift in Sources */,
+				2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */,
 				47F3FD4227E4F072005DC7C2 /* TabViewModule.swift in Sources */,
-				472920AF27E3B39D00C62E86 /* ChatView.swift in Sources */,
+				2E864544281A37C0007634F4 /* MFMailComposeModule.swift in Sources */,
+				2E864550281A6A66007634F4 /* RegisterPersonalInformationView.swift in Sources */,
+				2E3A122528158AD70094D1E4 /* InterestButtonModule.swift in Sources */,
+				472920AF27E3B39D00C62E86 /* MessageView.swift in Sources */,
 				47F3FD3D27E46FF3005DC7C2 /* LoginView.swift in Sources */,
+				2E681765280B57C700849174 /* ChatInputTabView.swift in Sources */,
+				2E3A122D2815CD3F0094D1E4 /* SettingView.swift in Sources */,
 				47F3FD5827E52436005DC7C2 /* TextFieldStyle.swift in Sources */,
+				2E3A1222281587730094D1E4 /* InterestSelectView.swift in Sources */,
 				47F3FD5A27E529CE005DC7C2 /* CategoriesModule.swift in Sources */,
 				47F3FD6827E55613005DC7C2 /* LabelledDivider.swift in Sources */,
+				2E68175F280B500F00849174 /* ChatView.swift in Sources */,
+				2E681761280B524E00849174 /* MemberChatBarView.swift in Sources */,
+				2E3CEDC4281F0807006A3899 /* SearchView.swift in Sources */,
 				47F3FD7627E6679D005DC7C2 /* StringProtocol.swift in Sources */,
 				47F3FD5E27E53296005DC7C2 /* RoundedCorner.swift in Sources */,
+				2E1B1B13281F49A900F4E2AE /* PrivilegeView.swift in Sources */,
+				2E86454E281A562E007634F4 /* ProfileView.swift in Sources */,
 				47F3FD7127E65F51005DC7C2 /* AuthManager.swift in Sources */,
 				47F3FD6B27E55B25005DC7C2 /* RegisterView.swift in Sources */,
+				2E3A122828158FD70094D1E4 /* Colors.swift in Sources */,
 				47F3FD6F27E55B75005DC7C2 /* RegisterPasswordSettingsView.swift in Sources */,
+				2E3CEDC2281F0392006A3899 /* PolicyView.swift in Sources */,
+				2E1B1B18281F55AB00F4E2AE /* PaymentView.swift in Sources */,
 				47F3FD5C27E52EF0005DC7C2 /* GroupDisplayModule.swift in Sources */,
+				2E864546281A3E6D007634F4 /* AboutUsView.swift in Sources */,
 				472920AD27E3B37900C62E86 /* CreateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +673,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eatmate/Preview Content\"";
+				DEVELOPMENT_TEAM = 8BF693N7N5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eatmate/Info.plist;
@@ -556,6 +707,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eatmate/Preview Content\"";
+				DEVELOPMENT_TEAM = 8BF693N7N5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eatmate/Info.plist;
@@ -601,6 +753,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E3A1229281592720094D1E4 /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dkk/WrappingHStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		2E86454A281A4740007634F4 /* XCRemoteSwiftPackageReference "NavigationStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/indieSoftware/NavigationStack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E3A122A281592720094D1E4 /* WrappingHStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E3A1229281592720094D1E4 /* XCRemoteSwiftPackageReference "WrappingHStack" */;
+			productName = WrappingHStack;
+		};
+		2E86454B281A4740007634F4 /* NavigationStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E86454A281A4740007634F4 /* XCRemoteSwiftPackageReference "NavigationStack" */;
+			productName = NavigationStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 47E0DE6027D8A176004352EC /* Project object */;
 }

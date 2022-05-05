@@ -1,0 +1,28 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "v4.10.0",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)",
+      "hash" : "8d2d0f64b4bb452f072cef6cca4f81a57916b25e863a40488689495d6d58a460",
+      "name" : "OmiseSDK",
+      "container" : "OmiseSDK.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)",
+      "hash" : "3d279f97a2930c9b876b3fda792456721f8a5fce523d7323d53f7f60525a32c5",
+      "name" : "OmiseSDK",
+      "container" : "OmiseSDK.xcframework",
+      "identifier" : "ios-arm64_armv7"
+    }
+  ]
+}

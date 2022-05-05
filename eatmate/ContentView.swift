@@ -26,7 +26,7 @@ struct ContentView: View {
                     switch selectedIndex {
                     case 0: HomeView()
                     case 1: CreateView()
-                    case 2: ChatView()
+                    case 2: MessageView()
                     case 3: NotificationView()
                     default: EmptyView()
                     }
