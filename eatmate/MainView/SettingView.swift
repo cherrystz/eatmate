@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MessageUI
+import Lottie
 
 struct SettingView: View {
    
@@ -33,17 +34,39 @@ struct SettingView: View {
                 } .padding(.leading,15)
             }
             .padding(.top, 20)
-            
+          
+                NavigationLink(destination: PrivilegeView(), label: {
+                    VStack(spacing: 0){
+                    HStack{
+                        LottieView(name: "8812-eatsready-home-header", loopMode: .loop)
+                            .frame(height: 150)
+                        Text("Try Premium!")
+                            .font(.nunito(size: 20, weight: .bold))
+                            .foregroundColor(.white)
+                        
+                    }.padding(.horizontal,20)
+                        
+                    }.frame(height:100)
+                            .background(.gray)
+                            .cornerRadius(20)
+                            .shadow(color: Color.black.opacity(0.3),
+                                    radius: 3,
+                                    x: 3,
+                                    y: 3)
+                }
+                ) .padding(.horizontal,26)
+               
+                    
             Form {
             Section(header: Text("Setting")) {
-                Button(action: {}, label: {
+                NavigationLink(destination:PaymentView(), label: {
                     HStack{
                         Image(systemName: "creditcard")
                         Text("Payment")
                     }
                     
                 })
-                Button(action: {}, label: {
+                NavigationLink(destination: NotificationSettingVIew(), label: {
                     HStack{
                         Image(systemName: "bell")
                         Text("Notification")
@@ -51,7 +74,7 @@ struct SettingView: View {
                 })
             }
                 Section(header: Text("About")) {
-                    Button(action: {}, label: {
+                   NavigationLink(destination: PolicyView(), label: {
                         HStack{
                             Image(systemName: "newspaper")
                             Text("Term and Policy")
@@ -78,6 +101,8 @@ struct SettingView: View {
                     })
 
                 }
+                    
+                
                 Section(header: Text("")) {
                     Button(action: {}, label: {
                         HStack{
@@ -85,9 +110,10 @@ struct SettingView: View {
                             Text("Log out")
                         }.foregroundColor(.red)
                     })
-                   
-                   
                 }
+                
+                   
+               
             }
             .font(.nunito(size: 20, weight: .regular))
             .background(Color.white)
@@ -95,7 +121,7 @@ struct SettingView: View {
                   UITableView.appearance().backgroundColor = .clear
                 }
                 .onDisappear {
-                  UITableView.appearance().backgroundColor = .systemGroupedBackground
+                  UITableView.appearance().backgroundColor = .white
                 }
         }
         

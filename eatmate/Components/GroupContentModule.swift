@@ -77,40 +77,4 @@ struct GroupContentModule: View {
        
 }
 
-//struct GroupContentModule_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GroupContentModule()
-//    }
-//}
-
-
-//ทำให้ปุ่มมันอยู่เหนือTabbar 10 px แล้ว fix position
-//            HStack{
-//            Spacer()
-//            Button(action: {
-//                if groupApprove==0 {
-//                    self.groupApprove=2
-//                } else if groupApprove==2 {
-//                    self.groupApprove = 0
-//                }
-//                }, label: {
-//                    if groupApprove==2 {
-//                        Text("เข้าร่วม")
-//                            .font(.kanit(size: 20, weight: .bold))
-//                            .foregroundColor(.white)
-//                            .frame(width: 272, height: 33,alignment: .center)
-//                            .background(Color.green)
-//                    } else if groupApprove==0 {
-//                        Text("ยกเลิก")
-//                            .font(.kanit(size: 20, weight: .bold))
-//                            .foregroundColor(.white)
-//                            .frame(width: 272, height: 33,alignment: .center)
-//                            .background(Color.red)
-//                    }
-//
-//                            })
-//
-//                .cornerRadius(25)
-//            Spacer()
-//            }
-//End of button component
+ 

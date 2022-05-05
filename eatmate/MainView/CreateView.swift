@@ -15,11 +15,14 @@ struct CreateView: View {
     @State var dateField = Date()
     @State var locationField : String = ""
     @State var catagory : [String] = ["Breakfast","Seafood","Snack","Noodle"]
-    @State var ButtonToggle : Bool = false
+    @State var showAlert : Bool = false
+    @State var navigateActive : Bool = false
+    
     
     var body: some View {
         FullScreenView{
             NavbarView(title: "Create",showBackButton: false,showMoreButton: false,shadow: 2)
+            NavigationLink(destination: HomeView(), isActive: $navigateActive,label: { EmptyView() })
             ZStack{
             ScrollView{
                
@@ -90,6 +93,7 @@ struct CreateView: View {
                     Spacer()
                     HStack {
                         Button(action: {
+                        showAlert = true
                             //add to database and feed to homepage
                         }, label: {
                             Text("Create group")
@@ -99,7 +103,18 @@ struct CreateView: View {
                                 .background(Color.green)
                                 .cornerRadius(25)
 
-                        })
+                        }).alert(isPresented:$showAlert) {
+                            Alert(
+                                title: Text("Are you sure to create the group?"),
+                                
+                                primaryButton: .destructive(Text("No")) {
+                                    
+                                },
+                                secondaryButton: .default(Text("Yes")){
+                                   navigateActive = true
+                                }
+                            )
+                        }
                             .shadow(color: Color.black.opacity(0.3),
                                     radius: 3,
                                     x: 3,
