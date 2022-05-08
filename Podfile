@@ -18,6 +18,9 @@ target 'eatmate' do
   # For example, to use Firebase Authentication and Cloud Firestore
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
+  
 
   # Use for animated gif
   pod 'lottie-ios'

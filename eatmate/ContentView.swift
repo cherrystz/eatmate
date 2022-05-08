@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @AppStorage("bottomSheetShown") private var bottomSheetShown = false
+    @AppStorage("isLoggedIn") var loggedIn = false
     @State var selectedIndex = 0
     
     let tabItemList: [TabItem] = [
@@ -19,33 +21,49 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        VStack {
-            // Content
+        GeometryReader { geometry in
             VStack {
-                FullScreenView {
-                    switch selectedIndex {
-                    case 0: HomeView()
-                    case 1: CreateView()
-                    case 2: MessageView()
-                    case 3: NotificationView()
-                    default: EmptyView()
+                // Content
+                VStack {
+                    FullScreenView {
+                        switch selectedIndex {
+                        case 0: HomeView()
+                        case 1: CreateView()
+                        case 2: MessageView()
+                        case 3: NotificationView()
+                        default: EmptyView()
+                        }
                     }
-                }
-                
-                HStack {
-                    ForEach(0..<tabItemList.count, id: \.self) { number in
-                        Spacer()
-                        Button(action: { selectedIndex = number }, label: {
-                            TabItemDisplay(imageName: tabItemList[number].image,
-                                           tagName: tabItemList[number].name,
-                                           foregroundColor: selectedIndex == number ? .black : .gray)
-                        })
-                        Spacer()
+                    
+                    HStack {
+                        ForEach(0..<tabItemList.count, id: \.self) { number in
+                            Spacer()
+                            Button(action: { selectedIndex = number }, label: {
+                                TabItemDisplay(imageName: tabItemList[number].image,
+                                               tagName: tabItemList[number].name,
+                                               foregroundColor: selectedIndex == number ? .black : .gray)
+                            })
+                            Spacer()
+                        }
                     }
-                }
-                .frame(height: 87)
-                .background(.white)
+                    .frame(height: 87)
+                    .background(.white)
+                }.disabled(!loggedIn)
             }
+            .onTapGesture {
+                if !loggedIn {
+                    bottomSheetShown.toggle()
+                }
+            }
+            
+            
+            BottomSheetView(
+                isOpen: self.$bottomSheetShown,
+                maxHeight: geometry.size.height * 0.7
+            ) {
+                LoginViewCard()
+            }
+            .opacity(bottomSheetShown ? 1 : 0)
         }
     }
 }

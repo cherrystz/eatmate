@@ -30,7 +30,7 @@ struct HomeView: View {
                                 Text("Good Morning")
                                     .font(.nunito(size: 18))
                                 
-                                Text("John Doe")
+                                Text("Guest")
                                     .font(.nunito(size: 24))
                             }
                             Spacer()

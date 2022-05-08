@@ -8,12 +8,18 @@
 import SwiftUI
 import MessageUI
 import Lottie
+import GoogleSignIn
+import Firebase
 
 struct SettingView: View {
    
-    var username : String = "Phumipat Apivansri"
+    var username : String = "Guest"
     @State var result: Result<MFMailComposeResult, Error>? = nil
-        @State var isShowingMailView = false
+    @State var isShowingMailView = false
+    @State private var showingAlert = false
+    @AppStorage("isLoggedIn") var loggedIn = false
+    @AppStorage("bottomSheetShown") private var bottomSheetShown = false
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         FullScreenView{
@@ -104,12 +110,26 @@ struct SettingView: View {
                     
                 
                 Section(header: Text("")) {
-                    Button(action: {}, label: {
+                    Button(action: { showingAlert.toggle() }, label: {
                         HStack{
                             Image(systemName: "rectangle.portrait.and.arrow.right")
                             Text("Log out")
                         }.foregroundColor(.red)
                     })
+                    .alert(isPresented: $showingAlert) {
+                            Alert(
+                                title: Text("Sign out"),
+                                message: Text("Are you sure to sign out?"),
+                                primaryButton: .default(
+                                    Text("Cancel"),
+                                    action: {}
+                                ),
+                                secondaryButton: .destructive(
+                                    Text("Sign out"),
+                                    action: { logout() }
+                                )
+                            )
+                        }
                 }
                 
                    
@@ -126,10 +146,12 @@ struct SettingView: View {
         }
         
     }
-}
-
-struct SettingView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingView()
+    
+    func logout() {
+        GIDSignIn.sharedInstance.signOut()
+        try? Auth.auth().signOut()
+        loggedIn = false
+        bottomSheetShown = false
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
