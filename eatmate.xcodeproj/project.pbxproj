@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2E1B1B0D281F401100F4E2AE /* OmiseSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */; };
 		2E1B1B0E281F401100F4E2AE /* OmiseSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2E1B1B11281F41E800F4E2AE /* 8812-eatsready-home-header.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */; };
 		2E1B1B13281F49A900F4E2AE /* PrivilegeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */; };
 		2E1B1B18281F55AB00F4E2AE /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */; };
 		2E21D8E9281F116F000DFE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E21D8E8281F116F000DFE7B /* Assets.xcassets */; };
@@ -41,6 +40,8 @@
 		2EDC6F47281FF04100B172FC /* NotificationSettingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC6F46281FF04000B172FC /* NotificationSettingVIew.swift */; };
 		2EE38D2D2805DFA7000668BD /* CustomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE38D2C2805DFA6000668BD /* CustomRowView.swift */; };
 		3AE6CA6B3D3162796857D462 /* Pods_eatmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71489CFD9AE882EC0D356621 /* Pods_eatmate.framework */; };
+		472518762828398300B9AA86 /* 8812-eatsready-home-header.json in Resources */ = {isa = PBXBuildFile; fileRef = 472518752828398300B9AA86 /* 8812-eatsready-home-header.json */; };
+		47251878282839E700B9AA86 /* privacy_policy_20220502-1_th.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 47251877282839E700B9AA86 /* privacy_policy_20220502-1_th.pdf */; };
 		472920AD27E3B37900C62E86 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AC27E3B37900C62E86 /* CreateView.swift */; };
 		472920AF27E3B39D00C62E86 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AE27E3B39D00C62E86 /* MessageView.swift */; };
 		472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920B027E3B3AF00C62E86 /* NotificationView.swift */; };
@@ -93,9 +94,7 @@
 
 /* Begin PBXFileReference section */
 		2E1B1B0C281F401100F4E2AE /* OmiseSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OmiseSDK.xcframework; path = Carthage/Build/OmiseSDK.xcframework; sourceTree = "<group>"; };
-		2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "8812-eatsready-home-header.json"; sourceTree = "<group>"; };
 		2E1B1B12281F49A900F4E2AE /* PrivilegeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegeView.swift; sourceTree = "<group>"; };
-		2E1B1B16281F4BAF00F4E2AE /* privacy_policy_20220502-1_th.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "privacy_policy_20220502-1_th.pdf"; sourceTree = "<group>"; };
 		2E1B1B17281F55AB00F4E2AE /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		2E21D8E8281F116F000DFE7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E21D8EA281F1330000DFE7B /* 96916-searching.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "96916-searching.json"; sourceTree = "<group>"; };
@@ -124,6 +123,8 @@
 		2ED75BCB282466CD001C953D /* MyGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupView.swift; sourceTree = "<group>"; };
 		2EDC6F46281FF04000B172FC /* NotificationSettingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingVIew.swift; sourceTree = "<group>"; };
 		2EE38D2C2805DFA6000668BD /* CustomRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowView.swift; sourceTree = "<group>"; };
+		472518752828398300B9AA86 /* 8812-eatsready-home-header.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "8812-eatsready-home-header.json"; sourceTree = "<group>"; };
+		47251877282839E700B9AA86 /* privacy_policy_20220502-1_th.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "privacy_policy_20220502-1_th.pdf"; sourceTree = "<group>"; };
 		472920AC27E3B37900C62E86 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		472920AE27E3B39D00C62E86 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		472920B027E3B3AF00C62E86 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -183,7 +184,7 @@
 		2E3CEDC5281F0D8A006A3899 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
-				2E1B1B10281F41E700F4E2AE /* 8812-eatsready-home-header.json */,
+				472518752828398300B9AA86 /* 8812-eatsready-home-header.json */,
 				2E21D8EA281F1330000DFE7B /* 96916-searching.json */,
 			);
 			path = Lottie;
@@ -232,7 +233,7 @@
 		47E0DE7127D8A178004352EC /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2E1B1B16281F4BAF00F4E2AE /* privacy_policy_20220502-1_th.pdf */,
+				47251877282839E700B9AA86 /* privacy_policy_20220502-1_th.pdf */,
 				47E0DE7227D8A178004352EC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -431,7 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47F3FD6527E550EF005DC7C2 /* Nunito-Regular.ttf in Resources */,
-				2E1B1B11281F41E800F4E2AE /* 8812-eatsready-home-header.json in Resources */,
+				472518762828398300B9AA86 /* 8812-eatsready-home-header.json in Resources */,
 				47E0DE7327D8A178004352EC /* Preview Assets.xcassets in Resources */,
 				2E21D8EB281F1330000DFE7B /* 96916-searching.json in Resources */,
 				47F3FD4F27E51876005DC7C2 /* Kanit-Bold.ttf in Resources */,
@@ -444,6 +445,7 @@
 				4774197927E38A0100EF44C1 /* Podfile in Resources */,
 				47F3FD7A27E674F9005DC7C2 /* LaunchScreen.storyboard in Resources */,
 				47F3FD4C27E51829005DC7C2 /* Nunito-Bold.ttf in Resources */,
+				47251878282839E700B9AA86 /* privacy_policy_20220502-1_th.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,7 +679,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eatmate/Preview Content\"";
-				DEVELOPMENT_TEAM = 8BF693N7N5;
+				DEVELOPMENT_TEAM = 2FF3U2S4L7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eatmate/Info.plist;
@@ -711,7 +713,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eatmate/Preview Content\"";
-				DEVELOPMENT_TEAM = 8BF693N7N5;
+				DEVELOPMENT_TEAM = 2FF3U2S4L7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eatmate/Info.plist;
