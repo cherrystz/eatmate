@@ -17,7 +17,8 @@ struct CreateView: View {
     @State var catagory : [String] = ["Breakfast","Seafood","Snack","Noodle"]
     @State var showAlert : Bool = false
     @State var navigateActive : Bool = false
-    
+    @State var limitField : Int = 0
+    @State var memberlimit : [Int] = [2,3,4,5,6,7,8,9,10]
     
     var body: some View {
         FullScreenView{
@@ -72,6 +73,25 @@ struct CreateView: View {
                                         .datePickerStyle(GraphicalDatePickerStyle())
                                         .frame(maxHeight: 400)
                                         .font(.nunito(size: 18, weight: .semiBold))
+                    }
+                    VStack(alignment: .leading, spacing: 0) {
+                        HStack{
+                            VStack{
+                                Text("Member Limit")
+                                    .font(.nunito(size: 18, weight: .semiBold))
+                                Picker("Member Limit", selection: $limitField) {
+                                               ForEach(memberlimit, id: \.self) {
+                                                   Text(String($0))
+                                                   
+                                               }
+                                
+                                }.padding(.leading,-60)
+                                    
+                            }
+                           
+                            Spacer()
+                        }
+                       
                     }
                     VStack(alignment: .leading, spacing: 0) {
                         Text("Location")
