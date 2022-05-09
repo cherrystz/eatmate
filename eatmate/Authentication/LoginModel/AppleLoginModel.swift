@@ -62,17 +62,17 @@ struct AppleLoginModel: View {
                                 "email": Auth.auth().currentUser?.email,
                                 "profile_picture": "",
                                 "gender": "Unknown",
-                                "age": "0",
+                                "birthday": "",
                                 "description_profile": "I am new EatMate!",
                                 "favor_id": "",
                                 "subscription_id": "",
-                                "provider_id": "google",
+                                "provider_id": "apple",
                                 "uid": Auth.auth().currentUser?.uid,
                                 "successful_profile": "false"
                             ]
                             print(parameters)
                             
-                            AF.request("http://192.168.1.7:3000/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
+                            AF.request("\(urlAPI)/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
                                     .responseDecodable(of: ResultResponse.self) { response in
                                         switch response.result {
                                         case .success(let value):

@@ -74,7 +74,7 @@ struct GoogleLoginModel: View {
                     "email": user.email,
                     "profile_picture": user.photoURL?.absoluteString.description,
                     "gender": "Unknown",
-                    "age": "0",
+                    "birthday": "",
                     "description_profile": "I am new EatMate!",
                     "favor_id": "",
                     "subscription_id": "",
@@ -84,7 +84,7 @@ struct GoogleLoginModel: View {
                 ]
                 print(parameters)
                 
-                AF.request("http://192.168.1.7:3000/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
+                AF.request("\(urlAPI.rawValue)/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
                         .responseDecodable(of: ResultResponse.self) { response in
                             switch response.result {
                             case .success(let value):

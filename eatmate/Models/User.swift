@@ -14,7 +14,7 @@ struct User: Encodable, Decodable {
     var email: String = ""
     var profile_picture: String = ""
     var gender: String = ""
-    var age: Int = 0
+    var birthday: String = ""
     var description_profile: String = ""
     var favor_id: String = ""
     var subscription_id: String = ""
@@ -23,5 +23,5 @@ struct User: Encodable, Decodable {
     var successful_profile: Bool = false
 }
 
-var userGuest = User(_id: "", name: "Guest", register_date: "", email: "", profile_picture: "", gender: "", age: 0, description_profile: "", favor_id: "", subscription_id: "", provider_id: "", uid: "", successful_profile: false)
+var userGuest = User(_id: "", name: "Guest", register_date: "", email: "", profile_picture: "", gender: "", birthday: "", description_profile: "", favor_id: "", subscription_id: "", provider_id: "", uid: "", successful_profile: false)
 

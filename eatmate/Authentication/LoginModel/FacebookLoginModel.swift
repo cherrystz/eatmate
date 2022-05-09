@@ -8,11 +8,13 @@
 import SwiftUI
 import Firebase
 import FBSDKLoginKit
+import Alamofire
 
 struct FacebookLoginModel: View {
     
     @AppStorage("isLoggedIn") var loggedIn = false
     @AppStorage("bottomSheetShown") private var bottomSheetShown = false
+    @AppStorage("userApp") var userApp: Data = Data()
     
     var body: some View {
         Button(action: FacebookLogin, label: {
@@ -66,6 +68,39 @@ struct FacebookLoginModel: View {
                     print("asd")
                     return
                 }
+                
+                
+                let date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy"
+                let parameters = [
+                    "name": user?.user.displayName,
+                    "register_date": dateFormatter.string(from: date),
+                    "email": user?.user.email,
+                    "profile_picture": user?.user.photoURL?.absoluteString.description,
+                    "gender": "Unknown",
+                    "birthday": "",
+                    "description_profile": "I am new EatMate!",
+                    "favor_id": "",
+                    "subscription_id": "",
+                    "provider_id": "facebook",
+                    "uid": user?.user.uid,
+                    "successful_profile": "false"
+                ]
+                print(parameters)
+                
+                AF.request("\(urlAPI)/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
+                        .responseDecodable(of: ResultResponse.self) { response in
+                            switch response.result {
+                            case .success(let value):
+                                let encoder = JSONEncoder()
+                                if let data = try? encoder.encode(value.data) {
+                                    userApp = data
+                                }
+                            case .failure(let error):
+                                print(error)
+                            }
+                    }
                 
                 loggedIn.toggle()
                 bottomSheetShown = false

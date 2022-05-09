@@ -45,11 +45,11 @@ struct NavbarView : View {
                 
             },
                    label: {
-                if showMoreButton{
+                if showMoreButton && canEdit{
                     NavigationLink(destination: RegisterPersonalInformationView(), label: {
-                        Image(systemName: "ellipsis")
+                        Image(systemName: "pencil.circle")
                         .resizable()
-                        .frame(width: 16, height: 3.7)
+                        .frame(width: 24, height: 24)
                     })
                 }
                     

@@ -29,12 +29,7 @@ struct ProfileView: View {
                         Button(action: {}, label: {
                             if let url = decoder().profile_picture{
                                 if url != "" {
-                                    AsyncImage(url: URL(string: url),
-                                               content: { phase in
-                                        if let image = phase.image {
-                                            image.resizable()
-                                        }
-                                    })
+                                    AsyncImage(url: URL(string: url))
                                     .frame(width: 350, height: 350)
                                     .cornerRadius(15)
                                 }
@@ -47,7 +42,7 @@ struct ProfileView: View {
                             }
                         }).padding(.top,20)
                         HStack{
-                            Text(decoder().name + " " + String(decoder().age == 0 ? "Unknown" : "\(decoder().age)"))
+                            Text(decoder().name + " " + String(decoder().birthday == "" ? "Unknown" : "\(decoder().birthday)"))
                                 .font(.nunito(size: 28, weight: .semiBold))
                             Spacer()
                         }

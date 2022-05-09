@@ -42,3 +42,13 @@ struct eatmateApp: App {
     }
     
 }
+
+let urlAPI: APISelection = .localhost
+
+enum APISelection: String {
+    case localhost = "http://localhost:3000"
+    case homePlug = "http://192.168.1.7:3000"
+    case glitch = "https://eatmate-api.glitch.me"
+}
+
+
