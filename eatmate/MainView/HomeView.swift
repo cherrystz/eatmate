@@ -11,7 +11,7 @@ import SwiftColor
 struct HomeView: View {
     
     @State var textFieldSearch: String = ""
-    
+   
     let categoriesList = [
         "Esan",
         "Grill",
@@ -34,19 +34,25 @@ struct HomeView: View {
                                     .font(.nunito(size: 24))
                             }
                             Spacer()
-                            Image("ProfileImageDefault")
-                                .resizable()
-                                .frame(width: 48, height: 48)
-                                .cornerRadius(15)
+                            NavigationLink(destination: SettingView(), label: {
+                                Image("ProfileImageDefault")
+                                    .resizable()
+                                    .frame(width: 48, height: 48)
+                                    .cornerRadius(15)
+                            })
+                            
                         }
-                        
-                        TextField("What do you want to eat ?", text: $textFieldSearch)
-                            .font(.nunito(size: 18))
-                            .textFieldStyle(OvalTextFieldStyle())
-                            .padding(.top)
+                        NavigationLink(destination: SearchView(), label: {
+                            TextField("What do you want to eat ?", text: $textFieldSearch)
+                                .font(.kanit(size: 18))
+                                .textFieldStyle(OvalTextFieldStyle())
+                                .multilineTextAlignment(.leading)
+                        }).padding(.top)
+                       
+                            
                         
                         HStack(alignment: .bottom) {
-                            Button (action: {}, label: {
+                            NavigationLink (destination:CategoriesView(), label: {
                                 HStack {
                                     Text("Categories").font(.nunito())
                                     Image(systemName: "arrow.forward.circle.fill")
@@ -85,16 +91,17 @@ struct HomeView: View {
                         .padding(.leading, 26)
                         .padding(.trailing, 30)
                     
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack(spacing: 8) {
-                            Spacer(minLength: 21)
-                            ForEach(0..<3, id: \.self) { number in
-                                GroupDisplayModule()
-                            }
-                            Spacer()
-                        }
-                    }
+                   
                     Spacer()
+                   
+                    ScrollView{
+                       
+                         
+                            GroupDisplayModule()
+                            GroupDisplayModule()
+                            GroupDisplayModule();
+                        
+                    }.padding(.bottom,50)
                 }.padding(.top, 15)
             }
         }

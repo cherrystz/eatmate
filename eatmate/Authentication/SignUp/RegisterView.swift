@@ -86,7 +86,7 @@ struct RegisterView: View {
             }.padding(.top, 78)
             
             Spacer()
-        }.padding(.horizontal, 26)
+        }.padding(.horizontal, 20)
             .navigationBarHidden(true)
     }
 }
