@@ -17,6 +17,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
             application,
             didFinishLaunchingWithOptions: launchOptions
         )
+        
         return true
     }
     

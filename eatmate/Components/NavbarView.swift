@@ -10,6 +10,7 @@ import SwiftUI
 struct NavbarView : View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var title : String = "Title"
+    var canEdit: Bool = false
     @State var showBackButton : Bool = true
     @State var showMoreButton : Bool = true
     @State var shadow : CGFloat = 0
@@ -45,9 +46,11 @@ struct NavbarView : View {
             },
                    label: {
                 if showMoreButton{
-                    Image(systemName: "ellipsis")
-                    .resizable()
-                    .frame(width: 16, height: 3.7)
+                    NavigationLink(destination: RegisterPersonalInformationView(), label: {
+                        Image(systemName: "ellipsis")
+                        .resizable()
+                        .frame(width: 16, height: 3.7)
+                    })
                 }
                     
             })

@@ -19,8 +19,11 @@ target 'eatmate' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'GoogleSignIn'
+  pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
   
+  pod 'Alamofire'
 
   # Use for animated gif
   pod 'lottie-ios'

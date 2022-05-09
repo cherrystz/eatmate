@@ -13,26 +13,35 @@ import Firebase
 
 struct SettingView: View {
    
-    var username : String = "Guest"
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
     @State private var showingAlert = false
     @AppStorage("isLoggedIn") var loggedIn = false
     @AppStorage("bottomSheetShown") private var bottomSheetShown = false
+    @AppStorage("userApp") var userApp: Data = Data()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         FullScreenView{
             NavbarView(title: "Profile",showBackButton: true,showMoreButton: false,shadow: 2)
             HStack{
-                Image("ProfileImageDefault")
-                    .resizable()
-                    .frame(width: 96, height: 96)
-                    .cornerRadius(15)
+                if let url = decoder().profile_picture{
+                    if url != "" {
+                        AsyncImage(url: URL(string: url))
+                        .frame(width: 48, height: 48)
+                        .cornerRadius(15)
+                    }
+                    else {
+                        Image("ProfileImageDefault")
+                            .resizable()
+                            .frame(width: 48, height: 48)
+                            .cornerRadius(15)
+                    }
+                }
                 VStack(alignment:.leading){
-                    Text(username)
+                    Text(decoder().name)
                         .font(.nunito(size: 24, weight: .bold))
-                    NavigationLink(destination: ProfileView(), label: {
+                    NavigationLink(destination: ProfileView(isSelf:true), label: {
                         Text("View my profile")
                             .font(.nunito(size: 18, weight: .bold))
                             .foregroundColor(.gray)
@@ -131,7 +140,7 @@ struct SettingView: View {
                             )
                         }
                 }
-                
+            
                    
                
             }
@@ -147,9 +156,21 @@ struct SettingView: View {
         
     }
     
+    func decoder() -> User {
+        let decoder = JSONDecoder()
+        if let data = try? decoder.decode(User.self, from: userApp) {
+            return data
+        }
+        return userGuest
+    }
+    
     func logout() {
         GIDSignIn.sharedInstance.signOut()
         try? Auth.auth().signOut()
+        let encoder = JSONEncoder()
+        if let data = try? encoder.encode(userGuest) {
+            userApp = data
+        }
         loggedIn = false
         bottomSheetShown = false
         self.presentationMode.wrappedValue.dismiss()

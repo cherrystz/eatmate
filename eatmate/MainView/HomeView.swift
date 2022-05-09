@@ -11,6 +11,7 @@ import SwiftColor
 struct HomeView: View {
     
     @State var textFieldSearch: String = ""
+    @AppStorage("userApp") var userApp: Data = Data()
    
     let categoriesList = [
         "Esan",
@@ -30,15 +31,25 @@ struct HomeView: View {
                                 Text("Good Morning")
                                     .font(.nunito(size: 18))
                                 
-                                Text("Guest")
+                                Text(decoder().name)
                                     .font(.nunito(size: 24))
                             }
                             Spacer()
                             NavigationLink(destination: SettingView(), label: {
-                                Image("ProfileImageDefault")
-                                    .resizable()
-                                    .frame(width: 48, height: 48)
-                                    .cornerRadius(15)
+                                
+                                if let url = decoder().profile_picture{
+                                    if url != "" {
+                                        AsyncImage(url: URL(string: url))
+                                        .frame(width: 48, height: 48)
+                                        .cornerRadius(15)                                    }
+                                    else {
+                                        Image("ProfileImageDefault")
+                                            .resizable()
+                                            .frame(width: 48, height: 48)
+                                            .cornerRadius(15)
+                                    }
+                                }
+                                
                             })
                             
                         }
@@ -106,6 +117,14 @@ struct HomeView: View {
             }
         }
         .background(Color(hexString: "#F3F3F3"))
+    }
+    
+    func decoder() -> User {
+        let decoder = JSONDecoder()
+        if let data = try? decoder.decode(User.self, from: userApp) {
+            return data
+        }
+        return userGuest
     }
 }
 

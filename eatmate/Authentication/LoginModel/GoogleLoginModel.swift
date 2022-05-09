@@ -8,11 +8,13 @@
 import SwiftUI
 import Firebase
 import GoogleSignIn
+import Alamofire
 
 struct GoogleLoginModel: View {
     
     @AppStorage("isLoggedIn") var loggedIn = false
     @AppStorage("bottomSheetShown") private var bottomSheetShown = false
+    @AppStorage("userApp") var userApp: Data = Data()
     
     var body: some View {
         Button(action: handlelogin, label: {
@@ -24,7 +26,6 @@ struct GoogleLoginModel: View {
                     .font(.system(size: 20 , weight: .semibold))
             }
             .foregroundColor(.black)
-            .background(Color(hexString: "#FFFFFF"))
             .frame(width: 300, height: 55)
             .overlay(
                 RoundedRectangle(cornerRadius: 30)
@@ -63,6 +64,38 @@ struct GoogleLoginModel: View {
                 guard let user = result?.user else {
                     return
                 }
+                
+                let date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy"
+                let parameters = [
+                    "name": user.displayName,
+                    "register_date": dateFormatter.string(from: date),
+                    "email": user.email,
+                    "profile_picture": user.photoURL?.absoluteString.description,
+                    "gender": "Unknown",
+                    "age": "0",
+                    "description_profile": "I am new EatMate!",
+                    "favor_id": "",
+                    "subscription_id": "",
+                    "provider_id": "google",
+                    "uid": user.uid,
+                    "successful_profile": "false"
+                ]
+                print(parameters)
+                
+                AF.request("http://192.168.1.7:3000/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
+                        .responseDecodable(of: ResultResponse.self) { response in
+                            switch response.result {
+                            case .success(let value):
+                                let encoder = JSONEncoder()
+                                if let data = try? encoder.encode(value.data) {
+                                    userApp = data
+                                }
+                            case .failure(let error):
+                                print(error)
+                            }
+                    }
                 
                 print(user.displayName ?? "Success!")
                 loggedIn.toggle()
