@@ -29,7 +29,12 @@ struct ProfileView: View {
                         Button(action: {}, label: {
                             if let url = decoder().profile_picture{
                                 if url != "" {
-                                    AsyncImage(url: URL(string: url))
+                                    
+                                    AsyncImage(url: URL(string: url)) { image in
+                                        image.resizable()
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
                                     .frame(width: 350, height: 350)
                                     .cornerRadius(15)
                                 }
@@ -42,7 +47,7 @@ struct ProfileView: View {
                             }
                         }).padding(.top,20)
                         HStack{
-                            Text(decoder().name + " " + String(decoder().birthday == "" ? "Unknown" : "\(decoder().birthday)"))
+                            Text(decoder().name + " " + String(decoder().birthday == "" ? "Unknown" : "\(calcAge(birth: decoder().birthday))"))
                                 .font(.nunito(size: 28, weight: .semiBold))
                             Spacer()
                         }
@@ -81,6 +86,15 @@ struct ProfileView: View {
             return data
         }
         return userGuest
+    }
+    
+    func calcAge(birth: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let birthday = dateFormatter.date(from: birth)
+        let timeInterval = birthday?.timeIntervalSinceNow
+        let age = abs(Int(timeInterval! / 31556926.0))
+        return String(age)
     }
 }
 

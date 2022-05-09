@@ -39,9 +39,13 @@ struct HomeView: View {
                                 
                                 if let url = decoder().profile_picture{
                                     if url != "" {
-                                        AsyncImage(url: URL(string: url))
+                                        AsyncImage(url: URL(string: url)) { image in
+                                            image.resizable()
+                                        } placeholder: {
+                                            ProgressView()
+                                        }
                                         .frame(width: 48, height: 48)
-                                        .cornerRadius(15)                                    }
+                                        .cornerRadius(15)                                 }
                                     else {
                                         Image("ProfileImageDefault")
                                             .resizable()

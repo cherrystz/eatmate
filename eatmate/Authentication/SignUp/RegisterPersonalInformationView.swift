@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Alamofire
+import Firebase
 
 struct RegisterPersonalInformationView: View {
     
@@ -35,10 +37,22 @@ struct RegisterPersonalInformationView: View {
                 GeometryReader { gp in
                     VStack {
                         Button(action: {}, label: {
-                            Image("ProfileImageDefault")
-                                .resizable()
-                                .frame(width: 350, height: 350)
-                                .cornerRadius(15)
+                            if let url = decoder().profile_picture{
+                                if url != "" {
+                                    AsyncImage(url: URL(string: url)) { image in
+                                        image.resizable()
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                    .frame(width: 350, height: 350)
+                                    .cornerRadius(15)                                 }
+                                else {
+                                    Image("ProfileImageDefault")
+                                        .resizable()
+                                        .frame(width: 350, height: 350)
+                                        .cornerRadius(15)
+                                }
+                            }
                         })
                         VStack(alignment: .leading, spacing: 0) {
                             Text("Name")
@@ -55,10 +69,9 @@ struct RegisterPersonalInformationView: View {
                                 .textFieldStyle(BottomLineTextFieldStyle())
                         }
                         VStack(alignment: .leading, spacing: 0) {
-                            Text("Birthday")
-                                .font(.nunito(size: 18, weight: .semiBold))
                             DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
-                                            Text("")
+                                Text("Birthday")
+                                    .font(.nunito(size: 18, weight: .semiBold))
                                         }
                                 .font(.nunito(size: 18, weight: .regular))
                                 .textFieldStyle(BottomLineTextFieldStyle())
@@ -67,11 +80,39 @@ struct RegisterPersonalInformationView: View {
                             
                             NavigationLink(destination: InterestSelectView()) { EmptyView() }
                             Button(action: {
+                                let dateFormatter = DateFormatter()
+                                dateFormatter.dateFormat = "dd/MM/yyyy"
+                                let parameters = [
+                                    "name": nameField,
+                                    "birthday" : dateFormatter.string(from: birthDate),
+                                    "gender": genderField,
+                                    "uid": decoder().uid
+                                ]
+                                print(parameters)
+                                
+                                AF.request("\(urlAPI.rawValue)/data/users/update_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
+                                        .responseDecodable(of: ResultResponse.self) { response in
+                                            switch response.result {
+                                            case .success(let value):
+                                                let encoder = JSONEncoder()
+                                                if let data = try? encoder.encode(value.data) {
+                                                    userApp = data
+                                                }
+                                            case .failure(let error):
+                                                print(error)
+                                            }
+                                    }
+                                
+                                self.presentationMode.wrappedValue.dismiss()
                             }
                                    , label: {
                                 HStack {
-                                    Image(systemName: "arrow.right.circle.fill")
-                                        .font(.system(size: 35))
+                                    Text("Apply")
+                                        .font(.nunito(size: 24, weight: .semiBold))
+                                        .padding()
+                                        .foregroundColor(.white)
+                                        .background(.green)
+                                        .cornerRadius(50)
                                 }
                             })
                         }.padding(.top, 10)
@@ -83,8 +124,19 @@ struct RegisterPersonalInformationView: View {
             Spacer()
         }.padding(.horizontal, 20)
             .navigationBarHidden(true)
-        
+     
+            .onAppear {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy"
+                
+                nameField = decoder().name
+                genderField = decoder().gender
+                if decoder().birthday != "" {
+                    birthDate = dateFormatter.date(from:decoder().birthday)!
+                }
+            }
     }
+    
     func decoder() -> User {
         let decoder = JSONDecoder()
         if let data = try? decoder.decode(User.self, from: userApp) {
