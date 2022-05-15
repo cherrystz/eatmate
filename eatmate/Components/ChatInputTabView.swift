@@ -40,7 +40,7 @@ struct ChatInputTabView: View {
                 Color.white.ignoresSafeArea(edges:.top)
                     
             )
-        }.frame(maxHeight: .infinity, alignment: .bottom)
+        }
       
     }
     
