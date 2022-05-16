@@ -36,6 +36,7 @@
 		2E86454E281A562E007634F4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86454D281A562D007634F4 /* ProfileView.swift */; };
 		2E864550281A6A66007634F4 /* RegisterPersonalInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86454F281A6A66007634F4 /* RegisterPersonalInformationView.swift */; };
 		2E864554281F0132007634F4 /* PDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E864553281F0132007634F4 /* PDFView.swift */; };
+		2EB016D428322E140088AA38 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB016D328322E140088AA38 /* MessageManager.swift */; };
 		2EBAC20927EBB20700076492 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20827EBB20700076492 /* GroupView.swift */; };
 		2EBAC20D27EBB59F00076492 /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20C27EBB59F00076492 /* NavbarView.swift */; };
 		2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */; };
@@ -122,6 +123,7 @@
 		2E86454D281A562D007634F4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2E86454F281A6A66007634F4 /* RegisterPersonalInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonalInformationView.swift; sourceTree = "<group>"; };
 		2E864553281F0132007634F4 /* PDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFView.swift; sourceTree = "<group>"; };
+		2EB016D328322E140088AA38 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
 		2EBAC20827EBB20700076492 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		2EBAC20C27EBB59F00076492 /* NavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarView.swift; sourceTree = "<group>"; };
 		2EBAC20E27EE45A800076492 /* ImageSliderModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderModule.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				47E0DE6B27D8A176004352EC /* eatmateApp.swift */,
 				47F3FD7927E674F9005DC7C2 /* LaunchScreen.storyboard */,
 				47E0DE6D27D8A176004352EC /* ContentView.swift */,
+				2EB016D328322E140088AA38 /* MessageManager.swift */,
 				47F3FD3B27E46FD8005DC7C2 /* Authentication */,
 				47E0DE7927D8A6B1004352EC /* MainView */,
 				47F3FD5127E518B2005DC7C2 /* Extensions */,
@@ -533,6 +536,7 @@
 				47F3FD7427E664AD005DC7C2 /* PasscodeField.swift in Sources */,
 				47F3FD4427E4FA19005DC7C2 /* FullScreenView.swift in Sources */,
 				47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */,
+				2EB016D428322E140088AA38 /* MessageManager.swift in Sources */,
 				47F3FD6D27E55B5C005DC7C2 /* RegisterConfirmView.swift in Sources */,
 				2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */,
 				47F3FD4227E4F072005DC7C2 /* TabViewModule.swift in Sources */,

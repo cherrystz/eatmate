@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatView: View {
+    @StateObject var messagesManager  = MessageManager()
     var messageArray = ["Hello dude", "หาไรกินกัน", "อยากกินชาบูมากๆเลย"]
     var body: some View {
         FullScreenView{
@@ -15,15 +16,23 @@ struct ChatView: View {
             VStack{
             MemberChatBarView()
             VStack{
-                ScrollView{
-                    ForEach(messageArray, id: \.self) {
-                        text in MessageBubble(message: Message(id: "1234", text: text , received: true, timestamp: Date(), sender: "Anna"))
-                    }
-                    .padding(.top, 20)
+                ScrollViewReader { proxy in
+                    ScrollView{
+                        ForEach(messagesManager.messages, id: \.id) {
+                            message in MessageBubble(message: message)
+                        }
+                        .padding(.top, 20)
+                    } .onChange(of: messagesManager.lastMessageId) {
+                        id in
+                        withAnimation {
+                            proxy.scrollTo(id, anchor: .bottom)
+                        }}
+                   
                 }
             }
             
                 ChatInputTabView()
+                    .environmentObject(messagesManager)
 
             }
           
