@@ -25,23 +25,25 @@ struct MessageView: View {
     ]
     
     var body: some View {
-        FullScreenView{
-            NavbarView(title: "Messages",showBackButton: false,showMoreButton: false,shadow: 2)
-            
-          
-            List {
-               ForEach (MessageList,id: \.self) { MessageItem in
-                   MessageRowView(GroupName: MessageItem.groupName,RecentChat: MessageItem.recentChat, time: MessageItem.time, chatRead: MessageItem.chatRead)
-                   
-                      
-               }
-               .listRowSeparator(.hidden)
-            }.listStyle(.plain)
-        
+        NavigationView {
+            FullScreenView{
+                NavbarView(title: "Messages",showBackButton: false,showMoreButton: false,shadow: 2)
                 
+                
+                List {
+                    ForEach (MessageList,id: \.self) { MessageItem in
+                        NavigationLink(destination: ChatView()) {
+                            MessageRowView(GroupName: MessageItem.groupName,RecentChat: MessageItem.recentChat, time: MessageItem.time, chatRead: MessageItem.chatRead)
+                        }
+                        
+                        
+                    }
+                    .listRowSeparator(.hidden)
+                }.listStyle(.plain)
+            }
         }
     }
-    }
+}
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {

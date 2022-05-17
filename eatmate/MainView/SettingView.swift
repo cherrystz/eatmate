@@ -78,18 +78,12 @@ struct SettingView: View {
                     
             Form {
             Section(header: Text("Setting")) {
-                NavigationLink(destination:MyGroupView(), label: {
+                NavigationLink(destination: MyGroupView(), label: {
                     HStack{
                         Image(systemName: "fork.knife.circle")
                         Text("History")
                     }
 
-                })
-                NavigationLink(destination: NotificationSettingVIew(), label: {
-                    HStack{
-                        Image(systemName: "bell")
-                        Text("Notification")
-                    }
                 })
             }
                 Section(header: Text("About")) {

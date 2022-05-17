@@ -26,3 +26,4 @@ struct ResultUIDtoName: Decodable {
     let result: String
     let data: String
 }
+

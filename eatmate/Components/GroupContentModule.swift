@@ -12,7 +12,7 @@ struct GroupContentModule: View {
     
     @Binding var groupOwner : String
     @State var groupName: String = ""
-    @State var groupMember : [String] = []
+    @Binding var groupMember : [String]
     @State var groupLimit : Int = 0
     @State var groupDescription : String = ""
     @State var groupTime : String = ""
