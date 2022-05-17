@@ -17,7 +17,7 @@ struct CreateView: View {
     @State var descriptionField : String = ""
     @State var dateField = Date()
     @State var locationField : String = ""
-    @State var catagory : [String] = ["Breakfast","Seafood","Snack","Noodle"]
+    @State var catagory : [String] =  ["Breakfast","BBQ","Drink","Esan","Noodles","Japanese","Desserts","Coffee","Meat","Chinese","European","Chicken", "Salad","Italian","Streets","Grill","Shabu","Street","Seafood"]
     @State var showAlert : Bool = false
     @State var isCreate: Bool = false
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoriesView: View {
     
-    var catagory : [String] = ["Bakery","Breakfast","Seafood","Hamburger","BBQ"]
+    var catagory : [String] = ["Breakfast","BBQ","Drink","Esan","Noodles","Japanese","Desserts","Coffee","Meat","Chinese","European","Chicken", "Salad","Italian","Streets","Grill","Shabu","Street","Seafood"]
     
     var body: some View {
         FullScreenView{
@@ -17,9 +17,11 @@ struct CategoriesView: View {
             
             List{
                 ForEach(catagory, id: \.self) { catagory in
-                    Text(catagory)
+                    NavigationLink(destination: GroupCategoryView(group: catagory), label: {
+                        Text(catagory)
+                        .padding(.horizontal,20)
+                    })
                     
-                    .padding(.horizontal,20)
             }
 //                .listRowSeparator(.hidden)
             }.listStyle(.plain)

@@ -89,7 +89,7 @@ struct HomeView: View {
                         HStack(spacing: 21) {
                             Spacer()
                             ForEach(categoriesList, id: \.self) { category in
-                                Button(action: {}, label: {
+                                NavigationLink(destination: GroupCategoryView(group: category), label: {
                                     CategoriesModule(imageName: category, text: category)
                                 })
                             }
