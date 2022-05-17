@@ -21,15 +21,7 @@ struct MessageView: View {
     @State private var MessageList : [MessageItem] = [
         MessageItem(groupName: "ไปกินชาบูชูบา", recentChat: "Gong joined the Group.", time: "00.38", chatRead: true),
         MessageItem(groupName: "KFC มีเมนูใหม่มาน่ากินมากไปกินกันน", recentChat: "พรุ่งนี้ว่างกันไหม ไปกันๆ", time: "00.45", chatRead: false),
-        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false),
-        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false),
-        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false),
-        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false),
-        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false),
-        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false),
-        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false),
-        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false),
-        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false),MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false)
+        MessageItem(groupName: "หิว อยากกินMomo paradise มากๆ เลยย", recentChat: "ชอบเนื้อโมโม่มากกก เนื้อนุ่มสุด ๆ ต้องกินกับไข่ดิบ เนื้อนวล อร่อยขึ้นมากๆๆๆๆๆๆ", time: "00.45", chatRead: false)
     ]
     
     var body: some View {

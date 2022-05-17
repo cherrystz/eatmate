@@ -103,56 +103,7 @@ struct CreateView: View {
                                     .font(.nunito(size: 18, weight: .regular))
                                     .textFieldStyle(BottomLineTextFieldStyle())
                             }
-                            
-                            
-                            
                         }
-                       
-                    }
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("Description")
-                            .font(.nunito(size: 18, weight: .semiBold))
-                        TextField("", text: $descriptionField)
-                            .font(.nunito(size: 18, weight: .regular))
-                            .textFieldStyle(BottomLineTextFieldStyle())
-                    }
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("Date")
-                            .font(.nunito(size: 18, weight: .semiBold))
-
-                        DatePicker("Date", selection: $dateField, displayedComponents: [.date])
-                                        .datePickerStyle(GraphicalDatePickerStyle())
-                                        .frame(maxHeight: 400)
-                                        .font(.nunito(size: 18, weight: .semiBold))
-                    }
-                    VStack(alignment: .leading, spacing: 0) {
-                        HStack{
-                            VStack{
-                                Text("Member Limit")
-                                    .font(.nunito(size: 18, weight: .semiBold))
-                                Picker("Member Limit", selection: $limitField) {
-                                               ForEach(memberlimit, id: \.self) {
-                                                   Text(String($0))
-                                                   
-                                               }
-                                
-                                }.padding(.leading,-60)
-                                    
-                            }
-                           
-                            Spacer()
-                        }
-                       
-                    }
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("Location")
-                            .font(.nunito(size: 18, weight: .semiBold))
-                        TextField("Fill in Google Map Link", text: $locationField)
-                            .font(.nunito(size: 18, weight: .regular))
-                            .textFieldStyle(BottomLineTextFieldStyle())
-                    }
-             
-                    
                    
                     }.padding(.horizontal,20)
                         .padding(.bottom,80)
@@ -249,10 +200,5 @@ struct CreateView: View {
         }
         return userGuest
     }
-}
 
-struct CreateView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateView()
-    }
 }
