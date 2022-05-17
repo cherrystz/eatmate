@@ -22,12 +22,13 @@ struct groupDetailContentItem: Identifiable,Hashable {
 struct GroupView: View {
     
     @State var groupDetail = Group()
+    @State var loadImage: Bool = false
     @AppStorage("userApp") var userApp: Data = Data()
     @State var groupOwner: String = "Phumipat Apivansri"
     @State var buttonUser: String = "Join Group"
     @State var selectUser: interactGroupSelect = .join
     @State var groupImage: String = "https://firebasestorage.googleapis.com/v0/b/eatmateapp.appspot.com/o/imageGroup%2Fjay-wennington-N_Y88TWmGwA-unsplash.jpg?alt=media"
-    @State private var image = UIImage()
+    @State var image = UIImage()
     @State var groupDetailContent = groupDetailContentItem( groupName: "ไปกินชูบาชาบูกันเถอะ", groupMember: [], groupLimit: 10, groupDescription: "อยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดี อยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดีอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดีอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดีอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบางอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดี อยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดีอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดีอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดีอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบางอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดี อยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดีอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดีอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง มีซุชิด้วยนะ ไอติมก็ดีอยากไปกินชาบูมากๆ ชาบูร้านนี้ดีมากเนื้อนุ่ม เนื้อบาง ", groupTime: "22 มีนาคม 2565", groupLocation: "https://www.google.com/maps/place/Shuba+Shabu+(Ratchathewi)+%E0%B8%8A%E0%B8%B9%E0%B8%9A%E0%B8%B2+%E0%B8%8A%E0%B8%B2%E0%B8%9A%E0%B8%B9+(%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B5)/@13.7517685,100.5297017,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29ecb7db75303:0xbeb219bab8d260bf!8m2!3d13.7517633!4d100.5318904")
     @State var status : Int = 2
     @State var groupApprove : Bool = false
@@ -52,15 +53,16 @@ struct GroupView: View {
                 ScrollView{
                     
                     TabView {
+                        
                         Image(uiImage: image)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 250)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: 250)
                         
                     }
                     .tabViewStyle(PageTabViewStyle())
-                        .frame(height: 250)
-                        .listRowInsets(EdgeInsets(top:0, leading: 0,bottom: 0, trailing: 0))
+                    .frame(height: 250)
+                    .listRowInsets(EdgeInsets(top:0, leading: 0,bottom: 0, trailing: 0))
                     GroupContentModule(
                         groupOwner: $groupOwner,
                         groupName: groupDetail.groupName,
@@ -87,11 +89,11 @@ struct GroupView: View {
                                     .background(selectUser == .join ? Color.green : Color.red)
                                     .cornerRadius(25)
                             })
-                                .shadow(color: Color.black.opacity(0.3),
-                                        radius: 3,
-                                        x: 3,
-                                        y: 3)
-                                .padding(.bottom,20)
+                            .shadow(color: Color.black.opacity(0.3),
+                                    radius: 3,
+                                    x: 3,
+                                    y: 3)
+                            .padding(.bottom,20)
                         }
                     }
                     
@@ -103,8 +105,11 @@ struct GroupView: View {
         
         .onAppear(perform: {
             loadOwner()
-            let imageData = try? Data(contentsOf: URL(string: groupImage)!)
-            image = UIImage(data: imageData!)!
+            
+            if !loadImage {
+                let imageData = try? Data(contentsOf: URL(string: groupImage)!)
+                image = UIImage(data: imageData!)!
+            }
             
             if groupDetail.groupMember.contains(decoder().uid) {
                 buttonUser = "Leave Group"
@@ -132,16 +137,16 @@ struct GroupView: View {
     
     func interactGroup(_ select: interactGroupSelect) {
         AF.request("\(urlAPI.rawValue)/data/groups/\(select.rawValue)/\(groupDetail._id)/\(decoder().uid)", requestModifier: { $0.timeoutInterval = 5 })
-                .responseDecodable(of: ResultResponse.self) { response in
-                    switch response.result {
-                    case .success(let value):
-                        let encoder = JSONEncoder()
-                        if let data = try? encoder.encode(value.data) {
-                            userApp = data
-                        }
-                    case .failure(let error):
-                        print(error)
+            .responseDecodable(of: ResultResponse.self) { response in
+                switch response.result {
+                case .success(let value):
+                    let encoder = JSONEncoder()
+                    if let data = try? encoder.encode(value.data) {
+                        userApp = data
                     }
+                case .failure(let error):
+                    print(error)
+                }
             }
         
         if selectUser == .join {

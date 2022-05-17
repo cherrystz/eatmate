@@ -14,6 +14,7 @@ struct RegisterPersonalInformationView: View {
     
     @State var nameField : String = ""
     @State var genderField : String = ""
+    @State var descField : String = ""
     @State private var image = UIImage()
     @State private var imageDefault = UIImage()
     @State private var showSheet = false
@@ -87,6 +88,13 @@ struct RegisterPersonalInformationView: View {
                                 .font(.nunito(size: 18, weight: .regular))
                                 .textFieldStyle(BottomLineTextFieldStyle())
                         }
+                        VStack(alignment: .leading, spacing: 0) {
+                            Text("Description")
+                                .font(.nunito(size: 18, weight: .semiBold))
+                            TextField("", text: $descField)
+                                .font(.nunito(size: 18, weight: .regular))
+                                .textFieldStyle(BottomLineTextFieldStyle())
+                        }
                         VStack(spacing: 22) {
                             
                             NavigationLink(destination: InterestSelectView()) { EmptyView() }
@@ -109,6 +117,7 @@ struct RegisterPersonalInformationView: View {
                                     "birthday" : dateFormatter.string(from: birthDate),
                                     "gender": genderField,
                                     "uid": decoder().uid,
+                                    "description_profile": descField,
                                     "profile_picture": imageUrl
                                 ]
                                 print(parameters)

@@ -50,6 +50,7 @@
 		472920AD27E3B37900C62E86 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AC27E3B37900C62E86 /* CreateView.swift */; };
 		472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920B027E3B3AF00C62E86 /* NotificationView.swift */; };
 		473F74872833FB6100C91B01 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F74862833FB6100C91B01 /* Notification.swift */; };
+		473F7489283413FF00C91B01 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F7488283413FF00C91B01 /* AsyncImageView.swift */; };
 		4745AD5E2832A63A006DDFFB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745AD5D2832A63A006DDFFB /* ImagePicker.swift */; };
 		4745AD622832AD7A006DDFFB /* uploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745AD612832AD7A006DDFFB /* uploadImage.swift */; };
 		4745AD642832EE04006DDFFB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745AD632832EE04006DDFFB /* Group.swift */; };
@@ -143,6 +144,7 @@
 		472920AC27E3B37900C62E86 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		472920B027E3B3AF00C62E86 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		473F74862833FB6100C91B01 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		473F7488283413FF00C91B01 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		4745AD5D2832A63A006DDFFB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4745AD612832AD7A006DDFFB /* uploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadImage.swift; sourceTree = "<group>"; };
 		4745AD632832EE04006DDFFB /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 			children = (
 				47F3FD5227E518C0005DC7C2 /* Fonts.swift */,
 				47F3FD7D27E68241005DC7C2 /* AnyTransition.swift */,
+				473F7488283413FF00C91B01 /* AsyncImageView.swift */,
 				47F3FD7527E6679D005DC7C2 /* StringProtocol.swift */,
 				2E3A122728158FD70094D1E4 /* Colors.swift */,
 				47F3FD7727E66D20005DC7C2 /* TextLimiter.swift */,
@@ -569,6 +572,7 @@
 				47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */,
 				2EB016D428322E140088AA38 /* MessageManager.swift in Sources */,
 				2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */,
+				473F7489283413FF00C91B01 /* AsyncImageView.swift in Sources */,
 				4745AD722833999B006DDFFB /* MessageRowView.swift in Sources */,
 				47F3FD4227E4F072005DC7C2 /* TabViewModule.swift in Sources */,
 				2E864544281A37C0007634F4 /* MFMailComposeModule.swift in Sources */,

@@ -19,10 +19,12 @@ struct CreateView: View {
     @State var locationField : String = ""
     @State var catagory : [String] = ["Breakfast","Seafood","Snack","Noodle"]
     @State var showAlert : Bool = false
+    @State var isCreate: Bool = false
 
     @State var navigateActive : Bool = false
     @State var limitField : Int = 0
     @State var memberlimit : [Int] = [2,3,4,5,6,7,8,9,10]
+    @State var groupNext: Group = Group()
 
     @State private var image = UIImage()
     @State private var showSheet = false
@@ -147,7 +149,13 @@ struct CreateView: View {
                 }
                 //add image block
             }
+            NavigationLink(
+                destination: GroupView(groupDetail: groupNext, loadImage: true, image: image),
+                isActive: $isCreate
+            ) {EmptyView()}
         }
+        
+        
         .sheet(isPresented: $showSheet) {
             ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
         }
@@ -180,13 +188,15 @@ struct CreateView: View {
         print(parameters)
         
         AF.request("\(urlAPI.rawValue)/data/groups/create_group", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
-                .responseDecodable(of: ResultGroup.self) { response in
+                .responseDecodable(of: ResultCreateGroup.self) { response in
                     switch response.result {
                     case .success(let value):
                         let encoder = JSONEncoder()
                         if let data = try? encoder.encode(value.data) {
                             userApp = data
                         }
+                        groupNext = value.group
+                        isCreate.toggle()
                     case .failure(let error):
                         print(error)
                     }

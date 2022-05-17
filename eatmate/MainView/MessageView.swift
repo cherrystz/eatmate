@@ -36,9 +36,9 @@ struct MessageView: View {
             FullScreenView{
                 NavbarView(title: "Messages",showBackButton: false,showMoreButton: false,shadow: 2)
                 
-                
-                List {
-                    if !groupHome.isEmpty {
+                if !groupHome.isEmpty {
+                    List {
+                        
                         ForEach(groupHome, id: \.self) { group in
                             NavigationLink {
                                 ChatView(messagesManager: MessageManager(group_id: group._id), title: group.groupName)
@@ -46,19 +46,18 @@ struct MessageView: View {
                                 MessageRowView(GroupName: group.groupName, RecentChat: "", time: "", urlName: group.groupImage, chatRead: true)
                             }
                         }
+                        
                     }
-                    else {
-                        VStack(alignment: .center) {
-                            LottieView(name: "96253-data-not-found", loopMode: .loop)
-                                .frame(height: 150)
-                            Text("Not Found Group? Let's Create or Join!").font(.nunito(size: 14, weight: .light)).foregroundColor(.gray)
-                        }
+                    .opacity(appear ? 1 : 0)
+                    .listStyle(.plain)
+                    .listRowSeparator(.hidden)}
+                else {
+                    VStack(alignment: .center) {
+                        LottieView(name: "96253-data-not-found", loopMode: .loop)
+                            .frame(height: 150)
+                        Text("Not Found Group? Let's Create or Join!").font(.nunito(size: 14, weight: .light)).foregroundColor(.gray)
                     }
-                    
                 }
-                .opacity(appear ? 1 : 0)
-                .listStyle(.plain)
-                    .listRowSeparator(.hidden)
             }
         }
         .onAppear {

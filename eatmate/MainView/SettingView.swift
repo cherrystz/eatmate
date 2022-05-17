@@ -23,7 +23,7 @@ struct SettingView: View {
     
     var body: some View {
         FullScreenView{
-            NavbarView(title: "Profile",showBackButton: true,showMoreButton: false,shadow: 2)
+            NavbarView(title: "Settings",showBackButton: true,showMoreButton: false,shadow: 2)
             HStack{
                 if let url = decoder().profile_picture{
                     if url != "" {

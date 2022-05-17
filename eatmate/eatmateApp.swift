@@ -26,7 +26,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     -> Bool {
         return GIDSignIn.sharedInstance.handle(url)
     }
-    
 }
 
 @main
@@ -37,7 +36,7 @@ struct eatmateApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
-            }
+            }.navigationViewStyle(.stack)
         }
     }
     
