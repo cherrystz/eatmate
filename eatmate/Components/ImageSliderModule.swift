@@ -9,24 +9,21 @@ import SwiftUI
 
 struct ImageSliderModule: View {
     
-    var imageName = ["ShubaShabu","shabu2"]
+    @Binding var imageName: String
     
     var body: some View {
         
         TabView {
-            ForEach(imageName, id: \.self) {
-                item in Image(item)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 250)
+            AsyncImage(url: URL(string: imageName)) { image in
+                image.resizable()
+                image.scaledToFill()
+            } placeholder: {
+                ProgressView()
             }
+            .frame(height: 250)
+            
         }
         .tabViewStyle(PageTabViewStyle())
     }
 }
 
-struct ImageSlider_Previews: PreviewProvider {
-    static var previews: some View {
-        ImageSliderModule()
-    }
-}

@@ -10,14 +10,14 @@ import SwiftUI
 
 struct GroupContentModule: View {
     
-    var groupOwner : String
-    var groupName: String
-    var groupMember : Int
-    var groupLimit : Int
-    var groupDescription : String
-    var groupTime : String
-    var groupLocation : String
-    var status : Int 
+    @Binding var groupOwner : String
+    @State var groupName: String = ""
+    @State var groupMember : [String] = []
+    @State var groupLimit : Int = 0
+    @State var groupDescription : String = ""
+    @State var groupTime : String = ""
+    @State var groupLocation : String = ""
+    @State var status : Int = 2
     
     var body: some View {
         
@@ -32,7 +32,7 @@ struct GroupContentModule: View {
                     Text(groupName)
                         .font(.kanit(size: 32, weight: .bold))
                     Spacer()
-                   Text(String(groupMember)+"/"+String(groupLimit))
+                    Text(String(groupMember.count)+"/"+String(groupLimit))
                         .font(.kanit(size: 16, weight: .bold))
                 }
                 

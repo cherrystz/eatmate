@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @AppStorage("bottomSheetShown") private var bottomSheetShown = false
     @AppStorage("isLoggedIn") var loggedIn = false
-    @State var selectedIndex = 0
+    @StateObject var modelPublished = PublishedState()
     
     let tabItemList: [TabItem] = [
         TabItem(image: "HomeIcon", name: "Home"),
@@ -26,7 +26,7 @@ struct ContentView: View {
                 // Content
                 VStack {
                     FullScreenView {
-                        switch selectedIndex {
+                        switch modelPublished.selectedIndexTabBar {
                         case 0: HomeView()
                         case 1: CreateView()
                         case 2: MessageView()
@@ -38,10 +38,10 @@ struct ContentView: View {
                     HStack {
                         ForEach(0..<tabItemList.count, id: \.self) { number in
                             Spacer()
-                            Button(action: { selectedIndex = number }, label: {
+                            Button(action: { modelPublished.changeSelected(number)}, label: {
                                 TabItemDisplay(imageName: tabItemList[number].image,
                                                tagName: tabItemList[number].name,
-                                               foregroundColor: selectedIndex == number ? .black : .gray)
+                                               foregroundColor: modelPublished.selectedIndexTabBar == number ? .black : .gray)
                             })
                             Spacer()
                         }
@@ -63,7 +63,7 @@ struct ContentView: View {
             ) {
                 LoginViewCard()
             }
-            .opacity(bottomSheetShown ? 1 : 0)
+            .opacity(!loggedIn ? 1 : 0)
         }
     }
 }

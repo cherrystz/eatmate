@@ -7,12 +7,15 @@
 
 import SwiftUI
 import SwiftColor
+import Alamofire
+import Lottie
 
 struct HomeView: View {
     
     @State var textFieldSearch: String = ""
+    @State var groupHome: [Group] = []
     @AppStorage("userApp") var userApp: Data = Data()
-   
+    
     let categoriesList = [
         "Esan",
         "Grill",
@@ -63,8 +66,8 @@ struct HomeView: View {
                                 .textFieldStyle(OvalTextFieldStyle())
                                 .multilineTextAlignment(.leading)
                         }).padding(.top)
-                       
-                            
+                        
+                        
                         
                         HStack(alignment: .bottom) {
                             NavigationLink (destination:CategoriesView(), label: {
@@ -102,25 +105,43 @@ struct HomeView: View {
                             }
                         })
                         Spacer()
+                        Button (action: refreshGroup, label: {
+                            HStack {
+                                Image(systemName: "goforward")
+                                    .font(.system(size: 24))
+                            }
+                        })
                     }.padding(.top, 20)
                         .padding(.leading, 26)
                         .padding(.trailing, 30)
                     
-                   
+                    
                     Spacer()
-                   
+                    
                     ScrollView{
-                       
-                         
-                            GroupDisplayModule()
-                            GroupDisplayModule()
-                            GroupDisplayModule();
+                        
+                        
+                        if !groupHome.isEmpty {
+                            ForEach(groupHome, id: \.self) { groupModule in
+                                NavigationLink(destination: GroupView(groupDetail: groupModule, groupImage: groupModule.groupImage), label: {
+                                    GroupDisplayModule(imageName: groupModule.groupImage, topic: groupModule.groupName, personCount: groupModule.groupMember.count ,limitCount: groupModule.groupLimit, dueDate: groupModule.groupTime, catagory: groupModule.groupType)
+                                })
+                            }
+                        }
+                        else {
+                            VStack(alignment: .center) {
+                                LottieView(name: "96253-data-not-found", loopMode: .loop)
+                                    .frame(height: 150)
+                                Text("Not Found Group? Let's Create!").font(.nunito(size: 14, weight: .light)).foregroundColor(.gray)
+                            }
+                        }
                         
                     }.padding(.bottom,50)
                 }.padding(.top, 15)
             }
         }
         .background(Color(hexString: "#F3F3F3"))
+        .onAppear(perform: refreshGroup)
     }
     
     func decoder() -> User {
@@ -129,6 +150,19 @@ struct HomeView: View {
             return data
         }
         return userGuest
+    }
+    
+    func refreshGroup() {
+        AF.request("\(urlAPI.rawValue)/data/groups/home_group_rec", requestModifier: { $0.timeoutInterval = 5 })
+            .responseDecodable(of: ResultGroupHome.self) { response in
+                switch response.result {
+                case .success(let value):
+                    groupHome = value.data
+                    print(value.data)
+                case .failure(let error):
+                    print(error)
+                }
+            }
     }
 }
 

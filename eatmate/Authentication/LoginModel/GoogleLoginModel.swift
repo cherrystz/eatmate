@@ -80,7 +80,8 @@ struct GoogleLoginModel: View {
                     "subscription_id": "",
                     "provider_id": "google",
                     "uid": user.uid,
-                    "successful_profile": "false"
+                    "successful_profile": "false",
+                    "group_id": ""
                 ]
                 print(parameters)
                 

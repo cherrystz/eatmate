@@ -21,6 +21,7 @@ struct User: Encodable, Decodable {
     var provider_id: String = ""
     var uid: String = ""
     var successful_profile: Bool = false
+    var group_id: [String] = []
 }
 
 var userGuest = User(_id: "", name: "Guest", register_date: "", email: "", profile_picture: "", gender: "", birthday: "", description_profile: "", favor_id: "", subscription_id: "", provider_id: "", uid: "", successful_profile: false)

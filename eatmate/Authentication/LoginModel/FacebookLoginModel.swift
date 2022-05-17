@@ -65,10 +65,8 @@ struct FacebookLoginModel: View {
                     let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                     let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(okayAction)
-                    print("asd")
                     return
                 }
-                
                 
                 let date = Date()
                 let dateFormatter = DateFormatter()
@@ -85,11 +83,12 @@ struct FacebookLoginModel: View {
                     "subscription_id": "",
                     "provider_id": "facebook",
                     "uid": user?.user.uid,
-                    "successful_profile": "false"
+                    "successful_profile": "false",
+                    "group_id": ""
                 ]
                 print(parameters)
                 
-                AF.request("\(urlAPI)/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
+                AF.request("\(urlAPI.rawValue)/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
                         .responseDecodable(of: ResultResponse.self) { response in
                             switch response.result {
                             case .success(let value):

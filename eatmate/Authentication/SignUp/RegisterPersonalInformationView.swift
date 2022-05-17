@@ -8,11 +8,15 @@
 import SwiftUI
 import Alamofire
 import Firebase
+import FirebaseStorage
 
 struct RegisterPersonalInformationView: View {
     
     @State var nameField : String = ""
     @State var genderField : String = ""
+    @State private var image = UIImage()
+    @State private var imageDefault = UIImage()
+    @State private var showSheet = false
     @State private var birthDate = Date()
     @AppStorage("userApp") var userApp: Data = Data()
     
@@ -36,16 +40,23 @@ struct RegisterPersonalInformationView: View {
                 }
                 GeometryReader { gp in
                     VStack {
-                        Button(action: {}, label: {
+                        Button(action: {
+                            showSheet = true
+                        }, label: {
                             if let url = decoder().profile_picture{
                                 if url != "" {
-                                    AsyncImage(url: URL(string: url)) { image in
-                                        image.resizable()
-                                    } placeholder: {
-                                        ProgressView()
-                                    }
-                                    .frame(width: 350, height: 350)
-                                    .cornerRadius(15)                                 }
+                                    Image(uiImage: self.image)
+                                        .resizable()
+                                        .frame(width: 350, height: 350)
+                                        .cornerRadius(15)
+//                                    AsyncImage(url: URL(string: url)) { image in
+//                                        image.resizable()
+//                                    } placeholder: {
+//                                        ProgressView()
+//                                    }
+//                                    .frame(width: 350, height: 350)
+//                                    .cornerRadius(15)
+                                }
                                 else {
                                     Image("ProfileImageDefault")
                                         .resizable()
@@ -81,12 +92,24 @@ struct RegisterPersonalInformationView: View {
                             NavigationLink(destination: InterestSelectView()) { EmptyView() }
                             Button(action: {
                                 let dateFormatter = DateFormatter()
+                                var nameImage: String = ""
+                                var imageUrl = decoder().profile_picture
+                                
+                                if image != imageDefault {
+                                    dateFormatter.dateFormat = "ddMMyyyyHHmmss"
+                                    nameImage = "\(dateFormatter.string(from: Date()))\(decoder().uid)"
+                                    uploadImage(image: image, name: nameImage)
+                                    imageUrl = "https://firebasestorage.googleapis.com/v0/b/eatmateapp.appspot.com/o/imageProfile%2F\(nameImage).jpg?alt=media"
+                                }
+                                
                                 dateFormatter.dateFormat = "dd/MM/yyyy"
+                                
                                 let parameters = [
                                     "name": nameField,
                                     "birthday" : dateFormatter.string(from: birthDate),
                                     "gender": genderField,
-                                    "uid": decoder().uid
+                                    "uid": decoder().uid,
+                                    "profile_picture": imageUrl
                                 ]
                                 print(parameters)
                                 
@@ -129,11 +152,18 @@ struct RegisterPersonalInformationView: View {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "dd/MM/yyyy"
                 
+                
                 nameField = decoder().name
                 genderField = decoder().gender
+                let imageData = try? Data(contentsOf: URL(string: decoder().profile_picture)!)
+                image = UIImage(data: imageData!)!
+                imageDefault = UIImage(data: imageData!)!
                 if decoder().birthday != "" {
                     birthDate = dateFormatter.date(from:decoder().birthday)!
                 }
+            }
+            .sheet(isPresented: $showSheet) {
+                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
             }
     }
     

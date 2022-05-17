@@ -51,6 +51,11 @@
 		472920AD27E3B37900C62E86 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AC27E3B37900C62E86 /* CreateView.swift */; };
 		472920AF27E3B39D00C62E86 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920AE27E3B39D00C62E86 /* MessageView.swift */; };
 		472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472920B027E3B3AF00C62E86 /* NotificationView.swift */; };
+		4745AD5E2832A63A006DDFFB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745AD5D2832A63A006DDFFB /* ImagePicker.swift */; };
+		4745AD622832AD7A006DDFFB /* uploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745AD612832AD7A006DDFFB /* uploadImage.swift */; };
+		4745AD642832EE04006DDFFB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745AD632832EE04006DDFFB /* Group.swift */; };
+		4745AD66283301E4006DDFFB /* 96253-data-not-found.json in Resources */ = {isa = PBXBuildFile; fileRef = 4745AD65283301E4006DDFFB /* 96253-data-not-found.json */; };
+		4745AD6828336D2A006DDFFB /* PublishedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745AD6728336D2A006DDFFB /* PublishedState.swift */; };
 		4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4774197627E3896700EF44C1 /* GoogleService-Info.plist */; };
 		4774197927E38A0100EF44C1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4774197827E38A0100EF44C1 /* Podfile */; };
 		47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE6B27D8A176004352EC /* eatmateApp.swift */; };
@@ -135,6 +140,11 @@
 		472920AC27E3B37900C62E86 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		472920AE27E3B39D00C62E86 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		472920B027E3B3AF00C62E86 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		4745AD5D2832A63A006DDFFB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		4745AD612832AD7A006DDFFB /* uploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadImage.swift; sourceTree = "<group>"; };
+		4745AD632832EE04006DDFFB /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		4745AD65283301E4006DDFFB /* 96253-data-not-found.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "96253-data-not-found.json"; sourceTree = "<group>"; };
+		4745AD6728336D2A006DDFFB /* PublishedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedState.swift; sourceTree = "<group>"; };
 		4774197627E3896700EF44C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4774197827E38A0100EF44C1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		47E0DE6827D8A176004352EC /* eatmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				472518752828398300B9AA86 /* 8812-eatsready-home-header.json */,
+				4745AD65283301E4006DDFFB /* 96253-data-not-found.json */,
 				2E21D8EA281F1330000DFE7B /* 96916-searching.json */,
 			);
 			path = Lottie;
@@ -206,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				472518962828C10200B9AA86 /* User.swift */,
+				4745AD632832EE04006DDFFB /* Group.swift */,
 				472518982828C16300B9AA86 /* ResultResponse.swift */,
 			);
 			path = Models;
@@ -312,6 +324,7 @@
 				2EBAC21027EE497A00076492 /* GroupContentModule.swift */,
 				47F3FD5927E529CE005DC7C2 /* CategoriesModule.swift */,
 				47F3FD5B27E52EF0005DC7C2 /* GroupDisplayModule.swift */,
+				4745AD5D2832A63A006DDFFB /* ImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -339,9 +352,11 @@
 				2E3A122728158FD70094D1E4 /* Colors.swift */,
 				47F3FD7727E66D20005DC7C2 /* TextLimiter.swift */,
 				2E864553281F0132007634F4 /* PDFView.swift */,
+				4745AD6728336D2A006DDFFB /* PublishedState.swift */,
 				47F3FD5727E52436005DC7C2 /* TextFieldStyle.swift */,
 				47F3FD5D27E53296005DC7C2 /* RoundedCorner.swift */,
 				4725187E2828462500B9AA86 /* View.swift */,
+				4745AD612832AD7A006DDFFB /* uploadImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -450,6 +465,7 @@
 				47F3FD4B27E51829005DC7C2 /* Nunito-Light.ttf in Resources */,
 				47F3FD6227E54C01005DC7C2 /* Nunito-ExtraBold.ttf in Resources */,
 				47F3FD6627E550EF005DC7C2 /* Nunito-SemiBold.ttf in Resources */,
+				4745AD66283301E4006DDFFB /* 96253-data-not-found.json in Resources */,
 				2E21D8E9281F116F000DFE7B /* Assets.xcassets in Resources */,
 				47F3FD5027E51876005DC7C2 /* Kanit-Regular.ttf in Resources */,
 				4774197727E3896700EF44C1 /* GoogleService-Info.plist in Resources */,
@@ -512,6 +528,7 @@
 				2EE38D2D2805DFA7000668BD /* CustomRowView.swift in Sources */,
 				47E0DE7B27D8A6D2004352EC /* HomeView.swift in Sources */,
 				2E3CEDC9281F0DB6006A3899 /* LottieView.swift in Sources */,
+				4745AD5E2832A63A006DDFFB /* ImagePicker.swift in Sources */,
 				2E864554281F0132007634F4 /* PDFView.swift in Sources */,
 				47F3FD7E27E68241005DC7C2 /* AnyTransition.swift in Sources */,
 				2E4273CA2815F5B4003C68B8 /* CategoriesView.swift in Sources */,
@@ -525,6 +542,8 @@
 				2EBAC21127EE497A00076492 /* GroupContentModule.swift in Sources */,
 				472920B127E3B3AF00C62E86 /* NotificationView.swift in Sources */,
 				47F3FD7827E66D20005DC7C2 /* TextLimiter.swift in Sources */,
+				4745AD642832EE04006DDFFB /* Group.swift in Sources */,
+				4745AD6828336D2A006DDFFB /* PublishedState.swift in Sources */,
 				47F3FD4427E4FA19005DC7C2 /* FullScreenView.swift in Sources */,
 				47E0DE6C27D8A176004352EC /* eatmateApp.swift in Sources */,
 				2EBAC20F27EE45A800076492 /* ImageSliderModule.swift in Sources */,
@@ -556,6 +575,7 @@
 				2E3A122828158FD70094D1E4 /* Colors.swift in Sources */,
 				2E3CEDC2281F0392006A3899 /* PolicyView.swift in Sources */,
 				2E1B1B18281F55AB00F4E2AE /* PaymentView.swift in Sources */,
+				4745AD622832AD7A006DDFFB /* uploadImage.swift in Sources */,
 				47F3FD5C27E52EF0005DC7C2 /* GroupDisplayModule.swift in Sources */,
 				2E864546281A3E6D007634F4 /* AboutUsView.swift in Sources */,
 				472920AD27E3B37900C62E86 /* CreateView.swift in Sources */,

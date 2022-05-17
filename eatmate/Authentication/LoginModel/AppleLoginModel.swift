@@ -68,11 +68,12 @@ struct AppleLoginModel: View {
                                 "subscription_id": "",
                                 "provider_id": "apple",
                                 "uid": Auth.auth().currentUser?.uid,
-                                "successful_profile": "false"
+                                "successful_profile": "false",
+                                "group_id": ""
                             ]
                             print(parameters)
                             
-                            AF.request("\(urlAPI)/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
+                            AF.request("\(urlAPI.rawValue)/data/users/check_user", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
                                     .responseDecodable(of: ResultResponse.self) { response in
                                         switch response.result {
                                         case .success(let value):

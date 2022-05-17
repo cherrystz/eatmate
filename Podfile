@@ -18,12 +18,15 @@ target 'eatmate' do
   # For example, to use Firebase Authentication and Cloud Firestore
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   pod 'GoogleSignIn'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
   
   pod 'Alamofire'
+  
+  pod 'FirebaseFirestoreSwift', '> 7.0-beta'
 
   # Use for animated gif
   pod 'lottie-ios'
