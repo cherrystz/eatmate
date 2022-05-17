@@ -12,6 +12,12 @@ struct ResultResponse: Decodable {
     let data: User
 }
 
+struct ResultCreateGroup: Decodable {
+    let result: String
+    let data: User
+    let group: Group
+}
+
 struct ResultGroup: Decodable {
     let result: String
     let data: Group

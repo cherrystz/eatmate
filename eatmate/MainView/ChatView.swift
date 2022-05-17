@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ChatView: View {
-    @StateObject var messagesManager  = MessageManager()
-    var messageArray = ["Hello dude", "หาไรกินกัน", "อยากกินชาบูมากๆเลย"]
+    
+    @StateObject var messagesManager = MessageManager(group_id: "")
+    @State var title: String = ""
     var body: some View {
         FullScreenView{
             NavbarView(title: "หิว อยากกินMomo paradise มากๆ เลยย",showBackButton: true,showMoreButton: false,shadow: 2)

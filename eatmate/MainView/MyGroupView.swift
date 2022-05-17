@@ -39,6 +39,7 @@ struct MyGroupView: View {
         .onAppear {
             groupString = decoder().group_id
             groupString.removeFirst()
+            groupHome = []
             for id in groupString {
                 searchGroup(id)
             }

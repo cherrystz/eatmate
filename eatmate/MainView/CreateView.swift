@@ -185,7 +185,7 @@ struct CreateView: View {
                     case .success(let value):
                         let encoder = JSONEncoder()
                         if let data = try? encoder.encode(value.data) {
-                            print(data)
+                            userApp = data
                         }
                     case .failure(let error):
                         print(error)

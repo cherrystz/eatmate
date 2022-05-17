@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Alamofire
 
 struct MessageItem: Identifiable,Hashable {
     let id = UUID()
@@ -17,6 +18,10 @@ struct MessageItem: Identifiable,Hashable {
 
 struct MessageView: View {
     
+    
+    @State var groupHome: [Group] = []
+    @State var groupString: [String] = []
+    @AppStorage("userApp") var userApp: Data = Data()
     @State var isPress = false
     @State private var MessageList : [MessageItem] = [
         MessageItem(groupName: "ไปกินชาบูชูบา", recentChat: "Gong joined the Group.", time: "00.38", chatRead: true),
@@ -31,17 +36,57 @@ struct MessageView: View {
                 
                 
                 List {
-                    ForEach (MessageList,id: \.self) { MessageItem in
-                        NavigationLink(destination: ChatView()) {
-                            MessageRowView(GroupName: MessageItem.groupName,RecentChat: MessageItem.recentChat, time: MessageItem.time, chatRead: MessageItem.chatRead)
+                    if !groupHome.isEmpty {
+                        ForEach(groupHome, id: \.self) { group in
+                            NavigationLink {
+                                ChatView(messagesManager: MessageManager(group_id: group._id), title: group.groupName)
+                            } label: {
+                                MessageRowView(GroupName: group.groupName, RecentChat: "", time: "xxxx", urlName: group.groupImage, chatRead: true)
+                                   
+                            }
+
                         }
-                        
-                        
                     }
-                    .listRowSeparator(.hidden)
+                    else {
+                        VStack(alignment: .center) {
+                            LottieView(name: "96253-data-not-found", loopMode: .loop)
+                                .frame(height: 150)
+                            Text("Not Found Group? Let's Create or Join!").font(.nunito(size: 14, weight: .light)).foregroundColor(.gray)
+                        }
+                    }
+                    
                 }.listStyle(.plain)
+                    .listRowSeparator(.hidden)
             }
         }
+        .onAppear {
+            groupString = decoder().group_id
+            groupString.removeFirst()
+            groupHome = []
+            for id in groupString {
+                searchGroup(id)
+            }
+        }
+    }
+    
+    func decoder() -> User {
+        let decoder = JSONDecoder()
+        if let data = try? decoder.decode(User.self, from: userApp) {
+            return data
+        }
+        return userGuest
+    }
+    
+    func searchGroup(_ id: String) {
+        AF.request("\(urlAPI.rawValue)/data/groups/group/\(id)", requestModifier: { $0.timeoutInterval = 5 })
+            .responseDecodable(of: ResultGroup.self) { response in
+                switch response.result {
+                case .success(let value):
+                    groupHome.append(value.data)
+                case .failure(let error):
+                    print(error)
+                }
+            }
     }
 }
 

@@ -12,21 +12,29 @@ import FirebaseFirestoreSwift
 class MessageManager: ObservableObject {
     @Published private(set) var messages: [Message] = []
     @Published private(set) var lastMessageId = ""
+    @Published var group_id: String = ""
+    
     let db = Firestore.firestore()
     
-    init() {
+    init(group_id: String) {
+        self.group_id = group_id
         getMessage()
     }
     
     func getMessage() {
-        db.collection("messages").addSnapshotListener {QuerySnapshot, error in
+        db.collection("messages").addSnapshotListener { QuerySnapshot, error in
             guard let documents = QuerySnapshot?.documents else {
                 print("Error fetching : \(String(describing: error))")
                 return
             }
             self.messages = documents.compactMap {documents -> Message? in
                 do {
-                    return try documents.data(as: Message.self)
+                    let doc = try documents.data(as: Message.self)
+                    if doc.group_id == self.group_id {
+                        return try documents.data(as: Message.self)
+                    }
+                    return nil
+                   
                 } catch {
                     print("Error: \(error)")
                     return nil
@@ -43,7 +51,7 @@ class MessageManager: ObservableObject {
     
     func sendMessage(text:String) {
         do {
-            let newMessage = Message(id: "\(UUID())", text: text, received: false, timestamp: Date(), sender: "me")
+            let newMessage = Message(id: "\(UUID())", group_id: group_id ,text: text, received: false, timestamp: Date(), sender: "me")
             try db.collection("messages").document().setData(from: newMessage)
         } catch {
             print("Error: \(error)")

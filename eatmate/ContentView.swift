@@ -50,11 +50,7 @@ struct ContentView: View {
                     .background(.white)
                 }.disabled(!loggedIn)
             }
-            .onTapGesture {
-                if !loggedIn {
-                    bottomSheetShown.toggle()
-                }
-            }
+            
             
             
             BottomSheetView(
