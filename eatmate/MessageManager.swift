@@ -8,11 +8,13 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import SwiftUI
 
 class MessageManager: ObservableObject {
     @Published private(set) var messages: [Message] = []
     @Published private(set) var lastMessageId = ""
     @Published var group_id: String = ""
+    @AppStorage("userApp") var userApp: Data = Data()
     
     let db = Firestore.firestore()
     
@@ -51,11 +53,19 @@ class MessageManager: ObservableObject {
     
     func sendMessage(text:String) {
         do {
-            let newMessage = Message(id: "\(UUID())", group_id: group_id ,text: text, received: false, timestamp: Date(), sender: "me")
+            let newMessage = Message(id: "\(UUID())", group_id: group_id ,text: text, timestamp: Date(), sender: decoder().name)
             try db.collection("messages").document().setData(from: newMessage)
         } catch {
             print("Error: \(error)")
         }
+    }
+    
+    func decoder() -> User {
+        let decoder = JSONDecoder()
+        if let data = try? decoder.decode(User.self, from: userApp) {
+            return data
+        }
+        return userGuest
     }
 }
 

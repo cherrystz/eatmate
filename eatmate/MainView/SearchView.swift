@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Alamofire
+
 
 struct SearchView: View {
     
     @State var textFieldSearch: String = ""
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+    @State var groupSearch: [Group] = []
     
     
     var body: some View {
@@ -31,13 +33,27 @@ struct SearchView: View {
                         .foregroundColor(.gray)
                     }
                 })
-                TextField("What do you want to eat ?", text: $textFieldSearch)
+                TextField("What do you want to eat ?", text: $textFieldSearch, onEditingChanged: { change in
+                    searchGroup()
+                    print("testzzz")
+                })
+                    
                 .font(.kanit(size: 18))
                 .textFieldStyle(OvalTextFieldStyle())
                 .padding(.leading,10)
                 
+                
             }
             
+            if !groupSearch.isEmpty {
+                ForEach(groupSearch, id: \.self) { groupModule in
+                    NavigationLink(destination: GroupView(groupDetail: groupModule, groupImage: groupModule.groupImage), label: {
+                        GroupDisplayModule(imageName: groupModule.groupImage, topic: groupModule.groupName, personCount: groupModule.groupMember.count ,limitCount: groupModule.groupLimit, dueDate: groupModule.groupTime, catagory: groupModule.groupType)
+                    })
+                }
+            }
+            else
+            {
             LottieView(name: "96916-searching", loopMode: .loop)
                 .frame(width: 200, height: 200)
                 Text("Find Eatmate to eat with you!")
@@ -49,12 +65,30 @@ struct SearchView: View {
                 .font(.nunito(size: 20, weight: .regular))
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
-                
+            }
             Spacer()
             //Search sorting by groupname or restaurant name in groupname
         }.navigationBarHidden(true)
             .padding(.top,20)
             .padding(.horizontal,20)
+    }
+    
+    func searchGroup() {
+        
+        let parameters = [
+            "name": textFieldSearch
+        ]
+        
+        AF.request("\(urlAPI.rawValue)/data/groups/search/", method: .post,  parameters: parameters, encoder: JSONParameterEncoder.default)
+                .responseDecodable(of: ResultGroupHome.self) { response in
+                    switch response.result {
+                    case .success(let value):
+                        groupSearch = value.data
+                        print(value.data)
+                    case .failure(let error):
+                        print(error)
+                    }
+            }
     }
 }
 

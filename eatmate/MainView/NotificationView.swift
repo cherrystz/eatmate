@@ -7,6 +7,8 @@
 
 import SwiftUI
 import grpc
+import Alamofire
+
 struct NotificationItem: Identifiable,Hashable {
     let id = UUID()
     let header : String
@@ -18,13 +20,7 @@ struct NotificationView: View {
     
     var notiImage : String = "Image"
  
-    @State private var notificationList: [NotificationItem] = [
-        NotificationItem(header: "Header", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo sapien quis cursus. ", time: "7 March 10.02 PM"),
-        NotificationItem(header: "Header", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo sapien quis cursus. ", time: "7 March 10.02 PM"),
-        NotificationItem(header: "Header", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo sapien quis cursus. ", time: "7 March 10.02 PM"),
-        NotificationItem(header: "Header", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo sapien quis cursus. ", time: "7 March 10.02 PM")
-        
-    ]
+    @State private var notificationList: [Notification] = []
     
     var body: some View {
         FullScreenView{
@@ -33,7 +29,7 @@ struct NotificationView: View {
             
             List {
                ForEach (notificationList,id: \.self) { NotificationItem in
-                   CustomRowView(header: NotificationItem.header, description: NotificationItem.description, time:NotificationItem.time)
+                   CustomRowView(header: NotificationItem.name, description: NotificationItem.description, time:NotificationItem.time)
                    
                       
                }
@@ -52,9 +48,22 @@ struct NotificationView: View {
         
             
         }
+        .onAppear(perform: fetch)
         }
     func deleteAction(_ index: IndexSet) {
         notificationList.remove(atOffsets: index)
+    }
+    
+    func fetch() {
+        AF.request("\(urlAPI.rawValue)/data/notis", requestModifier: { $0.timeoutInterval = 5 })
+            .responseDecodable(of: ResultNotification.self) { response in
+                switch response.result {
+                case .success(let value):
+                    notificationList = value.data
+                case .failure(let error):
+                    print(error)
+                }
+            }
     }
    
 }

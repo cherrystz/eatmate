@@ -20,9 +20,11 @@ struct MessageView: View {
     
     
     @State var groupHome: [Group] = []
+    
     @State var groupString: [String] = []
     @AppStorage("userApp") var userApp: Data = Data()
     @State var isPress = false
+    @State var appear = false
     @State private var MessageList : [MessageItem] = [
         MessageItem(groupName: "ไปกินชาบูชูบา", recentChat: "Gong joined the Group.", time: "00.38", chatRead: true),
         MessageItem(groupName: "KFC มีเมนูใหม่มาน่ากินมากไปกินกันน", recentChat: "พรุ่งนี้ว่างกันไหม ไปกันๆ", time: "00.45", chatRead: false),
@@ -41,10 +43,8 @@ struct MessageView: View {
                             NavigationLink {
                                 ChatView(messagesManager: MessageManager(group_id: group._id), title: group.groupName)
                             } label: {
-                                MessageRowView(GroupName: group.groupName, RecentChat: "", time: "xxxx", urlName: group.groupImage, chatRead: true)
-                                   
+                                MessageRowView(GroupName: group.groupName, RecentChat: "", time: "", urlName: group.groupImage, chatRead: true)
                             }
-
                         }
                     }
                     else {
@@ -55,7 +55,9 @@ struct MessageView: View {
                         }
                     }
                     
-                }.listStyle(.plain)
+                }
+                .opacity(appear ? 1 : 0)
+                .listStyle(.plain)
                     .listRowSeparator(.hidden)
             }
         }
@@ -63,9 +65,14 @@ struct MessageView: View {
             groupString = decoder().group_id
             groupString.removeFirst()
             groupHome = []
+            
+            
             for id in groupString {
                 searchGroup(id)
             }
+            appear = true
+            
+            
         }
     }
     

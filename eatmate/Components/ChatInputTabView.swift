@@ -18,11 +18,6 @@ struct ChatInputTabView: View {
             .frame(height: 2.0)
            
             HStack{
-                
-                Button(action: {}, label: {
-                    Image(systemName: "photo")
-                        .foregroundColor(.gray)
-                })
                 HStack{
                 TextField("Aa", text:$chatfield)
                         .lineLimit(2)
@@ -30,6 +25,7 @@ struct ChatInputTabView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     Button(action: {
                         messagesManager.sendMessage(text: chatfield)
+                        chatfield = ""
                     }, label: {
                         Image(systemName: "paperplane")
                     })

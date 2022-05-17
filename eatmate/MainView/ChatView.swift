@@ -13,9 +13,8 @@ struct ChatView: View {
     @State var title: String = ""
     var body: some View {
         FullScreenView{
-            NavbarView(title: "หิว อยากกินMomo paradise มากๆ เลยย",showBackButton: true,showMoreButton: false,shadow: 2)
+            NavbarView(title: title,showBackButton: true,showMoreButton: false,shadow: 2)
             VStack{
-            MemberChatBarView()
             VStack{
                 ScrollViewReader { proxy in
                     ScrollView{
