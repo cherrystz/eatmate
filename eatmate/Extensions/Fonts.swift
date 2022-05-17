@@ -28,5 +28,6 @@ extension Font {
     enum KanitStyle: String {
         case bold = "Kanit-Bold"
         case regular = "Kanit-Regular"
+        case semiBold = "Kanit-Semibold"
     }
 }

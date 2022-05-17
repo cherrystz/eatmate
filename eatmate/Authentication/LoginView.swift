@@ -7,11 +7,74 @@
 
 import SwiftUI
 
-struct LoginView: View {
-    
-    @State var emailField: String = ""
-    @State private var passwordField: String = ""
-    
+fileprivate enum Constants {
+    static let radius: CGFloat = 16
+    static let indicatorHeight: CGFloat = 6
+    static let indicatorWidth: CGFloat = 60
+    static let snapRatio: CGFloat = 0.25
+    static let minHeightRatio: CGFloat = 0.3
+}
+
+struct BottomSheetView<Content: View>: View {
+    @Binding var isOpen: Bool
+
+    let maxHeight: CGFloat
+    let minHeight: CGFloat
+    let content: Content
+
+    @GestureState private var translation: CGFloat = 0
+
+    private var offset: CGFloat {
+        isOpen ? 0 : maxHeight - minHeight
+    }
+
+    private var indicator: some View {
+        RoundedRectangle(cornerRadius: Constants.radius)
+            .fill(Color.secondary)
+            .frame(
+                width: Constants.indicatorWidth,
+                height: Constants.indicatorHeight
+        ).onTapGesture {
+            self.isOpen.toggle()
+        }
+    }
+
+    init(isOpen: Binding<Bool>, maxHeight: CGFloat, @ViewBuilder content: () -> Content) {
+        self.minHeight = maxHeight * Constants.minHeightRatio
+        self.maxHeight = maxHeight
+        self.content = content()
+        self._isOpen = isOpen
+    }
+
+    var body: some View {
+        GeometryReader { geometry in
+            VStack(spacing: 0) {
+                self.indicator.padding()
+                self.content
+            }
+            .frame(width: geometry.size.width, height: self.maxHeight, alignment: .top)
+            .background(Color(.secondarySystemBackground))
+            .cornerRadius(Constants.radius)
+            .frame(height: geometry.size.height, alignment: .bottom)
+            .offset(y: max(self.offset + self.translation, 0))
+            .animation(.interactiveSpring())
+            .gesture(
+                DragGesture().updating(self.$translation) { value, state, _ in
+                    state = value.translation.height
+                }.onEnded { value in
+                    let snapDistance = self.maxHeight * Constants.snapRatio
+                    guard abs(value.translation.height) > snapDistance else {
+                        return
+                    }
+                    self.isOpen = value.translation.height < 0
+                }
+            )
+        }
+    }
+}
+
+
+struct LoginViewCard: View {
     var body: some View {
         VStack(alignment: .center) {
             
@@ -19,96 +82,23 @@ struct LoginView: View {
             
             VStack(spacing: 28) {
                 
-                HStack {
-                    Text("Sign in to EatMate")
-                        .font(.nunito(size: 24, weight: .extraBold))
-                    Spacer()
-                }
-                
-                VStack {
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("Email or Phone number")
-                            .font(.nunito(size: 18, weight: .semiBold))
-                        TextField("", text: $emailField)
-                            .font(.nunito(size: 18, weight: .regular))
-                            .textFieldStyle(BottomLineTextFieldStyle())
-                    }
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("Password")
-                            .font(.nunito(size: 18, weight: .semiBold))
-                        SecureField("", text: $passwordField)
-                            .font(.nunito(size: 18, weight: .regular))
-                            .textFieldStyle(BottomLineTextFieldStyle())
-                            .overlay(alignment: .trailing) {
-                                Button(action: {}, label: {
-                                    Image(systemName: "eye.slash")
-                                        .font(.system(size: 15))
-                                })
-                            }
-                    }
-                }
-                
-                Button(action: {}, label: {
-                    Text("Forgotten your password?")
-                        .font(.nunito(size: 14, weight: .regular))
-                })
-                
-                NavigationLink(destination: ContentView(), label: {
-                    Text("Sign In")
-                        .font(.nunito(size: 20, weight: .extraBold))
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 103)
-                        .padding(.vertical, 3)
-                        .background(Color(hexString: "#5AB763"))
-                        .cornerRadius(25)
-                })
-                
                 LabelledDivider(horizontalPadding: 27 ,color: .black.opacity(0.8), label: {
-                    Text("or")
+                    Text("Sign in to EatMate")
                         .font(.nunito(size: 14, weight: .regular))
                         .foregroundColor(.black.opacity(0.8))
                 })
                 
-                HStack() {
-                    Button(action: {}, label: {
-                        Image(systemName: "applelogo")
-                            .resizable()
-                            .frame(width: 44, height: 53)
-                    })
+                VStack() {
+                    AppleLoginModel()
+                    FacebookLoginModel()
+                    GoogleLoginModel()
                     Spacer()
-                    Button(action: {}, label: {
-                        Image("FBIcon")
-                            .resizable()
-                            .frame(width: 53, height: 53)
-                    })
-                    Spacer()
-                    Button(action: {}, label: {
-                            Image("GIcon")
-                                .resizable()
-                                .frame(width: 53, height: 53)
-                    })
-                    
-                }.padding(.horizontal, 53)
+                }
                 
-                NavigationLink(destination: RegisterView(), label: {
-                    HStack {
-                        Text("Don't have an account?")
-                            .font(.nunito(size: 14, weight: .regular))
-                        Text("Sign Up")
-                            .font(.nunito(size: 16, weight: .bold))
-                            .foregroundColor(Color(hexString: "#5AB763"))
-                    }
-                })
                 
             }
         }
-        .padding(.horizontal, 26)
+        .padding(.horizontal, 20)
         .navigationBarHidden(true)
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }

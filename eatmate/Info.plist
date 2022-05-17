@@ -10,8 +10,20 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.838405707466-ldsqc8819ak4rvs62jsu5v14llfqm4ld</string>
+				<string>fb5588268667867414</string>
 			</array>
 		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>5588268667867414</string>
+	<key>FacebookClientToken</key>
+	<string>ee5bdf72792bc9d27a1bc7fafa111d6f</string>
+	<key>FacebookDisplayName</key>
+	<string>EatMate</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array>

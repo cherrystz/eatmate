@@ -1,0 +1,24 @@
+// swiftlint:disable identifier_name
+import Foundation
+import UIKit
+
+typealias ControlState = UIControl.State
+typealias AttributedStringKey = NSAttributedString.Key
+typealias ViewAnimationOptions = UIView.AnimationOptions
+typealias TableViewCellStyle = UITableViewCell.CellStyle
+typealias ApplicationLaunchOptionsKey = UIApplication.LaunchOptionsKey
+typealias AlertActionStyle = UIAlertAction.Style
+typealias AccessibilityCustomRotorDirection = UIAccessibilityCustomRotor.Direction
+
+let ViewLayoutFittingCompressedSize = UIView.layoutFittingCompressedSize
+
+let NavigationControllerHideShowBarDuration: CGFloat = UINavigationController.hideShowBarDuration
+
+let NotificationKeyboardWillChangeFrameNotification: NSNotification.Name = UIResponder.keyboardWillChangeFrameNotification
+let NotificationKeyboardWillHideFrameNotification: NSNotification.Name = UIResponder.keyboardWillHideNotification
+let NotificationKeyboardWillShowFrameNotification: NSNotification.Name = UIResponder.keyboardWillShowNotification
+
+let NotificationKeyboardFrameEndUserInfoKey = UIResponder.keyboardFrameEndUserInfoKey
+let NotificationKeyboardFrameBeginUserInfoKey = UIResponder.keyboardFrameBeginUserInfoKey
+
+let AccessibilityNotificationAnnouncement = UIAccessibility.Notification.announcement
