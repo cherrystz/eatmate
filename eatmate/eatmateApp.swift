@@ -42,7 +42,7 @@ struct eatmateApp: App {
     
 }
 
-let urlAPI: APISelection = .localhost
+let urlAPI: APISelection = .glitch
 
 enum APISelection: String {
     case localhost = "http://localhost:3000"
