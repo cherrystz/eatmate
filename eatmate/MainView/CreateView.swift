@@ -19,11 +19,17 @@ struct CreateView: View {
     @State var locationField : String = ""
     @State var catagory : [String] = ["Breakfast","Seafood","Snack","Noodle"]
     @State var showAlert : Bool = false
+
+    @State var navigateActive : Bool = false
+    @State var limitField : Int = 0
+    @State var memberlimit : [Int] = [2,3,4,5,6,7,8,9,10]
+
     @State private var image = UIImage()
     @State private var showSheet = false
     @State private var limit = 3
     @AppStorage("userApp") var userApp: Data = Data()
     @StateObject var modelPublished = PublishedState()
+
     
     var body: some View {
         FullScreenView{
@@ -101,6 +107,53 @@ struct CreateView: View {
                             
                             
                         }
+                       
+                    }
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text("Description")
+                            .font(.nunito(size: 18, weight: .semiBold))
+                        TextField("", text: $descriptionField)
+                            .font(.nunito(size: 18, weight: .regular))
+                            .textFieldStyle(BottomLineTextFieldStyle())
+                    }
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text("Date")
+                            .font(.nunito(size: 18, weight: .semiBold))
+
+                        DatePicker("Date", selection: $dateField, displayedComponents: [.date])
+                                        .datePickerStyle(GraphicalDatePickerStyle())
+                                        .frame(maxHeight: 400)
+                                        .font(.nunito(size: 18, weight: .semiBold))
+                    }
+                    VStack(alignment: .leading, spacing: 0) {
+                        HStack{
+                            VStack{
+                                Text("Member Limit")
+                                    .font(.nunito(size: 18, weight: .semiBold))
+                                Picker("Member Limit", selection: $limitField) {
+                                               ForEach(memberlimit, id: \.self) {
+                                                   Text(String($0))
+                                                   
+                                               }
+                                
+                                }.padding(.leading,-60)
+                                    
+                            }
+                           
+                            Spacer()
+                        }
+                       
+                    }
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text("Location")
+                            .font(.nunito(size: 18, weight: .semiBold))
+                        TextField("Fill in Google Map Link", text: $locationField)
+                            .font(.nunito(size: 18, weight: .regular))
+                            .textFieldStyle(BottomLineTextFieldStyle())
+                    }
+             
+                    
+                   
                     }.padding(.horizontal,20)
                         .padding(.bottom,80)
                 }

@@ -14,7 +14,7 @@ struct MessageRowView: View {
     @State var chatRead : Bool = false
     @State var isPress : Bool = false
     var body: some View {
-        Button(action: {}, label: {
+       NavigationLink(destination: ChatView(), label: {
             HStack {
                 //GroupImage
                 Circle()

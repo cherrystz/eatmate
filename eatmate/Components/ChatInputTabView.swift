@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChatInputTabView: View {
     @State var chatfield : String = ""
-    
+    @EnvironmentObject var messagesManager : MessageManager
     var body: some View {
         VStack{
             GeometryReader { geometry in
@@ -28,7 +28,9 @@ struct ChatInputTabView: View {
                         .lineLimit(2)
                         .padding(.horizontal,10)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                    Button(action: {}, label: {
+                    Button(action: {
+                        messagesManager.sendMessage(text: chatfield)
+                    }, label: {
                         Image(systemName: "paperplane")
                     })
                 }
@@ -40,7 +42,7 @@ struct ChatInputTabView: View {
                 Color.white.ignoresSafeArea(edges:.top)
                     
             )
-        }.frame(maxHeight: .infinity, alignment: .bottom)
+        }
       
     }
     

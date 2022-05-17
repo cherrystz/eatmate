@@ -28,6 +28,7 @@ target 'eatmate' do
   
   pod 'FirebaseFirestoreSwift', '> 7.0-beta'
 
+  pod 'FirebaseFirestoreSwift', '> 7.0-beta'
   # Use for animated gif
   pod 'lottie-ios'
   
