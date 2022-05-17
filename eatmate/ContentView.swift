@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var selectedIndex = 0
+    @AppStorage("bottomSheetShown") private var bottomSheetShown = false
+    @AppStorage("isLoggedIn") var loggedIn = false
+    @StateObject var modelPublished = PublishedState()
     
     let tabItemList: [TabItem] = [
         TabItem(image: "HomeIcon", name: "Home"),
@@ -19,33 +21,49 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        VStack {
-            // Content
+        GeometryReader { geometry in
             VStack {
-                FullScreenView {
-                    switch selectedIndex {
-                    case 0: HomeView()
-                    case 1: CreateView()
-                    case 2: MessageView()
-                    case 3: NotificationView()
-                    default: EmptyView()
+                // Content
+                VStack {
+                    FullScreenView {
+                        switch modelPublished.selectedIndexTabBar {
+                        case 0: HomeView()
+                        case 1: CreateView()
+                        case 2: MessageView()
+                        case 3: NotificationView()
+                        default: EmptyView()
+                        }
                     }
-                }
-                
-                HStack {
-                    ForEach(0..<tabItemList.count, id: \.self) { number in
-                        Spacer()
-                        Button(action: { selectedIndex = number }, label: {
-                            TabItemDisplay(imageName: tabItemList[number].image,
-                                           tagName: tabItemList[number].name,
-                                           foregroundColor: selectedIndex == number ? .black : .gray)
-                        })
-                        Spacer()
+                    
+                    HStack {
+                        ForEach(0..<tabItemList.count, id: \.self) { number in
+                            Spacer()
+                            Button(action: { modelPublished.changeSelected(number)}, label: {
+                                TabItemDisplay(imageName: tabItemList[number].image,
+                                               tagName: tabItemList[number].name,
+                                               foregroundColor: modelPublished.selectedIndexTabBar == number ? .black : .gray)
+                            })
+                            Spacer()
+                        }
                     }
-                }
-                .frame(height: 87)
-                .background(.white)
+                    .frame(height: 87)
+                    .background(.white)
+                }.disabled(!loggedIn)
             }
+            .onTapGesture {
+                if !loggedIn {
+                    bottomSheetShown.toggle()
+                }
+            }
+            
+            
+            BottomSheetView(
+                isOpen: self.$bottomSheetShown,
+                maxHeight: geometry.size.height * 0.7
+            ) {
+                LoginViewCard()
+            }
+            .opacity(!loggedIn ? 1 : 0)
         }
     }
 }

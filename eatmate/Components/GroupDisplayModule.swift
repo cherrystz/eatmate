@@ -9,21 +9,25 @@ import SwiftUI
 
 struct GroupDisplayModule: View {
     
-    var imageName: String = "ShubaShabu"
-    var topic: String = "ไปกินชาบูชูบากัน"
-    var personCount: Int = 2
-    var dueDate: String = "22 มีนาคม 2565"
-    var catagory: String = "Shabu"
+    @State var imageName: String = "https://firebasestorage.googleapis.com/v0/b/eatmateapp.appspot.com/o/imageGroup%2Fjay-wennington-N_Y88TWmGwA-unsplash.jpg?alt=media"
+    @State var topic: String = "ไปกินชาบูชูบากัน"
+    @State var personCount: Int = 2
+    @State var limitCount: Int = 2
+    @State var dueDate: String = "22/03/2022-00:00"
+    @State var catagory: String = "Shabu"
     
     
     var body: some View {
         VStack {
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 335, height: 156, alignment: .center)
-                .clipped()
-                .cornerRadius(15, corners: [.topLeft, .topRight])
+            AsyncImage(url: URL(string: imageName)) { image in
+                image.resizable()
+//                image.aspectRatio(contentMode: .fill)
+//                image.clipped()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 335, height: 156, alignment: .center)
+            .cornerRadius(15, corners: [.topLeft, .topRight])
             
             VStack(spacing: 5) {
                 HStack{
@@ -37,7 +41,7 @@ struct GroupDisplayModule: View {
                         .font(.kanit(weight: .bold))
                     Spacer()
                     HStack(spacing: 4) {
-                        Text("\(personCount)/10")
+                        Text("\(personCount)/\(limitCount)")
                             .font(.kanit(size: 12, weight: .bold))
                         Image(systemName: "person.fill")
                             .font(.system(size: 12))
@@ -70,6 +74,13 @@ struct GroupDisplayModule: View {
         .cornerRadius(15)
         .shadow(color: .black.opacity(0.1), radius: 4, y: 4)
         .padding(.bottom, 20)
+        .onAppear {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy-HH:mm"
+            let date = dateFormatter.date(from: dueDate)
+            dateFormatter.dateFormat = "dd MMMM yyyy"
+            dueDate = dateFormatter.string(from: date ?? Date())
+        }
     }
 }
 

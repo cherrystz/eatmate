@@ -8,25 +8,44 @@
 import SwiftUI
 import MessageUI
 import Lottie
+import GoogleSignIn
+import Firebase
 
 struct SettingView: View {
    
-    var username : String = "Phumipat Apivansri"
     @State var result: Result<MFMailComposeResult, Error>? = nil
-        @State var isShowingMailView = false
+    @State var isShowingMailView = false
+    @State private var showingAlert = false
+    @AppStorage("isLoggedIn") var loggedIn = false
+    @AppStorage("bottomSheetShown") private var bottomSheetShown = false
+    @AppStorage("userApp") var userApp: Data = Data()
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         FullScreenView{
             NavbarView(title: "Profile",showBackButton: true,showMoreButton: false,shadow: 2)
             HStack{
-                Image("ProfileImageDefault")
-                    .resizable()
-                    .frame(width: 96, height: 96)
-                    .cornerRadius(15)
+                if let url = decoder().profile_picture{
+                    if url != "" {
+                        AsyncImage(url: URL(string: url)) { image in
+                            image.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 48, height: 48)
+                        .cornerRadius(15)
+                    }
+                    else {
+                        Image("ProfileImageDefault")
+                            .resizable()
+                            .frame(width: 48, height: 48)
+                            .cornerRadius(15)
+                    }
+                }
                 VStack(alignment:.leading){
-                    Text(username)
+                    Text(decoder().name)
                         .font(.nunito(size: 24, weight: .bold))
-                    NavigationLink(destination: ProfileView(), label: {
+                    NavigationLink(destination: ProfileView(isSelf:true), label: {
                         Text("View my profile")
                             .font(.nunito(size: 18, weight: .bold))
                             .foregroundColor(.gray)
@@ -104,14 +123,28 @@ struct SettingView: View {
                     
                 
                 Section(header: Text("")) {
-                    Button(action: {}, label: {
+                    Button(action: { showingAlert.toggle() }, label: {
                         HStack{
                             Image(systemName: "rectangle.portrait.and.arrow.right")
                             Text("Log out")
                         }.foregroundColor(.red)
                     })
+                    .alert(isPresented: $showingAlert) {
+                            Alert(
+                                title: Text("Sign out"),
+                                message: Text("Are you sure to sign out?"),
+                                primaryButton: .default(
+                                    Text("Cancel"),
+                                    action: {}
+                                ),
+                                secondaryButton: .destructive(
+                                    Text("Sign out"),
+                                    action: { logout() }
+                                )
+                            )
+                        }
                 }
-                
+            
                    
                
             }
@@ -126,10 +159,24 @@ struct SettingView: View {
         }
         
     }
-}
-
-struct SettingView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingView()
+    
+    func decoder() -> User {
+        let decoder = JSONDecoder()
+        if let data = try? decoder.decode(User.self, from: userApp) {
+            return data
+        }
+        return userGuest
+    }
+    
+    func logout() {
+        GIDSignIn.sharedInstance.signOut()
+        try? Auth.auth().signOut()
+        let encoder = JSONEncoder()
+        if let data = try? encoder.encode(userGuest) {
+            userApp = data
+        }
+        loggedIn = false
+        bottomSheetShown = false
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
