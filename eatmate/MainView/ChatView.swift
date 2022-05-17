@@ -2,13 +2,48 @@
 //  ChatView.swift
 //  eatmate
 //
-//  Created by Cherryst 🍒 on 18/3/2565 BE.
+//  Created by Phumipat Apivansri on 17.04.22.
 //
 
 import SwiftUI
 
 struct ChatView: View {
+    
+    @StateObject var messagesManager = MessageManager(group_id: "")
+    @State var title: String = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        FullScreenView{
+            NavbarView(title: title,showBackButton: true,showMoreButton: false,shadow: 2)
+            VStack{
+            VStack{
+                ScrollViewReader { proxy in
+                    ScrollView{
+                        ForEach(messagesManager.messages, id: \.id) {
+                            message in MessageBubble(message: message)
+                        }
+                        .padding(.top, 20)
+                    } .onChange(of: messagesManager.lastMessageId) {
+                        id in
+                        withAnimation {
+                            proxy.scrollTo(id, anchor: .bottom)
+                        }}
+                   
+                }
+            }
+            
+                ChatInputTabView()
+                    .environmentObject(messagesManager)
+
+            }
+          
+          
+                
+        }
+    }
+}
+
+struct ChatView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChatView()
     }
 }
