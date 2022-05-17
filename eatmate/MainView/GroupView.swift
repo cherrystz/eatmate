@@ -33,19 +33,6 @@ struct GroupView: View {
     @State var status : Int = 2
     @State var groupApprove : Bool = false
     
-    
-    func ButtonToggle() {
-        if (groupApprove) {
-            groupApprove = false
-            status = 2
-        } else {
-            groupApprove = true
-            status = 0
-        }
-        
-        // ส่งค่ากลับDB status จาก 2 เป็น 3 ไรงี้
-    }
-    
     var body: some View {
         FullScreenView{
             NavbarView(title: "", group_id: groupDetail._id, isOwner: groupDetail.groupOwner == decoder().uid)
